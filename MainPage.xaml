@@ -2,26 +2,38 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CVasApp.MainPage"
-             Shell.NavBarIsVisible="True">
-    
+             Shell.NavBarIsVisible="False">
 
-    <ScrollView VerticalScrollBarVisibility="Never" HorizontalScrollBarVisibility="Never" BackgroundColor="FloralWhite">
+
+    <ScrollView VerticalScrollBarVisibility="Never" HorizontalScrollBarVisibility="Never" BackgroundColor="#f5f8ff">
         <VerticalStackLayout
             Spacing="0"
-            Padding="0,0"
+            Padding="10,0"
             VerticalOptions="Start">
+            <Label
+                            Grid.Column="1"
+                            Grid.Row="0"
+                            Grid.ColumnSpan="2"
+                            Padding="0,20"
+                            Text="CV as App"
+                            FontFamily="FontSimplifica"
+                            SemanticProperties.HeadingLevel="Level1"
+                            TextColor="Black"
+                            FontSize="30"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"/>
             <Border
-                BackgroundColor="DeepSkyBlue"
-                Margin="10"
+                BackgroundColor="#1a236b"
+                Margin="20"
                 HorizontalOptions="FillAndExpand"
                 HeightRequest="200"
                 StrokeThickness="0"
                 Stroke="black"
-                StrokeShape="RoundRectangle 10">
+                StrokeShape="RoundRectangle 20">
                 <Border.Shadow>
                     <Shadow
-                        Offset="4,4"
-                        Opacity=".5"/>
+                        Offset="10,10"
+                        Opacity=".4"/>
                 </Border.Shadow>
                 <Grid>
                     <Grid.RowDefinitions>
@@ -47,7 +59,7 @@
                         StrokeShape="RoundRectangle 100">
                         <Border.Shadow>
                             <Shadow
-                        Offset="4,4"
+                        Offset="6,6"
                         Opacity=".5"/>
                         </Border.Shadow>
                             <Image
@@ -64,6 +76,7 @@
                             Text="Victor Luz"
                             FontFamily="FontSimplifica"
                             SemanticProperties.HeadingLevel="Level1"
+                            TextColor="White"
                             FontSize="30"
                             HorizontalOptions="Start"
                             VerticalOptions="Center"/>
@@ -83,6 +96,7 @@
                         Grid.Column="1"
                         Grid.Row="1"    
                         Text="932673261"
+                        TextColor="White"
                         FontSize="12"
                         HorizontalOptions="Start"
                         VerticalOptions="Center"/>
@@ -102,6 +116,7 @@
                         Grid.Column="2"
                         Grid.Row="1"
                         Text="Telegram"
+                        TextColor="White"
                         FontSize="12"
                         HorizontalOptions="Start"
                         VerticalOptions="Center"/>
@@ -121,6 +136,7 @@
                         Grid.Column="2"
                         Grid.Row="2"
                         Text="Signal"
+                        TextColor="White"
                         FontSize="12"
                         HorizontalOptions="Start"
                         VerticalOptions="Center"/>
@@ -140,6 +156,7 @@
                         Grid.Column="1"
                         Grid.Row="2"
                         Text="vluz@me.com"
+                        TextColor="White"
                         FontSize="12"
                         HorizontalOptions="Start"
                         VerticalOptions="Center"/>
@@ -147,17 +164,17 @@
             </Border>
 
             <Border
-                    BackgroundColor="LightCyan"
-                    Margin="10"
+                    BackgroundColor="#1a236b"
+                    Margin="20"
                     HorizontalOptions="FillAndExpand"
                     HeightRequest="300"
                     StrokeThickness="0"
                     Stroke="black"
-                    StrokeShape="RoundRectangle 10">
+                    StrokeShape="RoundRectangle 20">
                 <Border.Shadow>
                     <Shadow
-                        Offset="4,4"
-                        Opacity=".5"/>
+                        Offset="10,10"
+                        Opacity=".4"/>
                 </Border.Shadow>
                 <Grid>
                     <Grid.RowDefinitions>
@@ -171,42 +188,69 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
 
-                    <BoxView 
-                            Grid.Column="0"
-                            Grid.Row="0"
-                            Color="Yellow" />
-                    <BoxView 
-                            Grid.Column="0"
-                            Grid.Row="1"
-                            Color="Red" />
-                    <BoxView 
-                            Grid.Column="0"
-                            Grid.Row="2"
-                            Color="Magenta" />
-                    <BoxView 
-                            Grid.Column="1"
-                            Grid.Row="0"
-                            Color="Purple" />
-                    <BoxView 
-                            Grid.Column="1"
-                            Grid.Row="1"
-                            Color="Blue" />
-                    <BoxView 
-                            Grid.Column="1"
-                            Grid.Row="2"
-                            Color="Green" />
-                    <BoxView 
-                            Grid.Column="2"
-                            Grid.Row="0"
-                            Color="HotPink" />
-                    <BoxView 
-                            Grid.Column="2"
-                            Grid.Row="1"
-                            Color="BlueViolet" />
-                    <BoxView 
-                            Grid.Column="2"
-                            Grid.Row="2"
-                            Color="LightSteelBlue" />
+                    <Label
+                        Padding="12"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Text="Profile"
+                        TextColor="White"
+                        FontSize="12"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+                    <Label
+                        Padding="12"
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Text="Experience"
+                        TextColor="White"
+                        FontSize="12"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+                    <Label
+                        Padding="12"
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        Text="Skills"
+                        TextColor="White"
+                        FontSize="12"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+                    <Label
+                        Padding="12"
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        Text="Education"
+                        TextColor="White"
+                        FontSize="12"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+                    <Label
+                        Padding="12"
+                        Grid.Column="1"
+                        Grid.Row="2"
+                        Text="Other Information"
+                        TextColor="White"
+                        FontSize="12"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+                    <Label
+                        Padding="12"
+                        Grid.Column="2"
+                        Grid.Row="1"
+                        Text="Certifications"
+                        TextColor="White"
+                        FontSize="12"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+                    <Label
+                        Padding="12"
+                        Grid.Column="2"
+                        Grid.Row="2"
+                        Text="Options"
+                        TextColor="White"
+                        FontSize="12"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
                 </Grid>
             </Border>
 
