@@ -7,7 +7,7 @@
     Shell.FlyoutBehavior="Disabled">
 
     <ShellContent
-        Title="Home"
+        Title="CV as App"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 

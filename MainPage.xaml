@@ -1,39 +1,215 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CVasApp.MainPage">
+             x:Class="CVasApp.MainPage"
+             Shell.NavBarIsVisible="True">
+    
 
-    <ScrollView>
+    <ScrollView VerticalScrollBarVisibility="Never" HorizontalScrollBarVisibility="Never" BackgroundColor="FloralWhite">
         <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
-
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+            Spacing="0"
+            Padding="0,0"
+            VerticalOptions="Start">
+            <Border
+                BackgroundColor="DeepSkyBlue"
+                Margin="10"
+                HorizontalOptions="FillAndExpand"
                 HeightRequest="200"
-                HorizontalOptions="Center" />
+                StrokeThickness="0"
+                Stroke="black"
+                StrokeShape="RoundRectangle 10">
+                <Border.Shadow>
+                    <Shadow
+                        Offset="4,4"
+                        Opacity=".5"/>
+                </Border.Shadow>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height=".5*"/>
+                        <RowDefinition Height=".5*"/>
+                        <RowDefinition Height=".5*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="1.2*"/>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
 
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
+                    <Border
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Grid.RowSpan="4"
+                        WidthRequest="150"
+                        HeightRequest="150"
+                        StrokeThickness="1"
+                        Stroke="black"
+                        StrokeShape="RoundRectangle 100">
+                        <Border.Shadow>
+                            <Shadow
+                        Offset="4,4"
+                        Opacity=".5"/>
+                        </Border.Shadow>
+                            <Image
+                                Source="profile.png"
+                                SemanticProperties.Description="My mug"
+                                HeightRequest="200"
+                                HorizontalOptions="Center"/>
+                    </Border>
+                    
+                    <Label
+                            Grid.Column="1"
+                            Grid.Row="0"
+                            Grid.ColumnSpan="2"
+                            Text="Victor Luz"
+                            FontFamily="FontSimplifica"
+                            SemanticProperties.HeadingLevel="Level1"
+                            FontSize="30"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"/>
+                    <Image 
+                            Grid.Column="1"
+                            Grid.Row="1"
+                            WidthRequest="10"
+                            HeightRequest="10"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center">
+                        <Image.Source>
+                            <FontImageSource FontFamily="FontSolid" Glyph="&#xf095;" />
+                        </Image.Source>
+                    </Image>
+                    <Label 
+                        Padding="12"
+                        Grid.Column="1"
+                        Grid.Row="1"    
+                        Text="932673261"
+                        FontSize="12"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"/>
+                    <Image 
+                            Grid.Column="2"
+                            Grid.Row="1"
+                            WidthRequest="10"
+                            HeightRequest="10"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center">
+                        <Image.Source>
+                            <FontImageSource FontFamily="FontBrands" Glyph="&#xf2c6;" />
+                        </Image.Source>
+                    </Image>
+                    <Label
+                        Padding="12"
+                        Grid.Column="2"
+                        Grid.Row="1"
+                        Text="Telegram"
+                        FontSize="12"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"/>
+                    <Image 
+                            Grid.Column="2"
+                            Grid.Row="2"
+                            WidthRequest="10"
+                            HeightRequest="10"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center">
+                        <Image.Source>
+                            <FontImageSource FontFamily="FontSolid" Glyph="&#xf075;" />
+                        </Image.Source>
+                    </Image>
+                    <Label
+                        Padding="12"
+                        Grid.Column="2"
+                        Grid.Row="2"
+                        Text="Signal"
+                        FontSize="12"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"/>
+                    <Image 
+                            Grid.Column="1"
+                            Grid.Row="2"
+                            WidthRequest="10"
+                            HeightRequest="10"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center">
+                        <Image.Source>
+                            <FontImageSource FontFamily="FontSolid" Glyph="&#xf0e0;" />
+                        </Image.Source>
+                    </Image>
+                    <Label
+                        Padding="12"
+                        Grid.Column="1"
+                        Grid.Row="2"
+                        Text="vluz@me.com"
+                        FontSize="12"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"/>
+                </Grid>
+            </Border>
 
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
+            <Border
+                    BackgroundColor="LightCyan"
+                    Margin="10"
+                    HorizontalOptions="FillAndExpand"
+                    HeightRequest="300"
+                    StrokeThickness="0"
+                    Stroke="black"
+                    StrokeShape="RoundRectangle 10">
+                <Border.Shadow>
+                    <Shadow
+                        Offset="4,4"
+                        Opacity=".5"/>
+                </Border.Shadow>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
 
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+                    <BoxView 
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            Color="Yellow" />
+                    <BoxView 
+                            Grid.Column="0"
+                            Grid.Row="1"
+                            Color="Red" />
+                    <BoxView 
+                            Grid.Column="0"
+                            Grid.Row="2"
+                            Color="Magenta" />
+                    <BoxView 
+                            Grid.Column="1"
+                            Grid.Row="0"
+                            Color="Purple" />
+                    <BoxView 
+                            Grid.Column="1"
+                            Grid.Row="1"
+                            Color="Blue" />
+                    <BoxView 
+                            Grid.Column="1"
+                            Grid.Row="2"
+                            Color="Green" />
+                    <BoxView 
+                            Grid.Column="2"
+                            Grid.Row="0"
+                            Color="HotPink" />
+                    <BoxView 
+                            Grid.Column="2"
+                            Grid.Row="1"
+                            Color="BlueViolet" />
+                    <BoxView 
+                            Grid.Column="2"
+                            Grid.Row="2"
+                            Color="LightSteelBlue" />
+                </Grid>
+            </Border>
+
 
         </VerticalStackLayout>
     </ScrollView>
