@@ -50,11 +50,26 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Fonts\CooperHewitt-Light.otf" />
+	  <None Remove="Resources\Fonts\CooperHewitt-Medium.otf" />
+	  <None Remove="Resources\Fonts\CooperHewitt-Semibold.otf" />
 	  <None Remove="Resources\Fonts\Font Awesome 6 Brands-Regular-400.otf" />
 	  <None Remove="Resources\Fonts\Font Awesome 6 Free-Regular-400.otf" />
 	  <None Remove="Resources\Fonts\Font Awesome 6 Free-Solid-900.otf" />
 	  <None Remove="Resources\Fonts\simplifica.ttf" />
-	  <None Remove="Resources\Images\Profile.png" />
+	  <None Remove="Resources\Images\cert.svg" />
+	  <None Remove="Resources\Images\education.svg" />
+	  <None Remove="Resources\Images\expereince.svg" />
+	  <None Remove="Resources\Images\otherinfo.svg" />
+	  <None Remove="Resources\Images\profile.svg" />
+	  <None Remove="Resources\Images\profilepic.png" />
+	  <None Remove="Resources\Images\settings.svg" />
+	  <None Remove="Resources\Images\skills.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="CommunityToolkit.Maui" Version="2.0.0" />
+	  <PackageReference Include="CommunityToolkit.Maui.Markup" Version="1.2.1" />
 	</ItemGroup>
 
 </Project>
