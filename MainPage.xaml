@@ -5,61 +5,83 @@
              x:Class="CVasApp.MainPage"
              Shell.NavBarIsVisible="False">
 
+    
 
     <ScrollView 
         VerticalScrollBarVisibility="Never" 
         HorizontalScrollBarVisibility="Never" 
-        BackgroundColor="#2f3338" 
+        BackgroundColor="{AppThemeBinding Light={StaticResource MainBackgroundColorLight}, Dark={StaticResource MainBackgroundColorDark}}" 
         Margin="0">
         <VerticalStackLayout
             Spacing="0"
             Padding="0,0"
             VerticalOptions="Start">
             <Border
-                BackgroundColor="#15181b"
+                BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
                 Margin="0"
-                Padding="0,-10"
+                Padding="0,-5"
                 StrokeThickness="0"
                 StrokeShape="RoundRectangle 0 0 30 30">
+                <Border.Shadow>
+                    <Shadow
+                            Offset="5,5"
+                            Opacity="1"
+                            Radius="30">
+                        
+                    </Shadow>
+                </Border.Shadow>
             <Label
                     Grid.Column="1"
                     Grid.Row="0"
                     Grid.ColumnSpan="2"
-                    Padding="0,20"
+                    Padding="0,15"
                     Text="CV as App"
                     FontFamily="FontCHLight"
                     SemanticProperties.HeadingLevel="Level1"
-                    TextColor="White"
+                    TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                     FontSize="20"
                     HorizontalOptions="Center"
                     VerticalOptions="Center"/>
+                
             </Border>
-                <Border
-                    BackgroundColor="#15181b"
+            <Image
+                    Source="connectlines.svg"
+                    SemanticProperties.Description="My mug"
+                    HeightRequest="90"
+                    WidthRequest="400"                
+                    HorizontalOptions="Center">
+                <Image.Behaviors>
+                    <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
+                </Image.Behaviors>
+            </Image>
+            <Border
+                    BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
                     Margin="20"
+                    Padding="0,0"
                     HorizontalOptions="FillAndExpand"
                     HeightRequest="200"
                     StrokeThickness="0"
-                    Stroke="black"
+                    Stroke="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}"
                     StrokeShape="RoundRectangle 20">
-                    <Border.Shadow>
+                <Border.Shadow>
                         <Shadow
                             Offset="5,5"
                             Opacity="1"
                             Radius="40">
                         <Shadow.Brush>
-                            <LinearGradientBrush>
+                            <LinearGradientBrush
+                                StartPoint="0,.3"
+                                EndPoint=".25,1">
                                 <GradientStop Color="White"
                                     Offset="0.1" />
                                 <GradientStop Color="Black"
-                                    Offset="0.3" />
+                                    Offset="0.6" />
                                 <GradientStop Color="Black"
-                                    Offset="1.1" />
+                                    Offset="1" />
                             </LinearGradientBrush>
                         </Shadow.Brush>
                     </Shadow>
-                    </Border.Shadow>
-
+                </Border.Shadow>
                 <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"/>
@@ -78,8 +100,8 @@
                             Grid.RowSpan="4"
                             WidthRequest="150"
                             HeightRequest="150"
-                            StrokeThickness="2"
-                            Stroke="black"
+                            StrokeThickness="3"
+                            Stroke="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}"
                             StrokeShape="RoundRectangle 100">
                         <Border.Shadow>
                             <Shadow
@@ -89,21 +111,20 @@
                                 <Shadow.Brush>
                                     <LinearGradientBrush>
                                         <GradientStop Color="White"
-                                            Offset="0.1" />
+                                            Offset="0" />
                                         <GradientStop Color="Black"
                                             Offset="0.5" />
                                         <GradientStop Color="Black"
-                                            Offset="1.1" />
+                                            Offset="1" />
                                     </LinearGradientBrush>
                                 </Shadow.Brush>
                             </Shadow>
                         </Border.Shadow>
                         <Image
-                                Source="profilepic.png"
-                                SemanticProperties.Description="My mug"
-                                HeightRequest="200"
-                                HorizontalOptions="Center">
-                            
+                            Source="profilepic.png"
+                            SemanticProperties.Description="My mug"
+                            HeightRequest="200"
+                            HorizontalOptions="Center">
                         </Image>
                         </Border>
                         <Label
@@ -113,7 +134,7 @@
                             Text="Victor Luz"
                             FontFamily="FontCHLight"
                             SemanticProperties.HeadingLevel="Level1"
-                            TextColor="White"
+                            TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                             FontSize="30"
                             HorizontalOptions="Start"
                             VerticalOptions="Center"/>
@@ -134,7 +155,7 @@
                             Grid.Row="1"    
                             FontFamily="FontCHLight"
                             Text="932673261"
-                            TextColor="White"
+                            TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                             FontSize="12"
                             HorizontalOptions="Start"
                             VerticalOptions="Center"/>
@@ -155,7 +176,7 @@
                             Grid.Row="1"
                             FontFamily="FontCHLight"
                             Text="Telegram"
-                            TextColor="White"
+                            TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                             FontSize="12"
                             HorizontalOptions="Start"
                             VerticalOptions="Center"/>
@@ -176,7 +197,7 @@
                             Grid.Row="2"
                             FontFamily="FontCHLight"
                             Text="Signal"
-                            TextColor="White"
+                            TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                             FontSize="12"
                             HorizontalOptions="Start"
                             VerticalOptions="Center"/>
@@ -197,19 +218,19 @@
                             Grid.Row="2"
                             FontFamily="FontCHLight"
                             Text="vluz@me.com"
-                            TextColor="White"
+                            TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                             FontSize="12"
                             HorizontalOptions="Start"
                             VerticalOptions="Center"/>
                     </Grid>
                 </Border>
                 <Border
-                    BackgroundColor="#15181b"
+                    BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
                     Margin="20"
                     HorizontalOptions="FillAndExpand"
                     HeightRequest="300"
                     StrokeThickness="0"
-                    Stroke="black"
+                    Stroke="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}"
                     StrokeShape="RoundRectangle 20">
                 <Border.Shadow>
                     <Shadow
@@ -217,13 +238,15 @@
                             Opacity="1"
                             Radius="30">
                         <Shadow.Brush>
-                            <LinearGradientBrush>
+                            <LinearGradientBrush
+                                StartPoint="0,.1"
+                                EndPoint=".6,1">
                                 <GradientStop Color="White"
-                                    Offset="0.1" />
+                                    Offset="0" />
                                 <GradientStop Color="Black"
-                                    Offset="0.5" />
+                                    Offset="0.6" />
                                 <GradientStop Color="Black"
-                                    Offset="1.1" />
+                                    Offset="1" />
                             </LinearGradientBrush>
                         </Shadow.Brush>
                     </Shadow>
@@ -248,7 +271,7 @@
                         VerticalOptions="Center"
                         HorizontalOptions="Center">
                         <Image.Behaviors>
-                            <toolkit:IconTintColorBehavior TintColor="White" />
+                            <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                         </Image.Behaviors>
                     </Image>
                     <Label
@@ -257,7 +280,7 @@
                         Grid.Row="0"
                         FontFamily="FontCHLight"
                         Text="Profile"
-                        TextColor="White"
+                        TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                         FontSize="12"
                         HorizontalOptions="Center"
                         VerticalOptions="End"/>
@@ -268,7 +291,7 @@
                         Grid.ColumnSpan="2"
                         FontFamily="FontCHLight"
                         Text="CV Blocks"
-                        TextColor="White"
+                        TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                         FontSize="30"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"/>
@@ -280,8 +303,9 @@
                         VerticalOptions="Center"
                         HorizontalOptions="Center">
                         <Image.Behaviors>
-                            <toolkit:IconTintColorBehavior TintColor="White" />
+                            <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                         </Image.Behaviors>
+                        <!--
                         <Image.Shadow>
                             <Shadow
                             Offset="0,0"
@@ -299,6 +323,7 @@
                                 </Shadow.Brush>
                             </Shadow>
                         </Image.Shadow>
+                        -->
                     </Image>
                     <Label
                         Padding="12"
@@ -306,7 +331,7 @@
                         Grid.Row="1"
                         FontFamily="FontCHLight"
                         Text="Experience"
-                        TextColor="White"
+                        TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                         FontSize="12"
                         HorizontalOptions="Center"
                         VerticalOptions="End"/>
@@ -318,7 +343,7 @@
                         VerticalOptions="Center"
                         HorizontalOptions="Center">
                         <Image.Behaviors>
-                            <toolkit:IconTintColorBehavior TintColor="White" />
+                            <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                         </Image.Behaviors>
                     </Image>
                     <Label
@@ -327,7 +352,7 @@
                         Grid.Row="2"
                         FontFamily="FontCHLight"
                         Text="Skills"
-                        TextColor="White"
+                        TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                         FontSize="12"
                         HorizontalOptions="Center"
                         VerticalOptions="End"/>
@@ -339,7 +364,7 @@
                         VerticalOptions="Center"
                         HorizontalOptions="Center">
                         <Image.Behaviors>
-                            <toolkit:IconTintColorBehavior TintColor="White" />
+                            <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                         </Image.Behaviors>
                     </Image>
                     <Label
@@ -348,7 +373,7 @@
                         Grid.Row="1"
                         FontFamily="FontCHLight"
                         Text="Education"
-                        TextColor="White"
+                        TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                         FontSize="12"
                         HorizontalOptions="Center"
                         VerticalOptions="End"/>
@@ -360,7 +385,7 @@
                         VerticalOptions="Center"
                         HorizontalOptions="Center">
                         <Image.Behaviors>
-                            <toolkit:IconTintColorBehavior TintColor="White" />
+                            <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                         </Image.Behaviors>
                     </Image>
                     <Label
@@ -369,7 +394,7 @@
                         Grid.Row="2"
                         FontFamily="FontCHLight"
                         Text="Other Information"
-                        TextColor="White"
+                        TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                         FontSize="12"
                         HorizontalOptions="Center"
                         VerticalOptions="End"/>
@@ -381,7 +406,7 @@
                         VerticalOptions="Center"
                         HorizontalOptions="Center">
                         <Image.Behaviors>
-                            <toolkit:IconTintColorBehavior TintColor="White" />
+                            <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                         </Image.Behaviors>
                     </Image>
                     <Label
@@ -390,7 +415,7 @@
                         Grid.Row="1"
                         FontFamily="FontCHLight"
                         Text="Certifications"
-                        TextColor="White"
+                        TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                         FontSize="12"
                         HorizontalOptions="Center"
                         VerticalOptions="End"/>
@@ -402,7 +427,7 @@
                         VerticalOptions="Center"
                         HorizontalOptions="Center">
                         <Image.Behaviors>
-                            <toolkit:IconTintColorBehavior TintColor="White" />
+                            <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                         </Image.Behaviors>
                     </Image>
                     <Label
@@ -411,14 +436,15 @@
                         Grid.Row="2"
                         FontFamily="FontCHLight"
                         Text="Options"
-                        TextColor="White"
+                        TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                         FontSize="12"
                         HorizontalOptions="Center"
                         VerticalOptions="End"/>
                     </Grid>
                 </Border>
+            <!--
             <Border
-                BackgroundColor="#15181b"
+                BackgroundColor="#191e2d"
                 Margin="0"
                 Padding="0,30"
                 StrokeThickness="0"
@@ -431,11 +457,13 @@
                     Text="Something"
                     FontFamily="FontSimplifica"
                     SemanticProperties.HeadingLevel="Level1"
-                    TextColor="White"
+                    TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                     FontSize="30"
                     HorizontalOptions="Center"
                     VerticalOptions="Center"/>
             </Border>
+            -->
+            
         </VerticalStackLayout>
     </ScrollView>
 

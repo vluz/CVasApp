@@ -58,12 +58,15 @@
 	  <None Remove="Resources\Fonts\Font Awesome 6 Free-Solid-900.otf" />
 	  <None Remove="Resources\Fonts\simplifica.ttf" />
 	  <None Remove="Resources\Images\cert.svg" />
+	  <None Remove="Resources\Images\connectlines.svg" />
 	  <None Remove="Resources\Images\education.svg" />
+	  <None Remove="Resources\Images\exit.svg" />
 	  <None Remove="Resources\Images\expereince.svg" />
 	  <None Remove="Resources\Images\otherinfo.svg" />
 	  <None Remove="Resources\Images\profile.svg" />
 	  <None Remove="Resources\Images\profilepic.png" />
 	  <None Remove="Resources\Images\settings.svg" />
+	  <None Remove="Resources\Images\share.svg" />
 	  <None Remove="Resources\Images\skills.svg" />
 	</ItemGroup>
 

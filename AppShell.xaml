@@ -6,9 +6,22 @@
     xmlns:local="clr-namespace:CVasApp"
     Shell.FlyoutBehavior="Disabled">
 
+    <TabBar>
+        <Tab Title="Exit"
+             Icon="exit.svg">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+        </Tab>
+        <Tab Title="Share"
+            Icon="share.svg">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+        </Tab>
+    </TabBar>
+    
     <ShellContent
         Title="CV as App"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
+
+    
 
 </Shell>
