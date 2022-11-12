@@ -263,17 +263,38 @@
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
 
-                    <Image
+                    
+                    <ImageButton
+                        Clicked="OnProfileButtonClickedAsync"
                         Source="profile.svg"
                         Grid.Column="0"
                         Grid.Row="0"
                         SemanticProperties.Description="My mug"
                         VerticalOptions="Center"
                         HorizontalOptions="Center">
-                        <Image.Behaviors>
+                        <ImageButton.Behaviors>
                             <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
-                        </Image.Behaviors>
-                    </Image>
+                        </ImageButton.Behaviors>
+                        <!--<VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale" Value="1" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale" Value="0.8" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="Focused">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale" Value="1" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>-->
+                    </ImageButton>
                     <Label
                         Padding="12"
                         Grid.Column="0"
@@ -290,41 +311,42 @@
                         Grid.Row="0"
                         Grid.ColumnSpan="2"
                         FontFamily="FontCHLight"
-                        Text="CV Blocks"
+                        Text="Sections"
                         TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                         FontSize="30"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"/>
-                    <Image
+                    <ImageButton
+                        Clicked="OnExpButtonClickedAsync"
                         Source="expereince.svg"
                         Grid.Column="0"
                         Grid.Row="1"
                         SemanticProperties.Description="My mug"
                         VerticalOptions="Center"
                         HorizontalOptions="Center">
-                        <Image.Behaviors>
+                        <ImageButton.Behaviors>
                             <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
-                        </Image.Behaviors>
-                        <!--
-                        <Image.Shadow>
-                            <Shadow
-                            Offset="0,0"
-                            Opacity="1"
-                            Radius="5">
-                                <Shadow.Brush>
-                                    <LinearGradientBrush>
-                                        <GradientStop Color="White"
-                                    Offset="0.1" />
-                                        <GradientStop Color="Black"
-                                    Offset="0.5" />
-                                        <GradientStop Color="Black"
-                                    Offset="1.1" />
-                                    </LinearGradientBrush>
-                                </Shadow.Brush>
-                            </Shadow>
-                        </Image.Shadow>
-                        -->
-                    </Image>
+                        </ImageButton.Behaviors>
+                        <!--<VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale" Value="1" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale" Value="0.8" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="Focused">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale" Value="1" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>-->
+                    </ImageButton>
                     <Label
                         Padding="12"
                         Grid.Column="0"
@@ -442,27 +464,17 @@
                         VerticalOptions="End"/>
                     </Grid>
                 </Border>
-            <!--
-            <Border
-                BackgroundColor="#191e2d"
-                Margin="0"
-                Padding="0,30"
-                StrokeThickness="0"
-                StrokeShape="RoundRectangle 30 30 0 0">
-                <Label
-                    Grid.Column="1"
-                    Grid.Row="0"
-                    Grid.ColumnSpan="2"
-                    Padding="0,20"
-                    Text="Something"
-                    FontFamily="FontSimplifica"
-                    SemanticProperties.HeadingLevel="Level1"
-                    TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
-                    FontSize="30"
-                    HorizontalOptions="Center"
-                    VerticalOptions="Center"/>
-            </Border>
-            -->
+            <Image
+                    Source="connectlines.svg"
+                    SemanticProperties.Description="My mug"
+                    HeightRequest="90"
+                    Rotation="180"
+                    WidthRequest="400"                
+                    HorizontalOptions="Center">
+                <Image.Behaviors>
+                    <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
+                </Image.Behaviors>
+            </Image>
             
         </VerticalStackLayout>
     </ScrollView>

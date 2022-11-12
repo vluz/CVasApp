@@ -8,5 +8,15 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private async void OnProfileButtonClickedAsync(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("Profile");
+    }
+
+    private async void OnExpButtonClickedAsync(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("Exp");
+    }
 }
 

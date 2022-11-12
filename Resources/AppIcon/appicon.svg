@@ -12,7 +12,20 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
-     id="defs8" />
+     id="defs8">
+    <rect
+       x="49.328299"
+       y="71.368603"
+       width="191.01597"
+       height="350.54578"
+       id="rect1756" />
+    <rect
+       x="49.3283"
+       y="71.368607"
+       width="200.46181"
+       height="344.24855"
+       id="rect1756-8" />
+  </defs>
   <sodipodi:namedview
      id="namedview6"
      pagecolor="#ffffff"
@@ -23,9 +36,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="1.9232456"
-     inkscape:cx="215.00114"
-     inkscape:cy="228.77993"
+     inkscape:zoom="0.32195844"
+     inkscape:cx="619.6452"
+     inkscape:cy="211.20739"
      inkscape:window-width="1920"
      inkscape:window-height="1057"
      inkscape:window-x="-8"
@@ -38,6 +51,14 @@
      width="456"
      height="456"
      fill="#512BD4"
+     id="rect2-5"
+     style="fill:#20579b;fill-opacity:1" />
+  <path
      id="rect2"
-     style="fill:#5184a1;fill-opacity:1" />
+     style="fill:#2b74ce;fill-opacity:1"
+     d="M 125.98833,0 A 304.17331,278.1756 0 0 0 124.58599,17.91992 304.17331,278.1756 0 0 0 428.7598,296.0957 304.17331,278.1756 0 0 0 456,294.31445 V 0 Z" />
+  <path
+     id="rect2-2"
+     style="fill:#528fdc;fill-opacity:1"
+     d="M 231.7266,0 A 179.90422,179.90422 0 0 0 409.9454,156.35156 179.90422,179.90422 0 0 0 456,150.07228 V 0 Z" />
 </svg>
