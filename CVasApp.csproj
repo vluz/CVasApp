@@ -61,6 +61,7 @@
 	  <None Remove="Resources\Fonts\Font Awesome 6 Free-Regular-400.otf" />
 	  <None Remove="Resources\Fonts\Font Awesome 6 Free-Solid-900.otf" />
 	  <None Remove="Resources\Fonts\simplifica.ttf" />
+	  <None Remove="Resources\Images\back.svg" />
 	  <None Remove="Resources\Images\cert.svg" />
 	  <None Remove="Resources\Images\connectlines.svg" />
 	  <None Remove="Resources\Images\education.svg" />
@@ -102,5 +103,7 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
+
+	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadUnhandledDeviceExceptionCVasAppHideInfoBar="True" /></VisualStudio></ProjectExtensions>
 
 </Project>

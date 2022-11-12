@@ -1,12 +1,140 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="CVasApp.Skills"
-             Title="Skills">
-    <VerticalStackLayout>
-        <Label 
-            Text="Skills"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Skills"
+             Shell.NavBarIsVisible="False">
+    <ScrollView 
+        VerticalScrollBarVisibility="Never" 
+        HorizontalScrollBarVisibility="Never" 
+        BackgroundColor="{AppThemeBinding Light={StaticResource MainBackgroundColorLight}, Dark={StaticResource MainBackgroundColorDark}}" 
+        Margin="0">
+        <VerticalStackLayout
+            Spacing="0"
+            Padding="0,0"
+            VerticalOptions="Start">
+            <Border
+                BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
+                Margin="0"
+                Padding="0,-5"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 0 0 30 30">
+                <Border.Shadow>
+                    <Shadow
+                            Offset="5,5"
+                            Opacity="1"
+                            Radius="30">
+
+                    </Shadow>
+                </Border.Shadow>
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    Grid.ColumnSpan="2"
+                    Padding="0,15"
+                    Text="Skills"
+                    FontFamily="FontCHLight"
+                    SemanticProperties.HeadingLevel="Level1"
+                    TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
+                    FontSize="20"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+
+            </Border>
+            <Image
+                    Source="connectlines.svg"
+                    SemanticProperties.Description="My mug"
+                    HeightRequest="90"
+                    WidthRequest="400"                
+                    HorizontalOptions="Center">
+                <Image.Behaviors>
+                    <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
+                </Image.Behaviors>
+            </Image>
+            <Border
+                    BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
+                    Margin="20"
+                    Padding="0,0"
+                    HorizontalOptions="FillAndExpand"
+                    HeightRequest="200"
+                    StrokeThickness="0"
+                    Stroke="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}"
+                    StrokeShape="RoundRectangle 20">
+                <Border.Shadow>
+                    <Shadow
+                            Offset="5,5"
+                            Opacity="1"
+                            Radius="40">
+                        <Shadow.Brush>
+                            <LinearGradientBrush
+                                StartPoint="0,.3"
+                                EndPoint=".25,1">
+                                <GradientStop Color="White"
+                                    Offset="0.1" />
+                                <GradientStop Color="Black"
+                                    Offset="0.6" />
+                                <GradientStop Color="Black"
+                                    Offset="1" />
+                            </LinearGradientBrush>
+                        </Shadow.Brush>
+                    </Shadow>
+                </Border.Shadow>
+
+            </Border>
+            <Image
+                    Source="connectlines.svg"
+                    SemanticProperties.Description="My mug"
+                    HeightRequest="90"
+                    Rotation="180"
+                    WidthRequest="400"                
+                    HorizontalOptions="Center">
+                <Image.Behaviors>
+                    <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
+                </Image.Behaviors>
+            </Image>
+            <Border
+                BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
+                Margin="0"
+                Padding="0,0"
+                HeightRequest="50"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 30 30 0 0">
+                <Border.Shadow>
+                    <Shadow
+                            Offset="5,5"
+                            Opacity="1"
+                            Radius="30">
+
+                    </Shadow>
+                </Border.Shadow>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <ImageButton
+                        Clicked="OnBackButtonClickedAsync"
+                        Source="back.svg"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Padding="10"
+                        HeightRequest="80"
+                        WidthRequest="80"
+                        SemanticProperties.Description="My mug"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Start">
+                        <ImageButton.Behaviors>
+                            <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
+                        </ImageButton.Behaviors>
+                    </ImageButton>
+
+                </Grid>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

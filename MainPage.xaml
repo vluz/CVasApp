@@ -275,25 +275,6 @@
                         <ImageButton.Behaviors>
                             <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                         </ImageButton.Behaviors>
-                        <!--<VisualStateManager.VisualStateGroups>
-                            <VisualStateGroup x:Name="CommonStates">
-                                <VisualState x:Name="Normal">
-                                    <VisualState.Setters>
-                                        <Setter Property="Scale" Value="1" />
-                                    </VisualState.Setters>
-                                </VisualState>
-                                <VisualState x:Name="Pressed">
-                                    <VisualState.Setters>
-                                        <Setter Property="Scale" Value="0.8" />
-                                    </VisualState.Setters>
-                                </VisualState>
-                                <VisualState x:Name="Focused">
-                                    <VisualState.Setters>
-                                        <Setter Property="Scale" Value="1" />
-                                    </VisualState.Setters>
-                                </VisualState>
-                            </VisualStateGroup>
-                        </VisualStateManager.VisualStateGroups>-->
                     </ImageButton>
                     <Label
                         Padding="12"
@@ -327,25 +308,6 @@
                         <ImageButton.Behaviors>
                             <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                         </ImageButton.Behaviors>
-                        <!--<VisualStateManager.VisualStateGroups>
-                            <VisualStateGroup x:Name="CommonStates">
-                                <VisualState x:Name="Normal">
-                                    <VisualState.Setters>
-                                        <Setter Property="Scale" Value="1" />
-                                    </VisualState.Setters>
-                                </VisualState>
-                                <VisualState x:Name="Pressed">
-                                    <VisualState.Setters>
-                                        <Setter Property="Scale" Value="0.8" />
-                                    </VisualState.Setters>
-                                </VisualState>
-                                <VisualState x:Name="Focused">
-                                    <VisualState.Setters>
-                                        <Setter Property="Scale" Value="1" />
-                                    </VisualState.Setters>
-                                </VisualState>
-                            </VisualStateGroup>
-                        </VisualStateManager.VisualStateGroups>-->
                     </ImageButton>
                     <Label
                         Padding="12"
@@ -357,17 +319,18 @@
                         FontSize="12"
                         HorizontalOptions="Center"
                         VerticalOptions="End"/>
-                    <Image
+                    <ImageButton
+                        Clicked="OnSkillsButtonClickedAsync"
                         Source="skills.svg"
                         Grid.Column="0"
                         Grid.Row="2"
                         SemanticProperties.Description="My mug"
                         VerticalOptions="Center"
                         HorizontalOptions="Center">
-                        <Image.Behaviors>
+                        <ImageButton.Behaviors>
                             <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
-                        </Image.Behaviors>
-                    </Image>
+                        </ImageButton.Behaviors>
+                    </ImageButton>
                     <Label
                         Padding="12"
                         Grid.Column="0"
@@ -378,17 +341,18 @@
                         FontSize="12"
                         HorizontalOptions="Center"
                         VerticalOptions="End"/>
-                    <Image
+                    <ImageButton
+                        Clicked="OnEducationButtonClickedAsync"
                         Source="education.svg"
                         Grid.Column="1"
                         Grid.Row="1"
                         SemanticProperties.Description="My mug"
                         VerticalOptions="Center"
                         HorizontalOptions="Center">
-                        <Image.Behaviors>
+                        <ImageButton.Behaviors>
                             <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
-                        </Image.Behaviors>
-                    </Image>
+                        </ImageButton.Behaviors>
+                    </ImageButton>
                     <Label
                         Padding="12"
                         Grid.Column="1"
@@ -399,17 +363,18 @@
                         FontSize="12"
                         HorizontalOptions="Center"
                         VerticalOptions="End"/>
-                    <Image
+                    <ImageButton
+                        Clicked="OnOtherButtonClickedAsync"
                         Source="otherinfo.svg"
                         Grid.Column="1"
                         Grid.Row="2"
                         SemanticProperties.Description="My mug"
                         VerticalOptions="Center"
                         HorizontalOptions="Center">
-                        <Image.Behaviors>
+                        <ImageButton.Behaviors>
                             <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
-                        </Image.Behaviors>
-                    </Image>
+                        </ImageButton.Behaviors>
+                    </ImageButton>
                     <Label
                         Padding="12"
                         Grid.Column="1"
@@ -420,17 +385,18 @@
                         FontSize="12"
                         HorizontalOptions="Center"
                         VerticalOptions="End"/>
-                    <Image
+                    <ImageButton
+                        Clicked="OnCertButtonClickedAsync"
                         Source="cert.svg"
                         Grid.Column="2"
                         Grid.Row="1"
                         SemanticProperties.Description="My mug"
                         VerticalOptions="Center"
                         HorizontalOptions="Center">
-                        <Image.Behaviors>
+                        <ImageButton.Behaviors>
                             <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
-                        </Image.Behaviors>
-                    </Image>
+                        </ImageButton.Behaviors>
+                    </ImageButton>
                     <Label
                         Padding="12"
                         Grid.Column="2"
@@ -441,17 +407,18 @@
                         FontSize="12"
                         HorizontalOptions="Center"
                         VerticalOptions="End"/>
-                    <Image
+                    <ImageButton
+                        Clicked="OnOptionsButtonClickedAsync"
                         Source="settings.svg"
                         Grid.Column="2"
                         Grid.Row="2"
                         SemanticProperties.Description="My mug"
                         VerticalOptions="Center"
                         HorizontalOptions="Center">
-                        <Image.Behaviors>
+                        <ImageButton.Behaviors>
                             <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
-                        </Image.Behaviors>
-                    </Image>
+                        </ImageButton.Behaviors>
+                    </ImageButton>
                     <Label
                         Padding="12"
                         Grid.Column="2"
@@ -475,7 +442,64 @@
                     <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                 </Image.Behaviors>
             </Image>
-            
+            <Border
+                BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
+                Margin="0"
+                Padding="0,0"
+                HeightRequest="50"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 30 30 0 0">
+                <Border.Shadow>
+                    <Shadow
+                            Offset="5,5"
+                            Opacity="1"
+                            Radius="30">
+
+                    </Shadow>
+                </Border.Shadow>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    
+                    <ImageButton
+                        Clicked="OnExitButtonClicked"
+                        Source="exit.svg"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Padding="10"
+                        HeightRequest="80"
+                        WidthRequest="80"
+                        SemanticProperties.Description="My mug"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Start">
+                        <ImageButton.Behaviors>
+                            <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
+                        </ImageButton.Behaviors>
+                    </ImageButton>
+                    
+                    <ImageButton
+                        Clicked="OnShareButtonClickedAsync"
+                        Source="share.svg"
+                        Grid.Column="1"
+                        Padding="10"
+                        Grid.Row="0"
+                        HeightRequest="80"
+                        WidthRequest="80"
+                        SemanticProperties.Description="My mug"
+                        VerticalOptions="Center"
+                        HorizontalOptions="End">
+                        <ImageButton.Behaviors>
+                            <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
+                        </ImageButton.Behaviors>
+                    </ImageButton>
+                </Grid>
+            </Border>
+
         </VerticalStackLayout>
     </ScrollView>
 

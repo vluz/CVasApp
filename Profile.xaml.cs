@@ -6,4 +6,9 @@ public partial class Profile : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private async void OnBackButtonClickedAsync(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("..");
+    }
 }
