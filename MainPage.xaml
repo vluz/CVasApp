@@ -25,7 +25,7 @@
                 <Border.Shadow>
                     <Shadow
                             Offset="5,5"
-                            Opacity="1"
+                            Opacity=".5"
                             Radius="30">
                         
                     </Shadow>
@@ -66,7 +66,7 @@
                 <Border.Shadow>
                         <Shadow
                             Offset="5,5"
-                            Opacity="1"
+                            Opacity=".5"
                             Radius="40">
                         <Shadow.Brush>
                             <LinearGradientBrush
@@ -106,7 +106,7 @@
                         <Border.Shadow>
                             <Shadow
                             Offset="5,5"
-                            Opacity="1"
+                            Opacity=".5"
                             Radius="40">
                                 <Shadow.Brush>
                                     <LinearGradientBrush>
@@ -120,12 +120,13 @@
                                 </Shadow.Brush>
                             </Shadow>
                         </Border.Shadow>
-                        <Image
+                        <ImageButton
+                            Clicked="OnProfileButtonClickedAsync"
                             Source="profilepic.png"
                             SemanticProperties.Description="My mug"
                             HeightRequest="200"
                             HorizontalOptions="Center">
-                        </Image>
+                        </ImageButton>
                         </Border>
                         <Label
                             Grid.Column="1"
@@ -148,7 +149,10 @@
                             <Image.Source>
                                 <FontImageSource FontFamily="FontSolid" Glyph="&#xf095;" />
                             </Image.Source>
-                        </Image>
+                            <Image.Behaviors>
+                                <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
+                            </Image.Behaviors>
+                    </Image>
                         <Label 
                             Padding="12"
                             Grid.Column="1"
@@ -169,7 +173,10 @@
                                 <Image.Source>
                                     <FontImageSource FontFamily="FontBrands" Glyph="&#xf2c6;" />
                                 </Image.Source>
-                            </Image>
+                            <Image.Behaviors>
+                                <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
+                            </Image.Behaviors>
+                    </Image>
                         <Label
                             Padding="12"
                             Grid.Column="2"
@@ -190,7 +197,10 @@
                             <Image.Source>
                                 <FontImageSource FontFamily="FontSolid" Glyph="&#xf075;" />
                             </Image.Source>
-                        </Image>
+                        <Image.Behaviors>
+                            <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
+                        </Image.Behaviors>
+                    </Image>
                         <Label
                             Padding="12"
                             Grid.Column="2"
@@ -211,7 +221,10 @@
                             <Image.Source>
                                 <FontImageSource FontFamily="FontSolid" Glyph="&#xf0e0;" />
                             </Image.Source>
-                        </Image>
+                        <Image.Behaviors>
+                            <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
+                        </Image.Behaviors>
+                    </Image>
                         <Label
                             Padding="12"
                             Grid.Column="1"
@@ -235,7 +248,7 @@
                 <Border.Shadow>
                     <Shadow
                             Offset="5,5"
-                            Opacity="1"
+                            Opacity=".5"
                             Radius="30">
                         <Shadow.Brush>
                             <LinearGradientBrush
@@ -265,6 +278,7 @@
 
                     
                     <ImageButton
+                        x:Name="ProfileButton"
                         Clicked="OnProfileButtonClickedAsync"
                         Source="profile.svg"
                         Grid.Column="0"
@@ -298,6 +312,7 @@
                         HorizontalOptions="Center"
                         VerticalOptions="Center"/>
                     <ImageButton
+                        x:Name="ExpButton"
                         Clicked="OnExpButtonClickedAsync"
                         Source="expereince.svg"
                         Grid.Column="0"
@@ -320,6 +335,7 @@
                         HorizontalOptions="Center"
                         VerticalOptions="End"/>
                     <ImageButton
+                        x:Name="SkillsButton"
                         Clicked="OnSkillsButtonClickedAsync"
                         Source="skills.svg"
                         Grid.Column="0"
@@ -342,6 +358,7 @@
                         HorizontalOptions="Center"
                         VerticalOptions="End"/>
                     <ImageButton
+                        x:Name="EducationButton"
                         Clicked="OnEducationButtonClickedAsync"
                         Source="education.svg"
                         Grid.Column="1"
@@ -364,6 +381,7 @@
                         HorizontalOptions="Center"
                         VerticalOptions="End"/>
                     <ImageButton
+                        x:Name="OtherButton"
                         Clicked="OnOtherButtonClickedAsync"
                         Source="otherinfo.svg"
                         Grid.Column="1"
@@ -386,6 +404,7 @@
                         HorizontalOptions="Center"
                         VerticalOptions="End"/>
                     <ImageButton
+                        x:Name="CertButton"
                         Clicked="OnCertButtonClickedAsync"
                         Source="cert.svg"
                         Grid.Column="2"
@@ -408,6 +427,7 @@
                         HorizontalOptions="Center"
                         VerticalOptions="End"/>
                     <ImageButton
+                        x:Name="OptionsButton"
                         Clicked="OnOptionsButtonClickedAsync"
                         Source="settings.svg"
                         Grid.Column="2"
@@ -452,7 +472,7 @@
                 <Border.Shadow>
                     <Shadow
                             Offset="5,5"
-                            Opacity="1"
+                            Opacity=".5"
                             Radius="30">
 
                     </Shadow>
@@ -464,16 +484,18 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition />
                         <ColumnDefinition />
+                        <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     
                     <ImageButton
+                        x:Name="ExitButton"
                         Clicked="OnExitButtonClicked"
                         Source="exit.svg"
                         Grid.Column="0"
                         Grid.Row="0"
                         Padding="10"
-                        HeightRequest="80"
-                        WidthRequest="80"
+                        HeightRequest="70"
+                        WidthRequest="70"
                         SemanticProperties.Description="My mug"
                         VerticalOptions="Center"
                         HorizontalOptions="Start">
@@ -481,15 +503,31 @@
                             <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                         </ImageButton.Behaviors>
                     </ImageButton>
-                    
                     <ImageButton
+                        x:Name="WebButton"
+                        Clicked="OnWebButtonClickedAsync"
+                        Source="web.svg"
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        Padding="10"
+                        HeightRequest="70"
+                        WidthRequest="70"
+                        SemanticProperties.Description="My mug"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center">
+                        <ImageButton.Behaviors>
+                            <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
+                        </ImageButton.Behaviors>
+                    </ImageButton>
+                    <ImageButton
+                        x:Name="ShareButton"
                         Clicked="OnShareButtonClickedAsync"
                         Source="share.svg"
-                        Grid.Column="1"
+                        Grid.Column="2"
                         Padding="10"
                         Grid.Row="0"
-                        HeightRequest="80"
-                        WidthRequest="80"
+                        HeightRequest="70"
+                        WidthRequest="70"
                         SemanticProperties.Description="My mug"
                         VerticalOptions="Center"
                         HorizontalOptions="End">

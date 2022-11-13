@@ -73,11 +73,12 @@
 	  <None Remove="Resources\Images\settings.svg" />
 	  <None Remove="Resources\Images\share.svg" />
 	  <None Remove="Resources\Images\skills.svg" />
+	  <None Remove="Resources\Images\web.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <PackageReference Include="CommunityToolkit.Maui" Version="2.0.0" />
-	  <PackageReference Include="CommunityToolkit.Maui.Markup" Version="1.2.1" />
+	  <PackageReference Include="Plugin.Maui.Audio" Version="0.1.0-preview2" />
 	</ItemGroup>
 
 	<ItemGroup>

@@ -23,7 +23,7 @@
                 <Border.Shadow>
                     <Shadow
                             Offset="5,5"
-                            Opacity="1"
+                            Opacity=".5"
                             Radius="30">
 
                     </Shadow>
@@ -64,7 +64,7 @@
                 <Border.Shadow>
                     <Shadow
                             Offset="5,5"
-                            Opacity="1"
+                            Opacity=".5"
                             Radius="40">
                         <Shadow.Brush>
                             <LinearGradientBrush
@@ -103,7 +103,7 @@
                 <Border.Shadow>
                     <Shadow
                             Offset="5,5"
-                            Opacity="1"
+                            Opacity=".5"
                             Radius="30">
 
                     </Shadow>

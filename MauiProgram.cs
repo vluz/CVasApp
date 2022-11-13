@@ -1,5 +1,6 @@
 ﻿namespace CVasApp;
 using CommunityToolkit.Maui;
+using Plugin.Maui.Audio;
 
 public static class MauiProgram
 {
@@ -25,6 +26,9 @@ public static class MauiProgram
                 fonts.AddFont("CooperHewitt-Semibold.otf", "FontCHBold");
             });
 
-		return builder.Build();
+			builder.Services.AddSingleton(AudioManager.Current);
+			builder.Services.AddTransient<MainPage>();
+
+        return builder.Build();
 	}
 }
