@@ -57,7 +57,7 @@
                     Margin="20"
                     Padding="0,0"
                     HorizontalOptions="FillAndExpand"
-                    HeightRequest="200"
+                    
                     StrokeThickness="0"
                     Stroke="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}"
                     StrokeShape="RoundRectangle 20">
@@ -80,7 +80,33 @@
                         </Shadow.Brush>
                     </Shadow>
                 </Border.Shadow>
-
+                <Label
+                    Padding="10"
+                    FontSize="18"
+                    FontFamily="FontSimplifica"
+                    
+                    Text="1st to 11th Grade in Instituto Militar dos Pupilos do Exercito (Military Institution)&#10;
+EEC Level IV (Bach.) degree in Industrial electronics in ANFEI.&#10;
+Specialization in industrial automation in ANFEI.&#10;
+Level 3 technical German translation course in ANFEI.&#10;
+Configuration, maintenance and repair of electronics in SERRA.&#10;
+EMC Symmetrix installation, configuration, maintenance and repair course in IPM Spain.&#10;
+EMC Celerra installation and configuration course in IPM Spain.&#10;
+CNT Ultranet Storage Gateway Installation and configuration course in IPM Spain.&#10;
+Connectrix, Brocade and McData switches course in IPM Spain.&#10;
+Inrange Switches and directors course by Inrange in EMC Portuguesa.&#10;
+EMC Clariion installation, configuration, maintenance and repair course in IPM Spain.&#10;
+Several EMC courses in IPM Spain, EMC Portuguesa and EMC UK.&#10;
+HP-UX admin I and II courses by HP Portugal.&#10;
+Several Solaris Courses by Sun Portugal and WhatEverNet.&#10;
+Solaris and Fujitsu-Siemens UNIX Hardware course by Fujitsu-Siemens.&#10;
+Several HP Hardware and pre-sales courses.&#10;
+Several VMware updates, technical seminars and ‘hands on’ labs by VMware.&#10;
+NetApp hardware update by NetApp.&#10;
+HDS USPV hardware update by HDS.&#10;
+IBM DS8000 family and XIV family update by IBM.&#10;
+Administration of webMethods 7 by Software AG. "
+                />
             </Border>
             <Image
                     Source="connectlines.svg"

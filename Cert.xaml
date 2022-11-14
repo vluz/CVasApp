@@ -58,7 +58,7 @@
                     Margin="20"
                     Padding="0,0"
                     HorizontalOptions="FillAndExpand"
-                    HeightRequest="200"
+
                     StrokeThickness="0"
                     Stroke="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}"
                     StrokeShape="RoundRectangle 20">
@@ -81,7 +81,29 @@
                         </Shadow.Brush>
                     </Shadow>
                 </Border.Shadow>
-                
+                <Label
+                    Padding="10"
+                    FontSize="18"
+                    FontFamily="FontSimplifica"
+                    
+                    Text="ITIL Certification (Candidate nr. ITIL/NL010155 @ APMG)&#10;
+Microsoft Certified Systems Engineer: Security (MCSE +S)&#10;
+Microsoft Certified Systems Engineer: Messaging (MCSE +M)&#10;
+Microsoft Certified Systems Engineer (MCSE)&#10;
+Microsoft Certified Systems Administrator: Security (MCSA +S)&#10;
+Microsoft Certified Systems Administrator: Messaging (MCSA +M)&#10;
+Microsoft Certified Systems Administrator (MCSA)&#10;
+Microsoft Certified Professional (MCP)&#10;
+Comptia Linux+&#10;
+Comptia Security+&#10;
+Comptia Network+&#10;
+Comptia Server+&#10;
+Comptia A+&#10;
+Solaris&#10;
+Fujitsu-Siemens UNIX Hardware&#10;
+VERITAS volume manager and filesystem&#10;
+Legato Networker (older versions)"
+                />
             </Border>
             <Image
                     Source="connectlines.svg"

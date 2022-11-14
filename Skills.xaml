@@ -57,7 +57,6 @@
                     Margin="20"
                     Padding="0,0"
                     HorizontalOptions="FillAndExpand"
-                    HeightRequest="200"
                     StrokeThickness="0"
                     Stroke="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}"
                     StrokeShape="RoundRectangle 20">
@@ -80,7 +79,42 @@
                         </Shadow.Brush>
                     </Shadow>
                 </Border.Shadow>
-
+                <Label
+                    Padding="10"
+                    FontSize="19"
+                    FontFamily="FontSimplifica"
+                    
+                    Text="Languages:&#10;
+English spoken and written, fluent.&#10;
+French spoken and written.&#10;
+Some German spoken and written.&#10;&#10;
+General IT:&#10;
+Large experience in all EMC, HDS, IBM and NetApp Hardware and Software solutions.&#10;
+Large experience in Brocade/McData and Cisco MDS fabric switches and routers.&#10;
+Certified and experienced in all Microsoft Operating systems including embebed systems.&#10;
+Experience in all SUN and HP Hardware and Software including Solaris and HP-UX.&#10;
+Experience in Apple Xsan up to and including version 2.1.1&#10;
+Experience with Quatum StorNextFX2 high-performance distributed filesystem.&#10;
+Experience in VMware ESX/ESXi, VMware View including composer, Recovery Manager.&#10;
+Experience in Solaris virtualisation (containers and zones)&#10;
+Knowledge of virtualisation in AIX and Microsoft Virtual solutions&#10;
+Certified and experienced in all Fujitsu-Siemens Hardware and Software.&#10;
+Knowledge of IBM OS2, OS400, IBM and UNISYS Mainframes from the storage point of view.&#10;
+Large experience in Backup hardware from several vendors.&#10;
+Large experience in several UNIX (AIX, Solaris/Open Solaris, HP-UX, Linux, BSD, OS X)&#10;
+Experience in web-related servers and services installation and configuration.&#10;
+Programming knowledge include: C, C++, ObjectiveC, .net, xTML/xASP/PHP, Perl, Python, and Java.&#10;
+Large experience in applications ranging from Compositing (After Effects, Nuke), 3D Design (Cinema 4D, ShiVa, 3D Coat, UDK/UE3, CryENGINE3, etc), to 2D (Photoshop, Illustrator, etc), to page composition (PageMaker, Quark family) and to Office applications (MS Office including project, Open Office and IWork).&#10;
+Some experience in Assembler.&#10;
+Good knowledge of Apple hardware and software including OS X Server and Xserve.&#10;
+Good, sound, knowledge of cryptography.&#10;
+Good knowledge and experience in computer security.&#10;
+Some knowledge of reverse engineering.&#10;
+Some knowledge of TEMPEST (Transient ElectroMagnetic Pulse Emanation Standard) and AMSG 720B&#10;
+and subsequent (Tempest for NATO).&#10;
+Experience of local and wide area networks.&#10;
+Programming of PLC, KUKA and AEG Robots Programming. "
+                    />
             </Border>
             <Image
                     Source="connectlines.svg"

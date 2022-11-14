@@ -80,7 +80,15 @@
                         </Shadow.Brush>
                     </Shadow>
                 </Border.Shadow>
-
+                <Label
+                    Padding="10"
+                    FontSize="22"
+                    FontFamily="FontSimplifica"
+                    
+                    Text="Security Cleared in Portugal, UK and European Agencies.&#10;
+Experienced in coaching and training.&#10;
+Available for travel."
+                    />
             </Border>
             <Image
                     Source="connectlines.svg"
