@@ -11,4 +11,9 @@ public partial class Options : ContentPage
     {
         await Shell.Current.GoToAsync("..");
     }
+
+    private async void OnAboutButtonClickedAsync(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("About");
+    }
 }

@@ -121,7 +121,7 @@
                             </Shadow>
                         </Border.Shadow>
                         <ImageButton
-                            Clicked="OnProfileButtonClickedAsync"
+                            Clicked="OnProfilePicClickedAsync"
                             Source="profilepic.png"
                             SemanticProperties.Description="My mug"
                             HeightRequest="200"

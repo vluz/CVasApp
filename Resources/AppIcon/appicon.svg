@@ -37,8 +37,8 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
      inkscape:zoom="0.32195844"
-     inkscape:cx="619.6452"
-     inkscape:cy="211.20739"
+     inkscape:cx="619.64519"
+     inkscape:cy="214.31338"
      inkscape:window-width="1920"
      inkscape:window-height="1057"
      inkscape:window-x="-8"
@@ -46,19 +46,20 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="svg4" />
   <rect
-     x="0"
+     x="-456"
      y="0"
      width="456"
      height="456"
      fill="#512BD4"
      id="rect2-5"
-     style="fill:#20579b;fill-opacity:1" />
+     style="fill:#20579b;fill-opacity:1"
+     transform="scale(-1,1)" />
   <path
      id="rect2"
      style="fill:#2b74ce;fill-opacity:1"
-     d="M 125.98833,0 A 304.17331,278.1756 0 0 0 124.58599,17.91992 304.17331,278.1756 0 0 0 428.7598,296.0957 304.17331,278.1756 0 0 0 456,294.31445 V 0 Z" />
+     d="M 330.01167,0 A 304.17331,278.1756 0 0 1 331.41401,17.91992 304.17331,278.1756 0 0 1 27.2402,296.0957 304.17331,278.1756 0 0 1 0,294.31445 V 0 Z" />
   <path
      id="rect2-2"
      style="fill:#528fdc;fill-opacity:1"
-     d="M 231.7266,0 A 179.90422,179.90422 0 0 0 409.9454,156.35156 179.90422,179.90422 0 0 0 456,150.07228 V 0 Z" />
+     d="M 224.2734,0 A 179.90422,179.90422 0 0 1 46.0546,156.35156 179.90422,179.90422 0 0 1 0,150.07228 V 0 Z" />
 </svg>

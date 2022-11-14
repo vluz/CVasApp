@@ -52,36 +52,83 @@
                     <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                 </Image.Behaviors>
             </Image>
-            <Border
-                    BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
-                    Margin="20"
-                    Padding="0,0"
-                    HorizontalOptions="FillAndExpand"
-                    HeightRequest="200"
-                    StrokeThickness="0"
-                    Stroke="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}"
-                    StrokeShape="RoundRectangle 20">
-                <Border.Shadow>
-                    <Shadow
-                            Offset="5,5"
-                            Opacity=".5"
-                            Radius="40">
-                        <Shadow.Brush>
-                            <LinearGradientBrush
-                                StartPoint="0,.3"
-                                EndPoint=".25,1">
-                                <GradientStop Color="White"
-                                    Offset="0.1" />
-                                <GradientStop Color="Black"
-                                    Offset="0.6" />
-                                <GradientStop Color="Black"
-                                    Offset="1" />
-                            </LinearGradientBrush>
-                        </Shadow.Brush>
-                    </Shadow>
-                </Border.Shadow>
+            
+            <CarouselView
+                IndicatorView="ExpIndicator"
+                Margin="0"
+                WidthRequest="400"
+                HeightRequest="350"
+                PeekAreaInsets="30">
+                <CarouselView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>One</x:String>
+                        <x:String>Two</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                        <x:String>6</x:String>
+                        <x:String>Last</x:String>
+                    </x:Array>
+                </CarouselView.ItemsSource>
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        
+                        <Border
+                            BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
+                            Margin="0"
+                            Padding="0,0"
+                            HeightRequest="300"
+                            WidthRequest="340"
+                            StrokeThickness="1"
+                            Stroke="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}"
+                            StrokeShape="RoundRectangle 20">
+                            
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="CurrentItem">
+                                        <VisualState.Setters>
+                                            <Setter Property="Scale"
+                                        Value=".99" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                    <VisualState x:Name="PreviousItem">
+                                        <VisualState.Setters>
+                                            <Setter Property="Scale"
+                                        Value=".9" />
+                                            <Setter Property="Opacity"
+                                        Value="0.5" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                    <VisualState x:Name="NextItem">
+                                        <VisualState.Setters>
+                                            <Setter Property="Scale"
+                                        Value=".9" />
+                                            <Setter Property="Opacity"
+                                        Value="0.5" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                    <VisualState x:Name="DefaultItem">
+                                        <VisualState.Setters>
+                                            <Setter Property="Opacity"
+                                        Value="0.25" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Label Text="{Binding .}" 
+                                   Padding="10"/>
+                        </Border>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+            <IndicatorView
+                Margin="20"
+                x:Name="ExpIndicator"
+                HorizontalOptions="Center"
+                IndicatorColor="{StaticResource Gray500}"
+                SelectedIndicatorColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}"
+                />
 
-            </Border>
             <Image
                     Source="connectlines.svg"
                     SemanticProperties.Description="My mug"
@@ -93,6 +140,7 @@
                     <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                 </Image.Behaviors>
             </Image>
+            
             <Border
                 BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
                 Margin="0"
@@ -135,6 +183,7 @@
 
                 </Grid>
             </Border>
+            
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
