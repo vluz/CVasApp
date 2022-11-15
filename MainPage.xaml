@@ -138,20 +138,21 @@
                             FontSize="30"
                             HorizontalOptions="Start"
                             VerticalOptions="End"/>
-                        <Image 
+                        <ImageButton 
+                            Clicked="OnPhonePopupClicked"
                             Grid.Column="1"
                             Grid.Row="1"
                             WidthRequest="20"
                             HeightRequest="20"
                             HorizontalOptions="Start"
                             VerticalOptions="Center">
-                            <Image.Source>
+                            <ImageButton.Source>
                                 <FontImageSource FontFamily="FontSolid" Glyph="&#xf095;" />
-                            </Image.Source>
-                            <Image.Behaviors>
+                            </ImageButton.Source>
+                            <ImageButton.Behaviors>
                                 <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
-                            </Image.Behaviors>
-                    </Image>
+                            </ImageButton.Behaviors>
+                    </ImageButton>
                         <Label 
                             Padding="12"
                             Grid.Column="1"
@@ -162,20 +163,21 @@
                             FontSize="12"
                             HorizontalOptions="Start"
                             VerticalOptions="Center"/>
-                            <Image 
+                            <ImageButton 
+                                Clicked="OnTelegramPopupClicked"
                                 Grid.Column="2"
                                 Grid.Row="1"
                                 WidthRequest="20"
                                 HeightRequest="20"
                                 HorizontalOptions="Start"
                                 VerticalOptions="Center">
-                                <Image.Source>
+                                <ImageButton.Source>
                                     <FontImageSource FontFamily="FontBrands" Glyph="&#xf2c6;" />
-                                </Image.Source>
-                            <Image.Behaviors>
+                                </ImageButton.Source>
+                            <ImageButton.Behaviors>
                                 <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
-                            </Image.Behaviors>
-                    </Image>
+                            </ImageButton.Behaviors>
+                    </ImageButton>
                         <Label
                             Padding="12"
                             Grid.Column="2"
@@ -186,20 +188,21 @@
                             FontSize="12"
                             HorizontalOptions="Start"
                             VerticalOptions="Center"/>
-                        <Image 
+                        <ImageButton 
+                            Clicked="OnSignalPopupClicked"
                             Grid.Column="2"
                             Grid.Row="2"
                             WidthRequest="20"
                             HeightRequest="20"
                             HorizontalOptions="Start"
                             VerticalOptions="Center">
-                            <Image.Source>
+                            <ImageButton.Source>
                                 <FontImageSource FontFamily="FontSolid" Glyph="&#xf075;" />
-                            </Image.Source>
-                        <Image.Behaviors>
+                            </ImageButton.Source>
+                        <ImageButton.Behaviors>
                             <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
-                        </Image.Behaviors>
-                    </Image>
+                        </ImageButton.Behaviors>
+                    </ImageButton>
                         <Label
                             Padding="12"
                             Grid.Column="2"
@@ -210,20 +213,21 @@
                             FontSize="12"
                             HorizontalOptions="Start"
                             VerticalOptions="Center"/>
-                        <Image 
+                        <ImageButton 
+                            Clicked="OnMailPopupClicked"
                             Grid.Column="1"
                             Grid.Row="2"
                             WidthRequest="20"
                             HeightRequest="20"
                             HorizontalOptions="Start"
                             VerticalOptions="Center">
-                            <Image.Source>
+                            <ImageButton.Source>
                                 <FontImageSource FontFamily="FontSolid" Glyph="&#xf0e0;" />
-                            </Image.Source>
-                        <Image.Behaviors>
+                            </ImageButton.Source>
+                        <ImageButton.Behaviors>
                             <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
-                        </Image.Behaviors>
-                    </Image>
+                        </ImageButton.Behaviors>
+                    </ImageButton>
                         <Label
                             Padding="12"
                             Grid.Column="1"
@@ -281,6 +285,8 @@
                         x:Name="ProfileButton"
                         Clicked="OnProfileButtonClickedAsync"
                         Source="profile.svg"
+                        WidthRequest="50"
+                        HeightRequest="50"
                         Grid.Column="0"
                         Grid.Row="1"
                         SemanticProperties.Description="My mug"
@@ -328,6 +334,8 @@
                         x:Name="ExpButton"
                         Clicked="OnExpButtonClickedAsync"
                         Source="expereince.svg"
+                        WidthRequest="50"
+                        HeightRequest="50"
                         Grid.Column="1"
                         Grid.Row="1"
                         SemanticProperties.Description="My mug"
@@ -351,6 +359,8 @@
                         x:Name="SkillsButton"
                         Clicked="OnSkillsButtonClickedAsync"
                         Source="skills.svg"
+                        WidthRequest="50"
+                        HeightRequest="50"
                         Grid.Column="1"
                         Grid.Row="2"
                         SemanticProperties.Description="My mug"
@@ -374,6 +384,8 @@
                         x:Name="EducationButton"
                         Clicked="OnEducationButtonClickedAsync"
                         Source="education.svg"
+                        WidthRequest="50"
+                        HeightRequest="50"
                         Grid.Column="2"
                         Grid.Row="1"
                         SemanticProperties.Description="My mug"
@@ -397,6 +409,8 @@
                         x:Name="OtherButton"
                         Clicked="OnOtherButtonClickedAsync"
                         Source="otherinfo.svg"
+                        WidthRequest="50"
+                        HeightRequest="50"
                         Grid.Column="2"
                         Grid.Row="2"
                         SemanticProperties.Description="My mug"
@@ -420,6 +434,8 @@
                         x:Name="CertButton"
                         Clicked="OnCertButtonClickedAsync"
                         Source="cert.svg"
+                        WidthRequest="50"
+                        HeightRequest="50"
                         Grid.Column="0"
                         Grid.Row="2"
                         SemanticProperties.Description="My mug"

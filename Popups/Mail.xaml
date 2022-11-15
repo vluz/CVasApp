@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+               Size="300, 300"
+               x:Class="CVasApp.Popups.Mail">
+
+    <VerticalStackLayout BackgroundColor="{StaticResource MainPanelColorLight}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="1.2*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Border
+                    Grid.Column="0"
+                        Grid.Row="0"
+                    BackgroundColor="{StaticResource MainPanelColorLight}"
+                    Margin="20"
+                    Padding="5,5"
+                    HorizontalOptions="FillAndExpand"
+                    HeightRequest="200"
+                    StrokeThickness="2"
+                    Stroke="{StaticResource MainSVGTintLight}"
+                    StrokeShape="RoundRectangle 20">
+
+                <VerticalStackLayout>
+
+                    <Label 
+            Padding="30"
+            Text="Mail vluz@me.com?"
+            TextColor="{StaticResource MainSVGTintLight}"
+            FontSize="20"
+            HorizontalOptions="Center" />
+                    <ImageButton 
+                            Clicked="MailClicked"
+                            WidthRequest="40"
+                            HeightRequest="40"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center">
+                        <ImageButton.Source>
+                            <FontImageSource FontFamily="FontSolid" Glyph="&#xf0e0;" />
+                        </ImageButton.Source>
+                        <ImageButton.Behaviors>
+                            <toolkit:IconTintColorBehavior TintColor="{StaticResource MainSVGTintLight}" />
+                        </ImageButton.Behaviors>
+                    </ImageButton>
+                </VerticalStackLayout>
+            </Border>
+
+            <ImageButton
+                        Clicked="PopupMailCliked"
+                Grid.Column="0"
+                        Grid.Row="1"
+                        Source="back.svg"
+                        Padding="10"
+                        HeightRequest="80"
+                        WidthRequest="80"
+                        SemanticProperties.Description="My mug"
+                        VerticalOptions="End"
+                        HorizontalOptions="Start">
+            <ImageButton.Behaviors>
+                <toolkit:IconTintColorBehavior TintColor="{StaticResource MainSVGTintLight}" />
+            </ImageButton.Behaviors>
+        </ImageButton>
+            </Grid>
+    </VerticalStackLayout>
+</toolkit:Popup>

@@ -52,70 +52,66 @@
                     <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                 </Image.Behaviors>
             </Image>
-            <Border
-                    BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
-                    Margin="20"
-                    Padding="0,0"
-                    HorizontalOptions="FillAndExpand"
-                    StrokeThickness="0"
-                    Stroke="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}"
-                    StrokeShape="RoundRectangle 20">
-                <Border.Shadow>
-                    <Shadow
-                            Offset="5,5"
-                            Opacity=".5"
-                            Radius="40">
-                        <Shadow.Brush>
-                            <LinearGradientBrush
-                                StartPoint="0,.3"
-                                EndPoint=".25,1">
-                                <GradientStop Color="White"
-                                    Offset="0.1" />
-                                <GradientStop Color="Black"
-                                    Offset="0.6" />
-                                <GradientStop Color="Black"
-                                    Offset="1" />
-                            </LinearGradientBrush>
-                        </Shadow.Brush>
-                    </Shadow>
-                </Border.Shadow>
-                <Label
-                    Padding="10"
-                    FontSize="19"
-                    FontFamily="FontSimplifica"
-                    
-                    Text="Languages:&#10;
-English spoken and written, fluent.&#10;
-French spoken and written.&#10;
-Some German spoken and written.&#10;&#10;
-General IT:&#10;
-Large experience in all EMC, HDS, IBM and NetApp Hardware and Software solutions.&#10;
-Large experience in Brocade/McData and Cisco MDS fabric switches and routers.&#10;
-Certified and experienced in all Microsoft Operating systems including embebed systems.&#10;
-Experience in all SUN and HP Hardware and Software including Solaris and HP-UX.&#10;
-Experience in Apple Xsan up to and including version 2.1.1&#10;
-Experience with Quatum StorNextFX2 high-performance distributed filesystem.&#10;
-Experience in VMware ESX/ESXi, VMware View including composer, Recovery Manager.&#10;
-Experience in Solaris virtualisation (containers and zones)&#10;
-Knowledge of virtualisation in AIX and Microsoft Virtual solutions&#10;
-Certified and experienced in all Fujitsu-Siemens Hardware and Software.&#10;
-Knowledge of IBM OS2, OS400, IBM and UNISYS Mainframes from the storage point of view.&#10;
-Large experience in Backup hardware from several vendors.&#10;
-Large experience in several UNIX (AIX, Solaris/Open Solaris, HP-UX, Linux, BSD, OS X)&#10;
-Experience in web-related servers and services installation and configuration.&#10;
-Programming knowledge include: C, C++, ObjectiveC, .net, xTML/xASP/PHP, Perl, Python, and Java.&#10;
-Large experience in applications ranging from Compositing (After Effects, Nuke), 3D Design (Cinema 4D, ShiVa, 3D Coat, UDK/UE3, CryENGINE3, etc), to 2D (Photoshop, Illustrator, etc), to page composition (PageMaker, Quark family) and to Office applications (MS Office including project, Open Office and IWork).&#10;
-Some experience in Assembler.&#10;
-Good knowledge of Apple hardware and software including OS X Server and Xserve.&#10;
-Good, sound, knowledge of cryptography.&#10;
-Good knowledge and experience in computer security.&#10;
-Some knowledge of reverse engineering.&#10;
-Some knowledge of TEMPEST (Transient ElectroMagnetic Pulse Emanation Standard) and AMSG 720B&#10;
-and subsequent (Tempest for NATO).&#10;
-Experience of local and wide area networks.&#10;
-Programming of PLC, KUKA and AEG Robots Programming. "
-                    />
-            </Border>
+            <ListView
+                HasUnevenRows="True">
+                <ListView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>English spoken and written, fluent</x:String>
+                        <x:String>French spoken and written</x:String>
+                        <x:String>Some German spoken and written</x:String>
+                        <x:String>Large experience in all EMC, HDS, IBM and NetApp Hardware and Software solutions</x:String>
+                        <x:String>Large experience in Brocade/McData and Cisco MDS fabric switches and routers</x:String>
+                        <x:String>Certified and experienced in all Microsoft Operating systems including embebed systems</x:String>
+                        <x:String>Experience in all SUN and HP Hardware and Software including Solaris and HP-UX</x:String>
+                        <x:String>Experience in Apple Xsan up to and including version 2.1.1</x:String>
+                        <x:String>Experience with Quatum StorNextFX2 high-performance distributed filesystem</x:String>
+                        <x:String>Experience in VMware ESX/ESXi, VMware View including composer, Recovery Manager</x:String>
+                        <x:String>Experience in Solaris virtualisation (containers and zones)</x:String>
+                        <x:String>Knowledge of virtualisation in AIX and Microsoft Virtual solutions</x:String>
+                        <x:String>Certified and experienced in all Fujitsu-Siemens Hardware and Software</x:String>
+                        <x:String>Knowledge of IBM OS2, OS400, IBM and UNISYS Mainframes from the storage point of view</x:String>
+                        <x:String>Large experience in Backup hardware from several vendors</x:String>
+                        <x:String>Large experience in several UNIX (AIX, Solaris/Open Solaris, HP-UX, Linux, BSD, OS X)</x:String>
+                        <x:String>Experience in web-related servers and services installation and configuration</x:String>
+                        <x:String>Programming knowledge include: C, C++, ObjectiveC, .net, xTML/xASP/PHP, Perl, Python, and Java</x:String>
+                        <x:String>Large experience in applications ranging from Compositing, 2D/3D Design, to page composition and Office applications</x:String>
+                        <x:String>Some experience in Assembler</x:String>
+                        <x:String>Good knowledge of Apple hardware and software including OS X Server and Xserve</x:String>
+                        <x:String>Good, sound, knowledge of cryptography</x:String>
+                        <x:String>Good knowledge and experience in computer security</x:String>
+                        <x:String>Some knowledge of reverse engineering</x:String>
+                        <x:String>Some knowledge of TEMPEST (Transient ElectroMagnetic Pulse Emanation Standard) and AMSG 720B and subsequent</x:String>
+                        <x:String>Experience of local and wide area networks</x:String>
+                        <x:String>Programming of PLC, KUKA and AEG Robots</x:String>
+                    </x:Array>
+                </ListView.ItemsSource>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Frame
+                                    Margin="5"
+                                    HorizontalOptions="Start"
+                                    VerticalOptions="Start"
+                                    HeightRequest="80"
+                                    HasShadow="True"
+                                    CornerRadius="5"
+                                    BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
+                                    BorderColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}">
+                                    <Label
+                                        HorizontalOptions="Start"
+                                        VerticalOptions="Center"
+                                        Padding="0"
+                                        FontSize="20"
+                                        FontFamily="FontSimplifica"
+                                        Text="{Binding .}" />
+                                </Frame>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+ 
             <Image
                     Source="connectlines.svg"
                     SemanticProperties.Description="My mug"
