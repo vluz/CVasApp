@@ -82,30 +82,34 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="About.xaml">
+	  <MauiXaml Update="Pages\About.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Cert.xaml">
+	  <MauiXaml Update="Pages\Cert.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Education.xaml">
+	  <MauiXaml Update="Pages\Education.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Exp.xaml">
+	  <MauiXaml Update="Pages\Exp.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Options.xaml">
+	  <MauiXaml Update="Pages\Options.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Other.xaml">
+	  <MauiXaml Update="Pages\Other.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Profile.xaml">
+	  <MauiXaml Update="Pages\Profile.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Skills.xaml">
+	  <MauiXaml Update="Pages\Skills.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Popups\" />
 	</ItemGroup>
 
 	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadUnhandledDeviceExceptionCVasAppHideInfoBar="True" /></VisualStudio></ProjectExtensions>

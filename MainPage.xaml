@@ -27,7 +27,6 @@
                             Offset="5,5"
                             Opacity=".5"
                             Radius="30">
-                        
                     </Shadow>
                 </Border.Shadow>
             <Label
@@ -42,7 +41,6 @@
                     FontSize="20"
                     HorizontalOptions="Center"
                     VerticalOptions="Center"/>
-                
             </Border>
             <Image
                     Source="connectlines.svg"
@@ -59,7 +57,7 @@
                     Margin="20"
                     Padding="0,0"
                     HorizontalOptions="FillAndExpand"
-                    HeightRequest="200"
+                    HeightRequest="190"
                     StrokeThickness="0"
                     Stroke="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}"
                     StrokeShape="RoundRectangle 20">
@@ -87,19 +85,19 @@
                             <RowDefinition Height="*"/>
                             <RowDefinition Height=".5*"/>
                             <RowDefinition Height=".5*"/>
-                            <RowDefinition Height=".5*"/>
+                            <RowDefinition Height=".23*"/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="2*"/>
-                            <ColumnDefinition Width="1.2*"/>
+                            <ColumnDefinition Width="1.8*"/>
+                            <ColumnDefinition Width="1.4*"/>
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
                         <Border
                             Grid.Column="0"
                             Grid.Row="0"
                             Grid.RowSpan="4"
-                            WidthRequest="150"
-                            HeightRequest="150"
+                            WidthRequest="130"
+                            HeightRequest="130"
                             StrokeThickness="3"
                             Stroke="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}"
                             StrokeShape="RoundRectangle 100">
@@ -124,11 +122,12 @@
                             Clicked="OnProfilePicClickedAsync"
                             Source="profilepic.png"
                             SemanticProperties.Description="My mug"
-                            HeightRequest="200"
+                            HeightRequest="130"
                             HorizontalOptions="Center">
                         </ImageButton>
                         </Border>
                         <Label
+                            Padding="20"
                             Grid.Column="1"
                             Grid.Row="0"
                             Grid.ColumnSpan="2"
@@ -138,12 +137,12 @@
                             TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                             FontSize="30"
                             HorizontalOptions="Start"
-                            VerticalOptions="Center"/>
+                            VerticalOptions="End"/>
                         <Image 
                             Grid.Column="1"
                             Grid.Row="1"
-                            WidthRequest="10"
-                            HeightRequest="10"
+                            WidthRequest="20"
+                            HeightRequest="20"
                             HorizontalOptions="Start"
                             VerticalOptions="Center">
                             <Image.Source>
@@ -158,7 +157,7 @@
                             Grid.Column="1"
                             Grid.Row="1"    
                             FontFamily="FontCHLight"
-                            Text="932673261"
+                            Text="     932673261"
                             TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                             FontSize="12"
                             HorizontalOptions="Start"
@@ -166,8 +165,8 @@
                             <Image 
                                 Grid.Column="2"
                                 Grid.Row="1"
-                                WidthRequest="10"
-                                HeightRequest="10"
+                                WidthRequest="20"
+                                HeightRequest="20"
                                 HorizontalOptions="Start"
                                 VerticalOptions="Center">
                                 <Image.Source>
@@ -182,7 +181,7 @@
                             Grid.Column="2"
                             Grid.Row="1"
                             FontFamily="FontCHLight"
-                            Text="Telegram"
+                            Text="     Telegram"
                             TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                             FontSize="12"
                             HorizontalOptions="Start"
@@ -190,8 +189,8 @@
                         <Image 
                             Grid.Column="2"
                             Grid.Row="2"
-                            WidthRequest="10"
-                            HeightRequest="10"
+                            WidthRequest="20"
+                            HeightRequest="20"
                             HorizontalOptions="Start"
                             VerticalOptions="Center">
                             <Image.Source>
@@ -206,7 +205,7 @@
                             Grid.Column="2"
                             Grid.Row="2"
                             FontFamily="FontCHLight"
-                            Text="Signal"
+                            Text="     Signal"
                             TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                             FontSize="12"
                             HorizontalOptions="Start"
@@ -214,8 +213,8 @@
                         <Image 
                             Grid.Column="1"
                             Grid.Row="2"
-                            WidthRequest="10"
-                            HeightRequest="10"
+                            WidthRequest="20"
+                            HeightRequest="20"
                             HorizontalOptions="Start"
                             VerticalOptions="Center">
                             <Image.Source>
@@ -230,7 +229,7 @@
                             Grid.Column="1"
                             Grid.Row="2"
                             FontFamily="FontCHLight"
-                            Text="vluz@me.com"
+                            Text="     vluz@me.com"
                             TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                             FontSize="12"
                             HorizontalOptions="Start"
@@ -240,8 +239,9 @@
                 <Border
                     BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
                     Margin="20"
+                    Padding="5,5"
                     HorizontalOptions="FillAndExpand"
-                    HeightRequest="300"
+                    HeightRequest="290"
                     StrokeThickness="0"
                     Stroke="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}"
                     StrokeShape="RoundRectangle 20">
@@ -266,9 +266,9 @@
                 </Border.Shadow>
                 <Grid>
                         <Grid.RowDefinitions>
-                            <RowDefinition />
-                            <RowDefinition />
-                            <RowDefinition />
+                        <RowDefinition Height=".4*"/>
+                        <RowDefinition Height=".9*"/>
+                        <RowDefinition Height=".9*"/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
@@ -282,40 +282,6 @@
                         Clicked="OnProfileButtonClickedAsync"
                         Source="profile.svg"
                         Grid.Column="0"
-                        Grid.Row="0"
-                        SemanticProperties.Description="My mug"
-                        VerticalOptions="Center"
-                        HorizontalOptions="Center">
-                        <ImageButton.Behaviors>
-                            <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
-                        </ImageButton.Behaviors>
-                    </ImageButton>
-                    <Label
-                        Padding="12"
-                        Grid.Column="0"
-                        Grid.Row="0"
-                        FontFamily="FontCHLight"
-                        Text="Profile"
-                        TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
-                        FontSize="12"
-                        HorizontalOptions="Center"
-                        VerticalOptions="End"/>
-                    <Label
-                        Padding="12"
-                        Grid.Column="1"
-                        Grid.Row="0"
-                        Grid.ColumnSpan="2"
-                        FontFamily="FontCHLight"
-                        Text="Sections"
-                        TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
-                        FontSize="30"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center"/>
-                    <ImageButton
-                        x:Name="ExpButton"
-                        Clicked="OnExpButtonClickedAsync"
-                        Source="expereince.svg"
-                        Grid.Column="0"
                         Grid.Row="1"
                         SemanticProperties.Description="My mug"
                         VerticalOptions="Center"
@@ -327,6 +293,53 @@
                     <Label
                         Padding="12"
                         Grid.Column="0"
+                        Grid.Row="1"
+                        FontFamily="FontCHLight"
+                        Text="Profile"
+                        TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
+                        FontSize="12"
+                        HorizontalOptions="Center"
+                        VerticalOptions="End"/>
+                    <Label
+                        Padding="12"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Grid.ColumnSpan="3"
+                        FontFamily="FontCHLight"
+                        Text="CV Sections"
+                        TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
+                        FontSize="25"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+                   
+                    <Border
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Grid.ColumnSpan="3"
+                        HeightRequest="1"
+                        WidthRequest="230"
+                        BackgroundColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}"
+                        StrokeThickness="1"
+                        VerticalOptions="End"
+                        HorizontalOptions="Center">
+                        
+                    </Border>
+                    <ImageButton
+                        x:Name="ExpButton"
+                        Clicked="OnExpButtonClickedAsync"
+                        Source="expereince.svg"
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        SemanticProperties.Description="My mug"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center">
+                        <ImageButton.Behaviors>
+                            <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
+                        </ImageButton.Behaviors>
+                    </ImageButton>
+                    <Label
+                        Padding="12"
+                        Grid.Column="1"
                         Grid.Row="1"
                         FontFamily="FontCHLight"
                         Text="Experience"
@@ -338,7 +351,7 @@
                         x:Name="SkillsButton"
                         Clicked="OnSkillsButtonClickedAsync"
                         Source="skills.svg"
-                        Grid.Column="0"
+                        Grid.Column="1"
                         Grid.Row="2"
                         SemanticProperties.Description="My mug"
                         VerticalOptions="Center"
@@ -349,7 +362,7 @@
                     </ImageButton>
                     <Label
                         Padding="12"
-                        Grid.Column="0"
+                        Grid.Column="1"
                         Grid.Row="2"
                         FontFamily="FontCHLight"
                         Text="Skills"
@@ -361,7 +374,7 @@
                         x:Name="EducationButton"
                         Clicked="OnEducationButtonClickedAsync"
                         Source="education.svg"
-                        Grid.Column="1"
+                        Grid.Column="2"
                         Grid.Row="1"
                         SemanticProperties.Description="My mug"
                         VerticalOptions="Center"
@@ -372,7 +385,7 @@
                     </ImageButton>
                     <Label
                         Padding="12"
-                        Grid.Column="1"
+                        Grid.Column="2"
                         Grid.Row="1"
                         FontFamily="FontCHLight"
                         Text="Education"
@@ -384,7 +397,7 @@
                         x:Name="OtherButton"
                         Clicked="OnOtherButtonClickedAsync"
                         Source="otherinfo.svg"
-                        Grid.Column="1"
+                        Grid.Column="2"
                         Grid.Row="2"
                         SemanticProperties.Description="My mug"
                         VerticalOptions="Center"
@@ -395,7 +408,7 @@
                     </ImageButton>
                     <Label
                         Padding="12"
-                        Grid.Column="1"
+                        Grid.Column="2"
                         Grid.Row="2"
                         FontFamily="FontCHLight"
                         Text="Other Information"
@@ -407,8 +420,8 @@
                         x:Name="CertButton"
                         Clicked="OnCertButtonClickedAsync"
                         Source="cert.svg"
-                        Grid.Column="2"
-                        Grid.Row="1"
+                        Grid.Column="0"
+                        Grid.Row="2"
                         SemanticProperties.Description="My mug"
                         VerticalOptions="Center"
                         HorizontalOptions="Center">
@@ -418,37 +431,15 @@
                     </ImageButton>
                     <Label
                         Padding="12"
-                        Grid.Column="2"
-                        Grid.Row="1"
+                        Grid.Column="0"
+                        Grid.Row="2"
                         FontFamily="FontCHLight"
                         Text="Certifications"
                         TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                         FontSize="12"
                         HorizontalOptions="Center"
                         VerticalOptions="End"/>
-                    <ImageButton
-                        x:Name="OptionsButton"
-                        Clicked="OnOptionsButtonClickedAsync"
-                        Source="settings.svg"
-                        Grid.Column="2"
-                        Grid.Row="2"
-                        SemanticProperties.Description="My mug"
-                        VerticalOptions="Center"
-                        HorizontalOptions="Center">
-                        <ImageButton.Behaviors>
-                            <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
-                        </ImageButton.Behaviors>
-                    </ImageButton>
-                    <Label
-                        Padding="12"
-                        Grid.Column="2"
-                        Grid.Row="2"
-                        FontFamily="FontCHLight"
-                        Text="Options"
-                        TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
-                        FontSize="12"
-                        HorizontalOptions="Center"
-                        VerticalOptions="End"/>
+                                        
                     </Grid>
                 </Border>
             <Image
@@ -485,6 +476,7 @@
                         <ColumnDefinition />
                         <ColumnDefinition />
                         <ColumnDefinition />
+                        <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     
                     <ImageButton
@@ -504,10 +496,26 @@
                         </ImageButton.Behaviors>
                     </ImageButton>
                     <ImageButton
+                        x:Name="OptionsButton"
+                        Clicked="OnOptionsButtonClickedAsync"
+                        Source="settings.svg"
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        Padding="10"
+                        HeightRequest="70"
+                        WidthRequest="70"
+                        SemanticProperties.Description="My mug"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Start">
+                        <ImageButton.Behaviors>
+                            <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
+                        </ImageButton.Behaviors>
+                    </ImageButton>
+                    <ImageButton
                         x:Name="WebButton"
                         Clicked="OnWebButtonClickedAsync"
                         Source="web.svg"
-                        Grid.Column="1"
+                        Grid.Column="2"
                         Grid.Row="0"
                         Padding="10"
                         HeightRequest="70"
@@ -523,7 +531,7 @@
                         x:Name="ShareButton"
                         Clicked="OnShareButtonClickedAsync"
                         Source="share.svg"
-                        Grid.Column="2"
+                        Grid.Column="3"
                         Padding="10"
                         Grid.Row="0"
                         HeightRequest="70"
