@@ -38,8 +38,8 @@
             HorizontalOptions="Center" />
                     <ImageButton 
                             Clicked="TelegramClicked"
-                            WidthRequest="40"
-                            HeightRequest="40"
+                            WidthRequest="50"
+                            HeightRequest="50"
                             HorizontalOptions="Center"
                             VerticalOptions="Center">
                         <ImageButton.Source>
