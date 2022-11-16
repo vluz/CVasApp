@@ -5,6 +5,34 @@
              x:Class="CVasApp.Skills"
              Title="Skills"
              Shell.NavBarIsVisible="False">
+
+    <ContentPage.Resources>
+        <Style TargetType="Border">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="StrokeThickness" Value="1" />
+                                <Setter Property="HeightRequest" Value="90" />
+                                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}" />
+                            </VisualState.Setters>
+                        </VisualState>
+
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter Property="StrokeThickness" Value="3" />
+                                <Setter Property="HeightRequest" Value="130" />
+                                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
+
     <ScrollView 
         VerticalScrollBarVisibility="Never" 
         HorizontalScrollBarVisibility="Never" 
@@ -52,10 +80,9 @@
                     <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                 </Image.Behaviors>
             </Image>
-            <ListView
-                HasUnevenRows="True"
-                SelectionMode="None">
-                <ListView.ItemsSource>
+            <CollectionView
+                SelectionMode="Single">
+                <CollectionView.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>Portuguese spoken and written, native</x:String>
                         <x:String>English spoken and written, fluent</x:String>
@@ -76,43 +103,37 @@
                         <x:String>Large experience in several UNIX (AIX, Solaris/Open Solaris, HP-UX, Linux, BSD, OS X)</x:String>
                         <x:String>Experience in web-related servers and services installation and configuration</x:String>
                         <x:String>Programming knowledge include: C, C++, ObjectiveC, .net, xTML/xASP/PHP, Perl, Python, and Java</x:String>
-                        <x:String>Large experience in applications ranging from Compositing, 2D/3D Design, to page composition and Office applications</x:String>
+                        <x:String>Large experience in applications ranging from Compositing, 2D/3D Design, Composition and Office applications</x:String>
                         <x:String>Some experience in Assembler</x:String>
                         <x:String>Good knowledge of Apple hardware and software including OS X Server and Xserve</x:String>
                         <x:String>Good, sound, knowledge of cryptography</x:String>
                         <x:String>Good knowledge and experience in computer security</x:String>
                         <x:String>Some knowledge of reverse engineering</x:String>
-                        <x:String>Some knowledge of TEMPEST (Transient ElectroMagnetic Pulse Emanation Standard) and AMSG 720B and subsequent</x:String>
+                        <x:String>Some knowledge of TEMPEST and AMSG 720B and subsequent</x:String>
                         <x:String>Experience of local and wide area networks</x:String>
                         <x:String>Programming of PLC, KUKA and AEG Robots</x:String>
                     </x:Array>
-                </ListView.ItemsSource>
-                <ListView.ItemTemplate>
+                </CollectionView.ItemsSource>
+                <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <ViewCell>
-                            <StackLayout>
-                                <Frame
-                                    Margin="5"
-                                    HorizontalOptions="Start"
-                                    VerticalOptions="Start"
-                                    HeightRequest="80"
-                                    HasShadow="True"
-                                    CornerRadius="5"
-                                    BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
-                                    BorderColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}">
-                                    <Label
-                                        HorizontalOptions="Start"
-                                        VerticalOptions="Center"
-                                        Padding="0"
-                                        FontSize="20"
-                                        FontFamily="FontSimplifica"
-                                        Text="{Binding .}" />
-                                </Frame>
-                            </StackLayout>
-                        </ViewCell>
+                        <Border
+                            Margin="1"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="Start" 
+                            Stroke="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}"
+                            StrokeShape="RoundRectangle 10 10 10 10">
+                            <Label     
+                                Margin="0"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Center"
+                                Padding="10"
+                                FontFamily="FontCHLight"
+                                FontSize="19"
+                                Text="{Binding .}" />
+                        </Border>
                     </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
  
             <Image
                     Source="connectlines.svg"

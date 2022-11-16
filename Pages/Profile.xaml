@@ -82,8 +82,8 @@
                 </Border.Shadow>
                 <Label
                     Padding="10"
-                    FontSize="22"
-                    FontFamily="FontSimplifica"
+                    FontSize="20"
+                    FontFamily="FontCHLight"
                     
                     Text="I have over twenty years experience providing coding, systems, storage, backup and data protection services. &#10;&#10;
 I am well experienced on high-end and mid-range solutions with time proven skills, ranging from customer solution architecture and design to ‘hands on’ implementation and coding. At the operations level I am ITIL certified, familiar with operating systems, virtualization of hosts and storage, disaster recovery planning and operation, performance, capacity planning and have well tuned, strong troubleshooting skills. &#10;&#10;

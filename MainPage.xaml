@@ -517,9 +517,9 @@
                         </ImageButton.Behaviors>
                     </ImageButton>
                     <ImageButton
-                        x:Name="OptionsButton"
-                        Clicked="OnOptionsButtonClickedAsync"
-                        Source="settings.svg"
+                        x:Name="AboutButton"
+                        Clicked="OnAboutButtonClickedAsync"
+                        Source="about.svg"
                         Grid.Column="1"
                         Grid.Row="0"
                         Padding="10"

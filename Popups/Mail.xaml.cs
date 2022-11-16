@@ -1,5 +1,4 @@
 using CommunityToolkit.Maui.Views;
-using System.Diagnostics;
 
 namespace CVasApp.Popups;
 
@@ -24,7 +23,7 @@ public partial class Mail : Popup
                 Subject = "CV as App",
                 Body = "",
                 BodyFormat = EmailBodyFormat.PlainText,
-                To = new List<string>(new[] { "vluz@me.com"})
+                To = new List<string>(new[] { "vluz@me.com" })
             };
             await Email.Default.ComposeAsync(message);
         }

@@ -24,7 +24,7 @@
                     Padding="5,5"
                     HorizontalOptions="FillAndExpand"
                     HeightRequest="200"
-                    StrokeThickness="2"
+                    StrokeThickness="1"
                     Stroke="{StaticResource MainSVGTintLight}"
                     StrokeShape="RoundRectangle 20">
 
@@ -35,6 +35,7 @@
             Text="Dial 932673261?"
             TextColor="{StaticResource MainSVGTintLight}"
             FontSize="20"
+            FontFamily="FontCHLight"
             HorizontalOptions="Center" />
                     <ImageButton 
                             Clicked="DialClicked"

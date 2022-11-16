@@ -153,8 +153,8 @@ SERRA; Palmela, Portugal 1996-1998</x:String>
                                 </VisualStateGroup>
                             </VisualStateManager.VisualStateGroups>
                             <Label Text="{Binding .}" 
-                                   FontFamily="FontSimplifica"
-                                   FontSize="19"
+                                   FontFamily="FontCHLight"
+                                   FontSize="16"
                                    Padding="10"/>
                         </Border>
                     </DataTemplate>

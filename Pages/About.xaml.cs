@@ -2,10 +2,10 @@ namespace CVasApp;
 
 public partial class About : ContentPage
 {
-	public About()
-	{
-		InitializeComponent();
-	}
+    public About()
+    {
+        InitializeComponent();
+    }
 
     private async void OnBackButtonClickedAsync(object sender, EventArgs e)
     {

@@ -56,11 +56,9 @@
 	<ItemGroup>
 	  <None Remove="Resources\Fonts\CooperHewitt-Light.otf" />
 	  <None Remove="Resources\Fonts\CooperHewitt-Medium.otf" />
-	  <None Remove="Resources\Fonts\CooperHewitt-Semibold.otf" />
 	  <None Remove="Resources\Fonts\Font Awesome 6 Brands-Regular-400.otf" />
-	  <None Remove="Resources\Fonts\Font Awesome 6 Free-Regular-400.otf" />
 	  <None Remove="Resources\Fonts\Font Awesome 6 Free-Solid-900.otf" />
-	  <None Remove="Resources\Fonts\simplifica.ttf" />
+	  <None Remove="Resources\Images\about.svg" />
 	  <None Remove="Resources\Images\back.svg" />
 	  <None Remove="Resources\Images\cert.svg" />
 	  <None Remove="Resources\Images\connectlines.svg" />
@@ -70,7 +68,6 @@
 	  <None Remove="Resources\Images\otherinfo.svg" />
 	  <None Remove="Resources\Images\profile.svg" />
 	  <None Remove="Resources\Images\profilepic.png" />
-	  <None Remove="Resources\Images\settings.svg" />
 	  <None Remove="Resources\Images\share.svg" />
 	  <None Remove="Resources\Images\skills.svg" />
 	  <None Remove="Resources\Images\web.svg" />
@@ -92,9 +89,6 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\Exp.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Pages\Options.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\Other.xaml">

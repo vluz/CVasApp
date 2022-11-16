@@ -1,8 +1,6 @@
-﻿using Microsoft.Maui.ApplicationModel.DataTransfer;
-using System;
-using Plugin.Maui.Audio;
-using CommunityToolkit.Maui.Views;
+﻿using CommunityToolkit.Maui.Views;
 using CVasApp.Popups;
+using Plugin.Maui.Audio;
 
 namespace CVasApp;
 
@@ -81,18 +79,18 @@ public partial class MainPage : ContentPage
         EducationButton.IsEnabled = true;
     }
 
-    private async void OnOptionsButtonClickedAsync(object sender, EventArgs e)
+    private async void OnAboutButtonClickedAsync(object sender, EventArgs e)
     {
-        OptionsButton.IsEnabled = false;
+        AboutButton.IsEnabled = false;
         var audioplayer = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("click.wav"));
-        var scaleupani = OptionsButton.ScaleTo(OptionsButton.Scale = 1.25, 70, Easing.BounceIn);
+        var scaleupani = AboutButton.ScaleTo(AboutButton.Scale = 1.25, 70, Easing.BounceIn);
         await Task.WhenAll(scaleupani);
         audioplayer.Play();
-        var scaledownani = OptionsButton.ScaleTo(OptionsButton.Scale = 1, 70, Easing.BounceIn);
+        var scaledownani = AboutButton.ScaleTo(AboutButton.Scale = 1, 70, Easing.BounceIn);
         await Task.WhenAll(scaledownani);
-        await Shell.Current.GoToAsync("Options");
+        await Shell.Current.GoToAsync("About");
         audioplayer.Dispose();
-        OptionsButton.IsEnabled = true;
+        AboutButton.IsEnabled = true;
     }
     private async void OnOtherButtonClickedAsync(object sender, EventArgs e)
     {

@@ -13,7 +13,7 @@ public partial class Phone : Popup
         Close();
     }
 
-    
+
     private void DialClicked(object sender, EventArgs e)
     {
         if (PhoneDialer.Default.IsSupported)

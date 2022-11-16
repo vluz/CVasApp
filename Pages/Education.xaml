@@ -5,6 +5,34 @@
              x:Class="CVasApp.Education"
              Title="Education"
              Shell.NavBarIsVisible="False">
+    
+    <ContentPage.Resources>
+        <Style TargetType="Border">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="StrokeThickness" Value="1" />
+                                <Setter Property="HeightRequest" Value="90" />
+                                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}" />
+                            </VisualState.Setters>
+                        </VisualState>
+
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter Property="StrokeThickness" Value="3" />
+                                <Setter Property="HeightRequest" Value="130" />
+                                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
+    
     <ScrollView 
         VerticalScrollBarVisibility="Never" 
         HorizontalScrollBarVisibility="Never" 
@@ -15,6 +43,7 @@
             Padding="0,0"
             VerticalOptions="Start">
             <Border
+                HeightRequest="45"
                 BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
                 Margin="0"
                 Padding="0,-5"
@@ -52,10 +81,9 @@
                     <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                 </Image.Behaviors>
             </Image>
-            <ListView
-                HasUnevenRows="True"
-                SelectionMode="None">
-                <ListView.ItemsSource>
+            <CollectionView
+                SelectionMode="Single">
+                <CollectionView.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>1st to 11th Grade in Instituto Militar dos Pupilos do Exercito (Military Institution)</x:String>
                         <x:String>EEC Level IV (Bach.) degree in Industrial electronics in ANFEI</x:String>
@@ -79,33 +107,27 @@
                         <x:String>IBM DS8000 family and XIV family update by IBM</x:String>
                         <x:String>Administration of webMethods 7 by Software AG</x:String>
                     </x:Array>
-                </ListView.ItemsSource>
-                <ListView.ItemTemplate>
+                </CollectionView.ItemsSource>
+                <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <ViewCell>
-                            <StackLayout>
-                                <Frame
-                                    Margin="5"
-                                    HorizontalOptions="Start"
-                                    VerticalOptions="Start"
-                                    HeightRequest="80"
-                                    HasShadow="True"
-                                    CornerRadius="5"
-                                    BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
-                                    BorderColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}">
-                                    <Label
-                                        HorizontalOptions="Start"
-                                        VerticalOptions="Center"
-                                        Padding="0"
-                                        FontSize="20"
-                                        FontFamily="FontSimplifica"
-                                        Text="{Binding .}" />
-                                </Frame>
-                            </StackLayout>
-                        </ViewCell>
+                        <Border
+                            Margin="1"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="Start" 
+                            Stroke="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}"
+                            StrokeShape="RoundRectangle 10 10 10 10">
+                            <Label     
+                                Margin="0"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Center"
+                                Padding="10"
+                                FontFamily="FontCHLight"
+                                FontSize="19"
+                                Text="{Binding .}" />
+                        </Border>
                     </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
 
             <Image
                     Source="connectlines.svg"

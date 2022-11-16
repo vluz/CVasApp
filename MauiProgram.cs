@@ -10,25 +10,23 @@ public static class MauiProgram
 
 		builder.UseMauiApp<App>();
 
-        builder.UseMauiApp<App>().UseMauiCommunityToolkit();
+		builder.UseMauiApp<App>().UseMauiCommunityToolkit();
 
-        builder.ConfigureFonts(fonts =>
+		builder.ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+				//fonts.AddFont("", "Font");
 				fonts.AddFont("Font Awesome 6 Brands-Regular-400.otf", "FontBrands");
-				fonts.AddFont("Font Awesome 6 Free-Regular-400.otf", "FontRegular");
 				fonts.AddFont("Font Awesome 6 Free-Solid-900.otf", "FontSolid");
-				fonts.AddFont("simplifica.ttf", "FontSimplifica");
-                //fonts.AddFont("", "Font");
-                fonts.AddFont("CooperHewitt-Light.otf", "FontCHLight");
-                fonts.AddFont("CooperHewitt-Medium.otf", "FontCHMedium");
-                fonts.AddFont("CooperHewitt-Semibold.otf", "FontCHBold");
-            });
 
-			builder.Services.AddSingleton(AudioManager.Current);
-			builder.Services.AddTransient<MainPage>();
+				fonts.AddFont("CooperHewitt-Light.otf", "FontCHLight");
+				fonts.AddFont("CooperHewitt-Medium.otf", "FontCHMedium");
+			});
 
-        return builder.Build();
+		builder.Services.AddSingleton(AudioManager.Current);
+		builder.Services.AddTransient<MainPage>();
+
+		return builder.Build();
 	}
 }

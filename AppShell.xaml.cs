@@ -2,9 +2,9 @@
 
 public partial class AppShell : Shell
 {
-	public AppShell()
-	{
-		InitializeComponent();
+    public AppShell()
+    {
+        InitializeComponent();
 
         Routing.RegisterRoute("Profile", typeof(Profile));
         Routing.RegisterRoute("Exp", typeof(Exp));
@@ -12,7 +12,6 @@ public partial class AppShell : Shell
         Routing.RegisterRoute("Cert", typeof(Cert));
         Routing.RegisterRoute("Skills", typeof(Skills));
         Routing.RegisterRoute("Other", typeof(Other));
-        Routing.RegisterRoute("Options", typeof(Options));
         Routing.RegisterRoute("About", typeof(About));
     }
 }

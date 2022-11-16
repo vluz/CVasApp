@@ -1,5 +1,4 @@
 using CommunityToolkit.Maui.Views;
-using System.Diagnostics;
 
 namespace CVasApp.Popups;
 
