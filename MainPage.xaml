@@ -5,7 +5,6 @@
              x:Class="CVasApp.MainPage"
              Shell.NavBarIsVisible="False">
 
-    
 
     <ScrollView 
         VerticalScrollBarVisibility="Never" 
