@@ -53,7 +53,8 @@
                 </Image.Behaviors>
             </Image>
             <ListView
-                HasUnevenRows="True">
+                HasUnevenRows="True"
+                SelectionMode="None">
                 <ListView.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>1st to 11th Grade in Instituto Militar dos Pupilos do Exercito (Military Institution)</x:String>

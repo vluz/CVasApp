@@ -54,7 +54,8 @@
                 </Image.Behaviors>
             </Image>
             <ListView
-                HasUnevenRows="True">
+                HasUnevenRows="True"
+                SelectionMode="None">
                 <ListView.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>ITIL Certification (Candidate nr. ITIL/NL010155 @ APMG)</x:String>

@@ -53,9 +53,11 @@
                 </Image.Behaviors>
             </Image>
             <ListView
-                HasUnevenRows="True">
+                HasUnevenRows="True"
+                SelectionMode="None">
                 <ListView.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
+                        <x:String>Portuguese spoken and written, native</x:String>
                         <x:String>English spoken and written, fluent</x:String>
                         <x:String>French spoken and written</x:String>
                         <x:String>Some German spoken and written</x:String>

@@ -119,6 +119,7 @@
                             </Shadow>
                         </Border.Shadow>
                         <ImageButton
+                            x:Name="ProfilePic"
                             Clicked="OnProfilePicClickedAsync"
                             Source="profilepic.png"
                             SemanticProperties.Description="My mug"
@@ -139,6 +140,7 @@
                             HorizontalOptions="Start"
                             VerticalOptions="End"/>
                         <ImageButton 
+                            x:Name="PhonePopupButton"
                             Clicked="OnPhonePopupClicked"
                             Grid.Column="1"
                             Grid.Row="1"
@@ -164,6 +166,7 @@
                             HorizontalOptions="Start"
                             VerticalOptions="Center"/>
                             <ImageButton 
+                                x:Name="TelegramPopupButton"
                                 Clicked="OnTelegramPopupClicked"
                                 Grid.Column="2"
                                 Grid.Row="1"
@@ -189,6 +192,7 @@
                             HorizontalOptions="Start"
                             VerticalOptions="Center"/>
                         <ImageButton 
+                            x:Name="SignalPopupButton"
                             Clicked="OnSignalPopupClicked"
                             Grid.Column="2"
                             Grid.Row="2"
@@ -214,6 +218,7 @@
                             HorizontalOptions="Start"
                             VerticalOptions="Center"/>
                         <ImageButton 
+                            x:Name="MailPopupButton"
                             Clicked="OnMailPopupClicked"
                             Grid.Column="1"
                             Grid.Row="2"

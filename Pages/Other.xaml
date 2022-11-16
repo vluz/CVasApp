@@ -53,7 +53,8 @@
                 </Image.Behaviors>
             </Image>
             <ListView
-                HasUnevenRows="True">
+                HasUnevenRows="True"
+                SelectionMode="None">
                 <ListView.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>Security Cleared in Portugal, UK and European Agencies</x:String>
