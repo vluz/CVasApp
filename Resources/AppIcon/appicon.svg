@@ -5,61 +5,22 @@
    viewBox="0 0 456 456"
    version="1.1"
    id="svg4"
-   sodipodi:docname="appicon.svg"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
-  <defs
-     id="defs8">
-    <rect
-       x="49.328299"
-       y="71.368603"
-       width="191.01597"
-       height="350.54578"
-       id="rect1756" />
-    <rect
-       x="49.3283"
-       y="71.368607"
-       width="200.46181"
-       height="344.24855"
-       id="rect1756-8" />
-  </defs>
-  <sodipodi:namedview
-     id="namedview6"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     showgrid="false"
-     inkscape:zoom="0.32195844"
-     inkscape:cx="619.64519"
-     inkscape:cy="214.31338"
-     inkscape:window-width="1920"
-     inkscape:window-height="1057"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg4" />
-  <rect
-     x="-456"
-     y="0"
-     width="456"
-     height="456"
-     fill="#512BD4"
+  <path
+     id="rect2-5-4"
+     style="fill:#20579b;stroke-width:0.788193"
+     d="M 407.70809,48.291908 H 48.291908 V 407.70809 H 407.70809 Z" />
+  <path
      id="rect2-5"
-     style="fill:#20579b;fill-opacity:1"
-     transform="scale(-1,1)" />
+     style="fill:#3077d3;fill-opacity:1;stroke-width:0.974519"
+     d="M 48.291908,48.291908 V 304.19264 C 165.30404,157.4072 313.15092,178.22125 370.5154,48.291908 Z" />
   <path
-     id="rect2"
-     style="fill:#2b74ce;fill-opacity:1"
-     d="M 330.01167,0 A 304.17331,278.1756 0 0 1 331.41401,17.91992 304.17331,278.1756 0 0 1 27.2402,296.0957 304.17331,278.1756 0 0 1 0,294.31445 V 0 Z" />
+     id="rect2-5-6-4"
+     style="fill:#528fdb;fill-opacity:1;stroke-width:1.01258"
+     d="M 48.291908,48.291908 V 232.17211 C 126.94249,134.97527 225.97142,162.29983 313.68154,48.291908 Z" />
   <path
-     id="rect2-2"
-     style="fill:#528fdc;fill-opacity:1"
-     d="M 224.2734,0 A 179.90422,179.90422 0 0 1 46.0546,156.35156 179.90422,179.90422 0 0 1 0,150.07228 V 0 Z" />
+     id="rect2-5-6"
+     style="fill:#aec7e9;fill-opacity:1;stroke-width:1.3068"
+     d="M 48.291908,48.291908 V 143.94145 C 137.17566,109.48174 158.5927,134.61314 261.99437,48.291908 Z" />
 </svg>
