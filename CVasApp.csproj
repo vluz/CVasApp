@@ -35,33 +35,105 @@
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-android33.0|AnyCPU'">
-	  <AndroidLinkTool>r8</AndroidLinkTool>
 	  <AndroidStoreUncompressedFileExtensions>.wav;.svg;.png</AndroidStoreUncompressedFileExtensions>
+	  <ApplicationId>com.victorluz.cvasapp</ApplicationId>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-android33.0|AnyCPU'">
-	  <AndroidLinkTool>r8</AndroidLinkTool>
 	  <AndroidStoreUncompressedFileExtensions>.wav;.svg;.png</AndroidStoreUncompressedFileExtensions>
+	  <ApplicationId>com.victorluz.cvasapp</ApplicationId>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-android33.0|ARM64'">
-	  <AndroidLinkTool>r8</AndroidLinkTool>
 	  <AndroidStoreUncompressedFileExtensions>.wav;.svg;.png</AndroidStoreUncompressedFileExtensions>
+	  <ApplicationId>com.victorluz.cvasapp</ApplicationId>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-android33.0|ARM64'">
-	  <AndroidLinkTool>r8</AndroidLinkTool>
 	  <AndroidStoreUncompressedFileExtensions>.wav;.svg;.png</AndroidStoreUncompressedFileExtensions>
+	  <ApplicationId>com.victorluz.cvasapp</ApplicationId>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-android33.0|x64'">
-	  <AndroidLinkTool>r8</AndroidLinkTool>
 	  <AndroidStoreUncompressedFileExtensions>.wav;.svg;.png</AndroidStoreUncompressedFileExtensions>
+	  <ApplicationId>com.victorluz.cvasapp</ApplicationId>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-android33.0|x64'">
-	  <AndroidLinkTool>r8</AndroidLinkTool>
 	  <AndroidStoreUncompressedFileExtensions>.wav;.svg;.png</AndroidStoreUncompressedFileExtensions>
+	  <ApplicationId>com.victorluz.cvasapp</ApplicationId>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-maccatalyst|AnyCPU'">
+	  <ApplicationId>com.victorluz.cvasapp</ApplicationId>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-maccatalyst|AnyCPU'">
+	  <ApplicationId>com.victorluz.cvasapp</ApplicationId>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-maccatalyst|ARM64'">
+	  <ApplicationId>com.victorluz.cvasapp</ApplicationId>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-maccatalyst|ARM64'">
+	  <ApplicationId>com.victorluz.cvasapp</ApplicationId>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-maccatalyst|x64'">
+	  <ApplicationId>com.victorluz.cvasapp</ApplicationId>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-maccatalyst|x64'">
+	  <ApplicationId>com.victorluz.cvasapp</ApplicationId>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios15.4|AnyCPU'">
+	  <ApplicationId>com.victorluz.cvasapp</ApplicationId>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-ios15.4|AnyCPU'">
+	  <ApplicationId>com.victorluz.cvasapp</ApplicationId>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios15.4|ARM64'">
+	  <ApplicationId>com.victorluz.cvasapp</ApplicationId>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-ios15.4|ARM64'">
+	  <ApplicationId>com.victorluz.cvasapp</ApplicationId>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios15.4|x64'">
+	  <ApplicationId>com.victorluz.cvasapp</ApplicationId>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-ios15.4|x64'">
+	  <ApplicationId>com.victorluz.cvasapp</ApplicationId>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-windows10.0.19041.0|AnyCPU'">
+	  <ApplicationId>com.victorluz.cvasapp</ApplicationId>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-windows10.0.19041.0|AnyCPU'">
+	  <ApplicationId>com.victorluz.cvasapp</ApplicationId>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-windows10.0.19041.0|ARM64'">
+	  <ApplicationId>com.victorluz.cvasapp</ApplicationId>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-windows10.0.19041.0|ARM64'">
+	  <ApplicationId>com.victorluz.cvasapp</ApplicationId>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-windows10.0.19041.0|x64'">
+	  <ApplicationId>com.victorluz.cvasapp</ApplicationId>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-windows10.0.19041.0|x64'">
+	  <ApplicationId>com.victorluz.cvasapp</ApplicationId>
 	</PropertyGroup>
 
 	<ItemGroup>
