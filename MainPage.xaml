@@ -4,8 +4,12 @@
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="CVasApp.MainPage"
              Shell.NavBarIsVisible="False">
-
-
+    
+    <Page.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}" 
+                                   StatusBarStyle="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"/>
+    </Page.Behaviors>
+    
     <ScrollView 
         VerticalScrollBarVisibility="Never" 
         HorizontalScrollBarVisibility="Never" 
@@ -28,7 +32,7 @@
                             Radius="30">
                     </Shadow>
                 </Border.Shadow>
-            <Label
+                <Label
                     Grid.Column="1"
                     Grid.Row="0"
                     Grid.ColumnSpan="2"
@@ -61,7 +65,7 @@
                     Stroke="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}"
                     StrokeShape="RoundRectangle 20">
                 <Border.Shadow>
-                        <Shadow
+                    <Shadow
                             Offset="5,5"
                             Opacity=".5"
                             Radius="40">
@@ -80,18 +84,18 @@
                     </Shadow>
                 </Border.Shadow>
                 <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height=".5*"/>
-                            <RowDefinition Height=".5*"/>
-                            <RowDefinition Height=".23*"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1.8*"/>
-                            <ColumnDefinition Width="1.4*"/>
-                            <ColumnDefinition />
-                        </Grid.ColumnDefinitions>
-                        <Border
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height=".5*"/>
+                        <RowDefinition Height=".5*"/>
+                        <RowDefinition Height=".23*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1.8*"/>
+                        <ColumnDefinition Width="1.4*"/>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Border
                             Grid.Column="0"
                             Grid.Row="0"
                             Grid.RowSpan="4"
@@ -125,8 +129,8 @@
                             HeightRequest="130"
                             HorizontalOptions="Center">
                         </ImageButton>
-                        </Border>
-                        <Label
+                    </Border>
+                    <Label
                             Padding="20"
                             Grid.Column="1"
                             Grid.Row="0"
@@ -138,7 +142,7 @@
                             FontSize="30"
                             HorizontalOptions="Start"
                             VerticalOptions="End"/>
-                        <ImageButton 
+                    <ImageButton 
                             x:Name="PhonePopupButton"
                             Clicked="OnPhonePopupClicked"
                             Grid.Column="1"
@@ -147,14 +151,14 @@
                             HeightRequest="20"
                             HorizontalOptions="Start"
                             VerticalOptions="Center">
-                            <ImageButton.Source>
-                                <FontImageSource FontFamily="FontSolid" Glyph="&#xf095;" />
-                            </ImageButton.Source>
-                            <ImageButton.Behaviors>
-                                <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
-                            </ImageButton.Behaviors>
+                        <ImageButton.Source>
+                            <FontImageSource FontFamily="FontSolid" Glyph="&#xf095;" />
+                        </ImageButton.Source>
+                        <ImageButton.Behaviors>
+                            <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
+                        </ImageButton.Behaviors>
                     </ImageButton>
-                        <Label 
+                    <Label 
                             Padding="12"
                             Grid.Column="1"
                             Grid.Row="1"    
@@ -164,33 +168,33 @@
                             FontSize="12"
                             HorizontalOptions="Start"
                             VerticalOptions="Center"/>
-                            <ImageButton 
-                                x:Name="TelegramPopupButton"
-                                Clicked="OnTelegramPopupClicked"
+                    <ImageButton 
+                                x:Name="SlackPopupButton"
+                                Clicked="OnSlackPopupClicked"
                                 Grid.Column="2"
                                 Grid.Row="1"
                                 WidthRequest="20"
                                 HeightRequest="20"
                                 HorizontalOptions="Start"
                                 VerticalOptions="Center">
-                                <ImageButton.Source>
-                                    <FontImageSource FontFamily="FontBrands" Glyph="&#xf2c6;" />
-                                </ImageButton.Source>
-                            <ImageButton.Behaviors>
-                                <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
-                            </ImageButton.Behaviors>
+                        <ImageButton.Source>
+                            <FontImageSource FontFamily="FontBrands" Glyph="&#xf198;" />
+                        </ImageButton.Source>
+                        <ImageButton.Behaviors>
+                            <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
+                        </ImageButton.Behaviors>
                     </ImageButton>
-                        <Label
+                    <Label
                             Padding="12"
                             Grid.Column="2"
                             Grid.Row="1"
                             FontFamily="FontCHLight"
-                            Text="     Telegram"
+                            Text="     Slack"
                             TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                             FontSize="12"
                             HorizontalOptions="Start"
                             VerticalOptions="Center"/>
-                        <ImageButton 
+                    <ImageButton 
                             x:Name="SignalPopupButton"
                             Clicked="OnSignalPopupClicked"
                             Grid.Column="2"
@@ -199,14 +203,14 @@
                             HeightRequest="20"
                             HorizontalOptions="Start"
                             VerticalOptions="Center">
-                            <ImageButton.Source>
-                                <FontImageSource FontFamily="FontSolid" Glyph="&#xf075;" />
-                            </ImageButton.Source>
+                        <ImageButton.Source>
+                            <FontImageSource FontFamily="FontSolid" Glyph="&#xf075;" />
+                        </ImageButton.Source>
                         <ImageButton.Behaviors>
                             <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                         </ImageButton.Behaviors>
                     </ImageButton>
-                        <Label
+                    <Label
                             Padding="12"
                             Grid.Column="2"
                             Grid.Row="2"
@@ -216,7 +220,7 @@
                             FontSize="12"
                             HorizontalOptions="Start"
                             VerticalOptions="Center"/>
-                        <ImageButton 
+                    <ImageButton 
                             x:Name="MailPopupButton"
                             Clicked="OnMailPopupClicked"
                             Grid.Column="1"
@@ -225,14 +229,14 @@
                             HeightRequest="20"
                             HorizontalOptions="Start"
                             VerticalOptions="Center">
-                            <ImageButton.Source>
-                                <FontImageSource FontFamily="FontSolid" Glyph="&#xf0e0;" />
-                            </ImageButton.Source>
+                        <ImageButton.Source>
+                            <FontImageSource FontFamily="FontSolid" Glyph="&#xf0e0;" />
+                        </ImageButton.Source>
                         <ImageButton.Behaviors>
                             <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                         </ImageButton.Behaviors>
                     </ImageButton>
-                        <Label
+                    <Label
                             Padding="12"
                             Grid.Column="1"
                             Grid.Row="2"
@@ -242,9 +246,9 @@
                             FontSize="12"
                             HorizontalOptions="Start"
                             VerticalOptions="Center"/>
-                    </Grid>
-                </Border>
-                <Border
+                </Grid>
+            </Border>
+            <Border
                     BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
                     Margin="20"
                     Padding="5,5"
@@ -273,18 +277,18 @@
                     </Shadow>
                 </Border.Shadow>
                 <Grid>
-                        <Grid.RowDefinitions>
+                    <Grid.RowDefinitions>
                         <RowDefinition Height=".4*"/>
                         <RowDefinition Height=".9*"/>
                         <RowDefinition Height=".9*"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition />
-                            <ColumnDefinition />
-                            <ColumnDefinition />
-                        </Grid.ColumnDefinitions>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
 
-                    
+
                     <ImageButton
                         x:Name="ProfileButton"
                         Clicked="OnProfileButtonClickedAsync"
@@ -321,7 +325,7 @@
                         FontSize="25"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"/>
-                   
+
                     <Border
                         Grid.Column="0"
                         Grid.Row="0"
@@ -332,7 +336,7 @@
                         StrokeThickness="1"
                         VerticalOptions="End"
                         HorizontalOptions="Center">
-                        
+
                     </Border>
                     <ImageButton
                         x:Name="ExpButton"
@@ -459,9 +463,9 @@
                         FontSize="12"
                         HorizontalOptions="Center"
                         VerticalOptions="End"/>
-                                        
-                    </Grid>
-                </Border>
+
+                </Grid>
+            </Border>
             <Image
                     Source="connectlines.svg"
                     SemanticProperties.Description="My mug"
@@ -498,7 +502,7 @@
                         <ColumnDefinition />
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
-                    
+
                     <ImageButton
                         x:Name="ExitButton"
                         Clicked="OnExitButtonClicked"

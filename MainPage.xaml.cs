@@ -18,11 +18,10 @@ public partial class MainPage : ContentPage
     {
         ProfileButton.IsEnabled = false;
         var audioplayer = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("click.wav"));
-        var scaleupani = ProfileButton.ScaleTo(ProfileButton.Scale = 1.25, 70, Easing.BounceIn);
-        await Task.WhenAll(scaleupani);
+        await ProfileButton.ScaleTo(ProfileButton.Scale = 1.25, 70, Easing.BounceIn);
         audioplayer.Play();
-        var scaledownani = ProfileButton.ScaleTo(ProfileButton.Scale = 1, 70, Easing.BounceIn);
-        await Task.WhenAll(scaledownani);
+        await ProfileButton.ScaleTo(ProfileButton.Scale = 1, 20, Easing.BounceIn);
+        
         await Shell.Current.GoToAsync("Profile");
         audioplayer.Dispose();
         ProfileButton.IsEnabled = true;
@@ -31,7 +30,11 @@ public partial class MainPage : ContentPage
     {
         ProfilePic.IsEnabled = false;
         var audioplayer = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("click.wav"));
-        audioplayer.Play();
+        
+        await ProfilePic.ScaleXTo(0.005, 200, Easing.Linear);
+        audioplayer.Play();               
+        await ProfilePic.ScaleXTo(1, 50, Easing.Linear);
+               
         await Shell.Current.GoToAsync("Profile");
         audioplayer.Dispose();
         ProfilePic.IsEnabled = true;
@@ -41,11 +44,9 @@ public partial class MainPage : ContentPage
     {
         ExpButton.IsEnabled = false;
         var audioplayer = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("click.wav"));
-        var scaleupani = ExpButton.ScaleTo(ExpButton.Scale = 1.25, 70, Easing.BounceIn);
-        await Task.WhenAll(scaleupani);
+        await ExpButton.ScaleTo(ExpButton.Scale = 1.25, 70, Easing.BounceIn);
         audioplayer.Play();
-        var scaledownani = ExpButton.ScaleTo(ExpButton.Scale = 1, 70, Easing.BounceIn);
-        await Task.WhenAll(scaledownani);
+        await ExpButton.ScaleTo(ExpButton.Scale = 1, 20, Easing.BounceIn);
         await Shell.Current.GoToAsync("Exp");
         audioplayer.Dispose();
         ExpButton.IsEnabled = true;
@@ -55,11 +56,9 @@ public partial class MainPage : ContentPage
     {
         CertButton.IsEnabled = false;
         var audioplayer = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("click.wav"));
-        var scaleupani = CertButton.ScaleTo(CertButton.Scale = 1.25, 70, Easing.BounceIn);
-        await Task.WhenAll(scaleupani);
+        await CertButton.ScaleTo(CertButton.Scale = 1.25, 70, Easing.BounceIn);
         audioplayer.Play();
-        var scaledownani = CertButton.ScaleTo(CertButton.Scale = 1, 70, Easing.BounceIn);
-        await Task.WhenAll(scaledownani);
+        await CertButton.ScaleTo(CertButton.Scale = 1, 20, Easing.BounceIn);
         await Shell.Current.GoToAsync("Cert");
         audioplayer.Dispose();
         CertButton.IsEnabled = true;
@@ -69,11 +68,9 @@ public partial class MainPage : ContentPage
     {
         EducationButton.IsEnabled = false;
         var audioplayer = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("click.wav"));
-        var scaleupani = EducationButton.ScaleTo(EducationButton.Scale = 1.25, 70, Easing.BounceIn);
-        await Task.WhenAll(scaleupani);
+        await EducationButton.ScaleTo(EducationButton.Scale = 1.25, 70, Easing.BounceIn);
         audioplayer.Play();
-        var scaledownani = EducationButton.ScaleTo(EducationButton.Scale = 1, 70, Easing.BounceIn);
-        await Task.WhenAll(scaledownani);
+        await EducationButton.ScaleTo(EducationButton.Scale = 1, 20, Easing.BounceIn);
         await Shell.Current.GoToAsync("Education");
         audioplayer.Dispose();
         EducationButton.IsEnabled = true;
@@ -83,11 +80,9 @@ public partial class MainPage : ContentPage
     {
         AboutButton.IsEnabled = false;
         var audioplayer = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("click.wav"));
-        var scaleupani = AboutButton.ScaleTo(AboutButton.Scale = 1.25, 70, Easing.BounceIn);
-        await Task.WhenAll(scaleupani);
+        await AboutButton.ScaleTo(AboutButton.Scale = 1.25, 70, Easing.BounceIn);
         audioplayer.Play();
-        var scaledownani = AboutButton.ScaleTo(AboutButton.Scale = 1, 70, Easing.BounceIn);
-        await Task.WhenAll(scaledownani);
+        await AboutButton.ScaleTo(AboutButton.Scale = 1, 20, Easing.BounceIn);
         await Shell.Current.GoToAsync("About");
         audioplayer.Dispose();
         AboutButton.IsEnabled = true;
@@ -96,11 +91,9 @@ public partial class MainPage : ContentPage
     {
         OtherButton.IsEnabled = false;
         var audioplayer = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("click.wav"));
-        var scaleupani = OtherButton.ScaleTo(OtherButton.Scale = 1.25, 70, Easing.BounceIn);
-        await Task.WhenAll(scaleupani);
+        await OtherButton.ScaleTo(OtherButton.Scale = 1.25, 70, Easing.BounceIn);
         audioplayer.Play();
-        var scaledownani = OtherButton.ScaleTo(OtherButton.Scale = 1, 70, Easing.BounceIn);
-        await Task.WhenAll(scaledownani);
+        await OtherButton.ScaleTo(OtherButton.Scale = 1, 20, Easing.BounceIn);
         await Shell.Current.GoToAsync("Other");
         audioplayer.Dispose();
         OtherButton.IsEnabled = true;
@@ -109,11 +102,9 @@ public partial class MainPage : ContentPage
     {
         SkillsButton.IsEnabled = false;
         var audioplayer = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("click.wav"));
-        var scaleupani = SkillsButton.ScaleTo(SkillsButton.Scale = 1.25, 70, Easing.BounceIn);
-        await Task.WhenAll(scaleupani);
+        await SkillsButton.ScaleTo(SkillsButton.Scale = 1.25, 70, Easing.BounceIn);
         audioplayer.Play();
-        var scaledownani = SkillsButton.ScaleTo(SkillsButton.Scale = 1, 70, Easing.BounceIn);
-        await Task.WhenAll(scaledownani);
+        await SkillsButton.ScaleTo(SkillsButton.Scale = 1, 20, Easing.BounceIn);
         await Shell.Current.GoToAsync("Skills");
         audioplayer.Dispose();
         SkillsButton.IsEnabled = true;
@@ -121,11 +112,9 @@ public partial class MainPage : ContentPage
     private async void OnExitButtonClicked(object sender, EventArgs e)
     {
         var audioplayer = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("click.wav"));
-        var scaleupani = ExitButton.ScaleTo(ExitButton.Scale = 1.25, 70, Easing.BounceIn);
-        await Task.WhenAll(scaleupani);
+        await ExitButton.ScaleTo(ExitButton.Scale = 1.25, 70, Easing.BounceIn);
         audioplayer.Play();
-        var scaledownani = ExitButton.ScaleTo(ExitButton.Scale = 1, 70, Easing.BounceIn);
-        await Task.WhenAll(scaledownani);
+        await ExitButton.ScaleTo(ExitButton.Scale = 1, 20, Easing.BounceIn);
         audioplayer.Dispose();
         Application.Current.Quit();
     }
@@ -133,11 +122,9 @@ public partial class MainPage : ContentPage
     {
         ShareButton.IsEnabled = false;
         var audioplayer = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("click.wav"));
-        var scaleupani = ShareButton.ScaleTo(ShareButton.Scale = 1.25, 70, Easing.BounceIn);
-        await Task.WhenAll(scaleupani);
+        await ShareButton.ScaleTo(ShareButton.Scale = 1.25, 70, Easing.BounceIn);
         audioplayer.Play();
-        var scaledownani = ShareButton.ScaleTo(ShareButton.Scale = 1, 70, Easing.BounceIn);
-        await Task.WhenAll(scaledownani);
+        await ShareButton.ScaleTo(ShareButton.Scale = 1, 20, Easing.BounceIn);
         await Share.RequestAsync(new ShareTextRequest
         {
             Uri = "https://victest.rf.gd/",
@@ -150,11 +137,9 @@ public partial class MainPage : ContentPage
     {
         WebButton.IsEnabled = false;
         var audioplayer = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("click.wav"));
-        var scaleupani = WebButton.ScaleTo(WebButton.Scale = 1.25, 70, Easing.BounceIn);
-        await Task.WhenAll(scaleupani);
+        await WebButton.ScaleTo(WebButton.Scale = 1.25, 70, Easing.BounceIn);
         audioplayer.Play();
-        var scaledownani = WebButton.ScaleTo(WebButton.Scale = 1, 70, Easing.BounceIn);
-        await Task.WhenAll(scaledownani);
+        await WebButton.ScaleTo(WebButton.Scale = 1, 20, Easing.BounceIn);
         try
         {
             Uri uri = new Uri("https://victest.rf.gd/");
@@ -172,44 +157,52 @@ public partial class MainPage : ContentPage
     {
         SignalPopupButton.IsEnabled = false;
         var audioplayer = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("click.wav"));
+        await SignalPopupButton.ScaleTo(SignalPopupButton.Scale = 1.25, 70, Easing.BounceIn);
         audioplayer.Play();
+        await SignalPopupButton.ScaleTo(SignalPopupButton.Scale = 1, 20, Easing.BounceIn);
         var popup = new Signal();
 
         this.ShowPopup(popup);
         SignalPopupButton.IsEnabled = true;
-        //audioplayer.Dispose();
+        audioplayer.Dispose();
     }
     private async void OnMailPopupClicked(object sender, EventArgs e)
     {
         MailPopupButton.IsEnabled = false;
         var audioplayer = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("click.wav"));
+        await MailPopupButton.ScaleTo(MailPopupButton.Scale = 1.25, 70, Easing.BounceIn);
         audioplayer.Play();
+        await MailPopupButton.ScaleTo(MailPopupButton.Scale = 1, 20, Easing.BounceIn);
         var popup = new Mail();
 
         this.ShowPopup(popup);
-        //audioplayer.Dispose();
+        audioplayer.Dispose();
         MailPopupButton.IsEnabled = true;
     }
-    private async void OnTelegramPopupClicked(object sender, EventArgs e)
+    private async void OnSlackPopupClicked(object sender, EventArgs e)
     {
-        TelegramPopupButton.IsEnabled = false;
+        SlackPopupButton.IsEnabled = false;
         var audioplayer = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("click.wav"));
+        await SlackPopupButton.ScaleTo(SlackPopupButton.Scale = 1.25, 70, Easing.BounceIn);
         audioplayer.Play();
-        var popup = new Telegram();
+        await SlackPopupButton.ScaleTo(SlackPopupButton.Scale = 1, 20, Easing.BounceIn);
+        var popup = new Slack();
 
         this.ShowPopup(popup);
-        //audioplayer.Dispose();
-        TelegramPopupButton.IsEnabled = true;
+        audioplayer.Dispose();
+        SlackPopupButton.IsEnabled = true;
     }
     private async void OnPhonePopupClicked(object sender, EventArgs e)
     {
         PhonePopupButton.IsEnabled = false;
         var audioplayer = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("click.wav"));
+        await PhonePopupButton.ScaleTo(PhonePopupButton.Scale = 1.25, 70, Easing.BounceIn);
         audioplayer.Play();
+        await PhonePopupButton.ScaleTo(PhonePopupButton.Scale = 1, 20, Easing.BounceIn);
         var popup = new Phone();
 
         this.ShowPopup(popup);
-        //audioplayer.Dispose();
+        audioplayer.Dispose();
         PhonePopupButton.IsEnabled = true;
     }
 }

@@ -5,6 +5,10 @@
              x:Class="CVasApp.Exp"
              Title="Exp"
              Shell.NavBarIsVisible="False">
+    <Page.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}" 
+                                   StatusBarStyle="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"/>
+    </Page.Behaviors>
     <ScrollView 
         VerticalScrollBarVisibility="Never" 
         HorizontalScrollBarVisibility="Never" 
@@ -57,8 +61,10 @@
                 IndicatorView="ExpIndicator"
                 Margin="0"
                 WidthRequest="400"
-                HeightRequest="450"
+                HeightRequest="505"
                 PeekAreaInsets="30">
+               
+     
                 <CarouselView.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>SYSTEMS, ENGENEERING, CODING, REPAIR&#10;
@@ -93,7 +99,7 @@ Invited to start a new area of Storage, and Backup solutions, having as main res
 WhatEverNet; Lisbon, Portugal&#10;
 2001-2004&#10;
 Called to join a team for the start of a new EMC Business Partner with other selected members, having as main responsibilities EMC solution design, pre-sales support, solution implementation and ‘on call’ customer support. Customers include most ISPs, some telcos, some banks and financial services, central and local government including intelligence and scientific police, state and some manufacturing, heavy industry and MSEs. WhatEverNet is the top Sun partner and one of the top EMC partners in Portugal.</x:String>
-                        <x:String>OPEN SYSTEMS SUPPORT, - 1999-2001&#10;
+                        <x:String>OPEN SYSTEMS SUPPORT&#10;
 EMC Portuguesa; Lisbon, Portugal&#10;
 1999-2001&#10;
 Hired to help integrate customer Mainframe, UNIX and other open systems with EMC Symmetrix and later also CLARiiON storage solutions, EMC data protection and backup solutions integration on customer disaster recovery plan, 24x7 second line Portugal and Spain Customer OS, disaster recovery and application support, and eventual pre-sales support. Customers include ISPs, all telcos, several financial services, most banks, central and local government, state, some manufacturing and heavy industry. EMC Portuguesa is the top EMC partner in Portugal and was at the time I joined a part of EMC itself.</x:String>
@@ -113,8 +119,8 @@ SERRA; Palmela, Portugal 1996-1998</x:String>
                         <Border
                             BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
                             Margin="0"
-                            Padding="0,0"
-                            HeightRequest="410"
+                            Padding="5,10"
+                            HeightRequest="500"
                             WidthRequest="340"
                             StrokeThickness="1"
                             Stroke="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}"
@@ -124,37 +130,36 @@ SERRA; Palmela, Portugal 1996-1998</x:String>
                                 <VisualStateGroup x:Name="CommonStates">
                                     <VisualState x:Name="CurrentItem">
                                         <VisualState.Setters>
-                                            <Setter Property="Scale"
-                                        Value=".99" />
+                                            <Setter Property="StrokeThickness" Value="4" />
+                                            <Setter Property="Opacity" Value="1" />
+                                            <Setter Property="Scale" Value=".99" />
                                         </VisualState.Setters>
                                     </VisualState>
                                     <VisualState x:Name="PreviousItem">
                                         <VisualState.Setters>
-                                            <Setter Property="Scale"
-                                        Value=".9" />
-                                            <Setter Property="Opacity"
-                                        Value="0.5" />
+                                            <Setter Property="StrokeThickness" Value="1" />
+                                            <Setter Property="Scale" Value=".9" />
+                                            <Setter Property="Opacity" Value="0.5" />
                                         </VisualState.Setters>
                                     </VisualState>
                                     <VisualState x:Name="NextItem">
                                         <VisualState.Setters>
-                                            <Setter Property="Scale"
-                                        Value=".9" />
-                                            <Setter Property="Opacity"
-                                        Value="0.5" />
+                                            <Setter Property="StrokeThickness" Value="1" />
+                                            <Setter Property="Scale" Value=".9" />
+                                            <Setter Property="Opacity" Value="0.5" />
                                         </VisualState.Setters>
                                     </VisualState>
                                     <VisualState x:Name="DefaultItem">
                                         <VisualState.Setters>
-                                            <Setter Property="Opacity"
-                                        Value="0.25" />
+                                            <Setter Property="StrokeThickness" Value="1" />
+                                            <Setter Property="Opacity" Value="0.25" />
                                         </VisualState.Setters>
                                     </VisualState>
                                 </VisualStateGroup>
                             </VisualStateManager.VisualStateGroups>
                             <Label Text="{Binding .}" 
                                    FontFamily="FontCHLight"
-                                   FontSize="16"
+                                   FontSize="17"
                                    Padding="10"/>
                         </Border>
                     </DataTemplate>
@@ -205,6 +210,7 @@ SERRA; Palmela, Portugal 1996-1998</x:String>
                     </Grid.ColumnDefinitions>
 
                     <ImageButton
+                        x:Name="BackButton"
                         Clicked="OnBackButtonClickedAsync"
                         Source="back.svg"
                         Grid.Column="0"

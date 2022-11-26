@@ -1,25 +1,24 @@
 using CommunityToolkit.Maui.Views;
 namespace CVasApp.Popups;
 
-public partial class Signal : Popup
+public partial class Slack : Popup
 {
-    public Signal()
-    {
-        InitializeComponent();
-    }
-
-    private async void PopupSignalCliked(object sender, EventArgs e)
+	public Slack()
+	{
+		InitializeComponent();
+	}
+    private async void PopupSlackCliked(object sender, EventArgs e)
     {
         await BackButton.ScaleTo(0.8, 70, Easing.Linear);
         await BackButton.ScaleTo(1, 50, Easing.Linear);
         Close();
     }
 
-    private async void SignalClicked(object sender, EventArgs e)
+    private async void SlackClicked(object sender, EventArgs e)
     {
         try
         {
-            Uri uri = new Uri("https://signal.org/install");
+            Uri uri = new Uri("https://vic-zt72202.slack.com/");
             await Browser.Default.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
         }
         catch (Exception ex)
@@ -33,9 +32,9 @@ public partial class Signal : Popup
         while (true)
         {
             await Task.Delay(200);
-            await SignalActionButton.ScaleTo(0.8, 800, Easing.Linear);
+            await SlackActionButton.ScaleTo(0.8, 800, Easing.Linear);
             await Task.Delay(100);
-            await SignalActionButton.ScaleTo(1, 1000, Easing.Linear);
+            await SlackActionButton.ScaleTo(1, 1000, Easing.Linear);
             await Task.Delay(200);
         }
     }

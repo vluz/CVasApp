@@ -5,34 +5,11 @@
              x:Class="CVasApp.Other"
              Title="Other"
              Shell.NavBarIsVisible="False">
-
-    <ContentPage.Resources>
-        <Style TargetType="Border">
-            <Setter Property="VisualStateManager.VisualStateGroups">
-                <VisualStateGroupList>
-                    <VisualStateGroup x:Name="CommonStates">
-
-                        <VisualState x:Name="Normal">
-                            <VisualState.Setters>
-                                <Setter Property="StrokeThickness" Value="1" />
-                                <Setter Property="HeightRequest" Value="90" />
-                                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}" />
-                            </VisualState.Setters>
-                        </VisualState>
-
-                        <VisualState x:Name="Selected">
-                            <VisualState.Setters>
-                                <Setter Property="StrokeThickness" Value="3" />
-                                <Setter Property="HeightRequest" Value="130" />
-                                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}" />
-                            </VisualState.Setters>
-                        </VisualState>
-                    </VisualStateGroup>
-                </VisualStateGroupList>
-            </Setter>
-        </Style>
-    </ContentPage.Resources>
-
+    <Page.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}" 
+                                   StatusBarStyle="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"/>
+    </Page.Behaviors>
+    
     <ScrollView 
         VerticalScrollBarVisibility="Never" 
         HorizontalScrollBarVisibility="Never" 
@@ -93,14 +70,21 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Border
-                            Margin="1"
+                            HeightRequest="90"
+                            BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
+                            Opacity="1"
+                            Margin="1,5"
                             HorizontalOptions="FillAndExpand"
                             VerticalOptions="Start" 
                             Stroke="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}"
                             StrokeShape="RoundRectangle 10 10 10 10">
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnTapGestureRecognizerTapped" />
+                            </Border.GestureRecognizers>
                             <Label     
                                 Margin="0"
-                                HorizontalOptions="Start"
+                                HorizontalTextAlignment="Center"
+                                HorizontalOptions="Center"
                                 VerticalOptions="Center"
                                 Padding="10"
                                 FontFamily="FontCHLight"
@@ -147,6 +131,7 @@
                     </Grid.ColumnDefinitions>
 
                     <ImageButton
+                        x:Name="BackButton"
                         Clicked="OnBackButtonClickedAsync"
                         Source="back.svg"
                         Grid.Column="0"

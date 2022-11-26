@@ -4,8 +4,11 @@
                xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
                Size="300, 300"
                x:Class="CVasApp.Popups.Mail">
+    
 
-    <VerticalStackLayout BackgroundColor="{StaticResource MainPanelColorLight}">
+    <VerticalStackLayout BackgroundColor="{StaticResource MainPanelColorLight}"
+                         >
+        
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="4*"/>
@@ -23,7 +26,7 @@
                     Padding="5,5"
                     HorizontalOptions="FillAndExpand"
                     HeightRequest="200"
-                    StrokeThickness="1"
+                    StrokeThickness="3"
                     Stroke="{StaticResource MainSVGTintLight}"
                     StrokeShape="RoundRectangle 20">
 
@@ -36,25 +39,39 @@
             FontSize="20"
             FontFamily="FontCHLight"
             HorizontalOptions="Center" />
-                    <ImageButton 
+                    <Border 
+                    BackgroundColor="{StaticResource MainPanelColorLight}"
+                    Margin="0"
+                    Padding="10,10"
+                    HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                    StrokeThickness="1"
+                    Stroke="{StaticResource MainSVGTintLight}"
+                    StrokeShape="RoundRectangle 20">
+                        <ImageButton 
+                            x:Name="MailActionButton"
+                        Scale="1"
                             Clicked="MailClicked"
+                            Loaded="onPageloaded"
                             WidthRequest="40"
                             HeightRequest="40"
                             HorizontalOptions="Center"
                             VerticalOptions="Center">
-                        <ImageButton.Source>
-                            <FontImageSource FontFamily="FontSolid" Glyph="&#xf0e0;" />
-                        </ImageButton.Source>
-                        <ImageButton.Behaviors>
-                            <toolkit:IconTintColorBehavior TintColor="{StaticResource MainSVGTintLight}" />
-                        </ImageButton.Behaviors>
-                    </ImageButton>
+                            <ImageButton.Source>
+                                <FontImageSource FontFamily="FontSolid" Glyph="&#xf0e0;" />
+                            </ImageButton.Source>
+                            <ImageButton.Behaviors>
+                                <toolkit:IconTintColorBehavior TintColor="{StaticResource MainSVGTintLight}" />
+                            </ImageButton.Behaviors>
+                        </ImageButton>
+                    </Border>
                 </VerticalStackLayout>
             </Border>
 
             <ImageButton
+                x:Name="BackButton"
                         Clicked="PopupMailCliked"
-                Grid.Column="0"
+                        Grid.Column="0"
                         Grid.Row="1"
                         Source="back.svg"
                         Padding="10"
@@ -63,10 +80,10 @@
                         SemanticProperties.Description="My mug"
                         VerticalOptions="End"
                         HorizontalOptions="Start">
-            <ImageButton.Behaviors>
-                <toolkit:IconTintColorBehavior TintColor="{StaticResource MainSVGTintLight}" />
-            </ImageButton.Behaviors>
-        </ImageButton>
-            </Grid>
+                <ImageButton.Behaviors>
+                    <toolkit:IconTintColorBehavior TintColor="{StaticResource MainSVGTintLight}" />
+                </ImageButton.Behaviors>
+            </ImageButton>
+        </Grid>
     </VerticalStackLayout>
 </toolkit:Popup>

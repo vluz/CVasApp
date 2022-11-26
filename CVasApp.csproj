@@ -156,6 +156,13 @@
 
 	<ItemGroup>
 	  <Compile Remove="NewPage1.cs" />
+	  <Compile Remove="Popups\NewPage1.xaml.cs" />
+	  <Compile Remove="Popups\Telegram.xaml.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Remove="Popups\NewPage1.xaml" />
+	  <MauiXaml Remove="Popups\Telegram.xaml" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -179,6 +186,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="AlohaKit.Animations" Version="1.0.0" />
 	  <PackageReference Include="CommunityToolkit.Maui" Version="3.0.0" />
 	  <PackageReference Include="Plugin.Maui.Audio" Version="0.1.0-preview2" />
 	</ItemGroup>
@@ -214,7 +222,7 @@
 	  <MauiXaml Update="Popups\Signal.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Popups\Telegram.xaml">
+	  <MauiXaml Update="Popups\Slack.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

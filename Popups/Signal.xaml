@@ -23,7 +23,7 @@
                     Padding="5,5"
                     HorizontalOptions="FillAndExpand"
                     HeightRequest="200"
-                    StrokeThickness="1"
+                    StrokeThickness="3"
                     Stroke="{StaticResource MainSVGTintLight}"
                     StrokeShape="RoundRectangle 20">
 
@@ -36,8 +36,19 @@
             FontSize="20"
             FontFamily="FontCHLight"
             HorizontalOptions="Center" />
-                    <ImageButton 
+                    <Border 
+                    BackgroundColor="{StaticResource MainPanelColorLight}"
+                    Margin="0"
+                    Padding="10,10"
+                    HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                    StrokeThickness="1"
+                    Stroke="{StaticResource MainSVGTintLight}"
+                        StrokeShape="RoundRectangle 20">
+                        <ImageButton 
+                        x:Name="SignalActionButton"
                             Clicked="SignalClicked"
+                            Loaded="onPageLoaded"
                             WidthRequest="40"
                             HeightRequest="40"
                             HorizontalOptions="Center"
@@ -48,11 +59,13 @@
                         <ImageButton.Behaviors>
                             <toolkit:IconTintColorBehavior TintColor="{StaticResource MainSVGTintLight}" />
                         </ImageButton.Behaviors>
-                    </ImageButton>
+                        </ImageButton>
+                    </Border>
                 </VerticalStackLayout>
             </Border>
 
             <ImageButton
+                x:Name="BackButton"
                         Clicked="PopupSignalCliked"
                 Grid.Column="0"
                         Grid.Row="1"

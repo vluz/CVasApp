@@ -5,33 +5,10 @@
              x:Class="CVasApp.Education"
              Title="Education"
              Shell.NavBarIsVisible="False">
-    
-    <ContentPage.Resources>
-        <Style TargetType="Border">
-            <Setter Property="VisualStateManager.VisualStateGroups">
-                <VisualStateGroupList>
-                    <VisualStateGroup x:Name="CommonStates">
-
-                        <VisualState x:Name="Normal">
-                            <VisualState.Setters>
-                                <Setter Property="StrokeThickness" Value="1" />
-                                <Setter Property="HeightRequest" Value="90" />
-                                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}" />
-                            </VisualState.Setters>
-                        </VisualState>
-
-                        <VisualState x:Name="Selected">
-                            <VisualState.Setters>
-                                <Setter Property="StrokeThickness" Value="3" />
-                                <Setter Property="HeightRequest" Value="130" />
-                                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}" />
-                            </VisualState.Setters>
-                        </VisualState>
-                    </VisualStateGroup>
-                </VisualStateGroupList>
-            </Setter>
-        </Style>
-    </ContentPage.Resources>
+    <Page.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}" 
+                                   StatusBarStyle="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"/>
+    </Page.Behaviors>    
     
     <ScrollView 
         VerticalScrollBarVisibility="Never" 
@@ -43,7 +20,6 @@
             Padding="0,0"
             VerticalOptions="Start">
             <Border
-                HeightRequest="45"
                 BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
                 Margin="0"
                 Padding="0,-5"
@@ -109,21 +85,30 @@
                     </x:Array>
                 </CollectionView.ItemsSource>
                 <CollectionView.ItemTemplate>
-                    <DataTemplate>
+                    <DataTemplate x:Name="EducationTemplate">
                         <Border
-                            Margin="1"
+                            HeightRequest="90"
+                            BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
+                            Opacity="1"
+                            Margin="1,5"
                             HorizontalOptions="FillAndExpand"
                             VerticalOptions="Start" 
                             Stroke="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}"
                             StrokeShape="RoundRectangle 10 10 10 10">
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnTapGestureRecognizerTapped" />
+                            </Border.GestureRecognizers>
                             <Label     
-                                Margin="0"
-                                HorizontalOptions="Start"
+                                Margin="35,0"
+                                HorizontalOptions="Center"
+                                HorizontalTextAlignment="Center"
                                 VerticalOptions="Center"
-                                Padding="10"
+                                Padding="0"
                                 FontFamily="FontCHLight"
                                 FontSize="19"
-                                Text="{Binding .}" />
+                                Text="{Binding .}" >
+                                
+                            </Label>
                         </Border>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
@@ -165,6 +150,7 @@
                     </Grid.ColumnDefinitions>
 
                     <ImageButton
+                        x:Name="BackButton"
                         Clicked="OnBackButtonClickedAsync"
                         Source="back.svg"
                         Grid.Column="0"

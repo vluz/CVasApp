@@ -5,6 +5,10 @@
              x:Class="CVasApp.About"
              Title="About"
              Shell.NavBarIsVisible="False">
+    <Page.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}" 
+                                   StatusBarStyle="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"/>
+    </Page.Behaviors>
     <ScrollView 
         VerticalScrollBarVisibility="Never" 
         HorizontalScrollBarVisibility="Never" 
@@ -85,7 +89,8 @@
                     <DataTemplate>
                         <Label     
                                 Margin="0"
-                                HorizontalOptions="Start"
+                                HorizontalTextAlignment="Center"
+                                HorizontalOptions="Center"
                                 VerticalOptions="Center"
                                 Padding="10"
                                 FontFamily="FontCHLight"
@@ -130,6 +135,7 @@
                     </Grid.ColumnDefinitions>
 
                     <ImageButton
+                        x:Name="BackButton"
                         Clicked="OnBackButtonClickedAsync"
                         Source="back.svg"
                         Grid.Column="0"

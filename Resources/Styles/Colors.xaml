@@ -7,7 +7,7 @@
     <!-- my stuff -->
     <Color x:Key="MainBackgroundColorLight">#e0e0e0</Color>
     <Color x:Key="MainBackgroundColorDark">#0f1423</Color>
-    
+
     <Color x:Key="MainPanelColorLight">#cdd2d8</Color>
     <Color x:Key="MainPanelColorDark">#191e2d</Color>
 

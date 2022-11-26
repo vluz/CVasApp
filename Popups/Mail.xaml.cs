@@ -1,5 +1,4 @@
 using CommunityToolkit.Maui.Views;
-
 namespace CVasApp.Popups;
 
 public partial class Mail : Popup
@@ -9,8 +8,23 @@ public partial class Mail : Popup
         InitializeComponent();
     }
 
-    private void PopupMailCliked(object sender, EventArgs e)
+    private async void onPageloaded(object sender, EventArgs e)
     {
+        while (true)
+        {
+            await Task.Delay(200);
+            await MailActionButton.ScaleTo(0.8, 800, Easing.Linear);
+            await Task.Delay(100);
+            await MailActionButton.ScaleTo(1, 1000, Easing.Linear);
+            await Task.Delay(200);
+            
+        }
+    }
+
+    private async void PopupMailCliked(object sender, EventArgs e)
+    {
+        await BackButton.ScaleTo(0.8, 70, Easing.Linear);
+        await BackButton.ScaleTo(1, 50, Easing.Linear);
         Close();
     }
 
