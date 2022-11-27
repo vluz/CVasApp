@@ -144,9 +144,12 @@
 		<MauiSplashScreen Include="Resources\AppIcon\appiconfg.svg" Color="#000000" BaseSize="128,128" />
 
 		<!-- Images -->
+		
+		<!-- Mine 
+		<MauiImage Update="Resources\Images\anidark.webp" Resize="False" />
+		-->
 		<MauiImage Include="Resources\Images\*" />
-		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
-
+		
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
 
@@ -186,7 +189,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="AlohaKit.Animations" Version="1.0.0" />
 	  <PackageReference Include="CommunityToolkit.Maui" Version="3.0.0" />
 	  <PackageReference Include="Plugin.Maui.Audio" Version="0.1.0-preview2" />
 	</ItemGroup>

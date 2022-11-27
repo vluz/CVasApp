@@ -205,5 +205,24 @@ public partial class MainPage : ContentPage
         audioplayer.Dispose();
         PhonePopupButton.IsEnabled = true;
     }
+
+    //private async void OnTopGifLoaded(object sender, EventArgs e)
+    //{
+
+    //    Image image = (sender) as Image;
+    //    image.Source = ImageSource.FromFile("anidark.webp");
+    //    image.IsAnimationPlaying = false;
+    //    image.IsAnimationPlaying = true;
+    //}
+
+    //private async void OnBottomGifLoaded(object sender, EventArgs e)
+    //{
+    //    Image image = (sender) as Image;
+    //    image.Source = ImageSource.FromFile("anidark.webp");
+    //    image.Rotation = 180;
+    //    image.IsAnimationPlaying = false;
+    //    await Task.Delay(9000);
+    //    image.IsAnimationPlaying = true;
+    //}
 }
 

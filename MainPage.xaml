@@ -36,7 +36,7 @@
                     Grid.Column="1"
                     Grid.Row="0"
                     Grid.ColumnSpan="2"
-                    Padding="0,15"
+                    Padding="0,10"
                     Text="CV as App"
                     FontFamily="FontCHLight"
                     SemanticProperties.HeadingLevel="Level1"
@@ -45,6 +45,7 @@
                     HorizontalOptions="Center"
                     VerticalOptions="Center"/>
             </Border>
+            
             <Image
                     Source="connectlines.svg"
                     SemanticProperties.Description="My mug"
@@ -55,10 +56,22 @@
                     <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                 </Image.Behaviors>
             </Image>
+            <!--
+            <Image 
+                x:Name="TopGif"
+                Loaded="OnTopGifLoaded"   
+                
+                   HeightRequest="90" 
+                   WidthRequest="400"
+                   IsAnimationPlaying="False" 
+                   InputTransparent="True"
+                   HorizontalOptions="Center"/>
+-->
+
             <Border
                     BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
                     Margin="20"
-                    Padding="0,0"
+                    Padding="10,0"
                     HorizontalOptions="FillAndExpand"
                     HeightRequest="190"
                     StrokeThickness="0"
@@ -85,7 +98,7 @@
                 </Border.Shadow>
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
+                        <RowDefinition Height=".95*"/>
                         <RowDefinition Height=".5*"/>
                         <RowDefinition Height=".5*"/>
                         <RowDefinition Height=".23*"/>
@@ -131,7 +144,7 @@
                         </ImageButton>
                     </Border>
                     <Label
-                            Padding="20"
+                            Padding="15"
                             Grid.Column="1"
                             Grid.Row="0"
                             Grid.ColumnSpan="2"
@@ -141,7 +154,11 @@
                             TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                             FontSize="30"
                             HorizontalOptions="Start"
-                            VerticalOptions="End"/>
+                            VerticalOptions="End">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnProfilePicClickedAsync" />
+                        </Label.GestureRecognizers>
+                    </Label>
                     <ImageButton 
                             x:Name="PhonePopupButton"
                             Clicked="OnPhonePopupClicked"
@@ -167,7 +184,11 @@
                             TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                             FontSize="12"
                             HorizontalOptions="Start"
-                            VerticalOptions="Center"/>
+                            VerticalOptions="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnPhonePopupClicked" />
+                        </Label.GestureRecognizers>
+                    </Label>
                     <ImageButton 
                                 x:Name="SlackPopupButton"
                                 Clicked="OnSlackPopupClicked"
@@ -193,7 +214,11 @@
                             TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                             FontSize="12"
                             HorizontalOptions="Start"
-                            VerticalOptions="Center"/>
+                            VerticalOptions="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnSlackPopupClicked" />
+                        </Label.GestureRecognizers>
+                    </Label>
                     <ImageButton 
                             x:Name="SignalPopupButton"
                             Clicked="OnSignalPopupClicked"
@@ -219,7 +244,11 @@
                             TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                             FontSize="12"
                             HorizontalOptions="Start"
-                            VerticalOptions="Center"/>
+                            VerticalOptions="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnSignalPopupClicked" />
+                        </Label.GestureRecognizers>
+                    </Label>
                     <ImageButton 
                             x:Name="MailPopupButton"
                             Clicked="OnMailPopupClicked"
@@ -245,15 +274,19 @@
                             TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                             FontSize="12"
                             HorizontalOptions="Start"
-                            VerticalOptions="Center"/>
+                            VerticalOptions="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnMailPopupClicked" />
+                        </Label.GestureRecognizers>
+                    </Label>
                 </Grid>
             </Border>
             <Border
                     BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
-                    Margin="20"
-                    Padding="5,5"
+                    Margin="20,10"
+                    Padding="5,10"
                     HorizontalOptions="FillAndExpand"
-                    HeightRequest="290"
+                    HeightRequest="285"
                     StrokeThickness="0"
                     Stroke="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}"
                     StrokeShape="RoundRectangle 20">
@@ -466,6 +499,7 @@
 
                 </Grid>
             </Border>
+            
             <Image
                     Source="connectlines.svg"
                     SemanticProperties.Description="My mug"
@@ -477,6 +511,17 @@
                     <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                 </Image.Behaviors>
             </Image>
+            <!--
+            <Image 
+                x:Name="BottomGif"
+                Loaded="OnBottomGifLoaded"   
+                
+                   HeightRequest="90" 
+                   WidthRequest="400"
+                   IsAnimationPlaying="False" 
+                   InputTransparent="True"
+                   HorizontalOptions="Center"/>
+            -->
             <Border
                 BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
                 Margin="0"

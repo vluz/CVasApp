@@ -31,7 +31,7 @@ public partial class Other : ContentPage
         Border border = (sender) as Border;
         border.StrokeThickness = 6;
         await border.ScaleTo(1.15);
-        for (int i = 90; i < 150; i = i + 2)
+        for (int i = 90; i < 150; i = i + 4)
         {
             border.HeightRequest = i;
             await Task.Delay(1);
