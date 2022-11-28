@@ -73,7 +73,7 @@
                         Padding="10"
                         HeightRequest="80"
                         WidthRequest="80"
-                        SemanticProperties.Description="My mug"
+                        SemanticProperties.Description="Back button"
                         VerticalOptions="End"
                         HorizontalOptions="Start">
                 <ImageButton.Behaviors>

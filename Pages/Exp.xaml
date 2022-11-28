@@ -59,7 +59,7 @@
             </Border>
             <Image
                     Source="connectlines.svg"
-                    SemanticProperties.Description="My mug"
+                    SemanticProperties.Description="Top Separator image"
                     HeightRequest="90"
                     WidthRequest="400"                
                     HorizontalOptions="Center">
@@ -196,7 +196,7 @@ SERRA; Palmela, Portugal 1996-1998</x:String>
 
             <Image
                     Source="connectlines.svg"
-                    SemanticProperties.Description="My mug"
+                    SemanticProperties.Description="Bottom Separator image"
                     HeightRequest="90"
                     Rotation="180"
                     WidthRequest="400"                
@@ -239,7 +239,7 @@ SERRA; Palmela, Portugal 1996-1998</x:String>
                         Padding="10"
                         HeightRequest="80"
                         WidthRequest="80"
-                        SemanticProperties.Description="My mug"
+                        SemanticProperties.Description="Back button"
                         VerticalOptions="Center"
                         HorizontalOptions="Start">
                         <ImageButton.Behaviors>

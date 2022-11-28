@@ -59,7 +59,7 @@
             
             <Image
                     Source="connectlines.svg"
-                    SemanticProperties.Description="My mug"
+                    SemanticProperties.Description="Top separator image"
                     HeightRequest="90"
                     WidthRequest="400"                
                     HorizontalOptions="Center">
@@ -162,7 +162,7 @@
                             x:Name="ProfilePic"
                             Clicked="OnProfilePicClickedAsync"
                             Source="profilepic.png"
-                            SemanticProperties.Description="My mug"
+                            SemanticProperties.Description="Profile picture, photographed from the front, bust only, circular"
                             HeightRequest="130"
                             HorizontalOptions="Center">
                         </ImageButton>
@@ -366,7 +366,7 @@
                         HeightRequest="50"
                         Grid.Column="0"
                         Grid.Row="1"
-                        SemanticProperties.Description="My mug"
+                        SemanticProperties.Description="Profile button"
                         VerticalOptions="Center"
                         HorizontalOptions="Center">
                         <ImageButton.Behaviors>
@@ -419,7 +419,7 @@
                         HeightRequest="50"
                         Grid.Column="1"
                         Grid.Row="1"
-                        SemanticProperties.Description="My mug"
+                        SemanticProperties.Description="Exp button"
                         VerticalOptions="Center"
                         HorizontalOptions="Center">
                         <ImageButton.Behaviors>
@@ -448,7 +448,7 @@
                         HeightRequest="50"
                         Grid.Column="1"
                         Grid.Row="2"
-                        SemanticProperties.Description="My mug"
+                        SemanticProperties.Description="Skills button"
                         VerticalOptions="Center"
                         HorizontalOptions="Center">
                         <ImageButton.Behaviors>
@@ -477,7 +477,7 @@
                         HeightRequest="50"
                         Grid.Column="2"
                         Grid.Row="1"
-                        SemanticProperties.Description="My mug"
+                        SemanticProperties.Description="Education button"
                         VerticalOptions="Center"
                         HorizontalOptions="Center">
                         <ImageButton.Behaviors>
@@ -506,7 +506,7 @@
                         HeightRequest="50"
                         Grid.Column="2"
                         Grid.Row="2"
-                        SemanticProperties.Description="My mug"
+                        SemanticProperties.Description="Other Information Button"
                         VerticalOptions="Center"
                         HorizontalOptions="Center">
                         <ImageButton.Behaviors>
@@ -535,7 +535,7 @@
                         HeightRequest="50"
                         Grid.Column="0"
                         Grid.Row="2"
-                        SemanticProperties.Description="My mug"
+                        SemanticProperties.Description="Certifications button"
                         VerticalOptions="Center"
                         HorizontalOptions="Center">
                         <ImageButton.Behaviors>
@@ -561,7 +561,7 @@
             
             <Image
                     Source="connectlines.svg"
-                    SemanticProperties.Description="My mug"
+                    SemanticProperties.Description="Bottom separator image"
                     HeightRequest="90"
                     Rotation="180"
                     WidthRequest="400"                
@@ -616,7 +616,7 @@
                         Padding="10"
                         HeightRequest="70"
                         WidthRequest="70"
-                        SemanticProperties.Description="My mug"
+                        SemanticProperties.Description="Exit Button"
                         VerticalOptions="Center"
                         HorizontalOptions="Start">
                         <ImageButton.Behaviors>
@@ -632,7 +632,7 @@
                         Padding="10"
                         HeightRequest="70"
                         WidthRequest="70"
-                        SemanticProperties.Description="My mug"
+                        SemanticProperties.Description="About button"
                         VerticalOptions="Center"
                         HorizontalOptions="Start">
                         <ImageButton.Behaviors>
@@ -648,7 +648,7 @@
                         Padding="10"
                         HeightRequest="70"
                         WidthRequest="70"
-                        SemanticProperties.Description="My mug"
+                        SemanticProperties.Description="Link to web page button"
                         VerticalOptions="Center"
                         HorizontalOptions="Center">
                         <ImageButton.Behaviors>
@@ -664,7 +664,7 @@
                         Grid.Row="0"
                         HeightRequest="70"
                         WidthRequest="70"
-                        SemanticProperties.Description="My mug"
+                        SemanticProperties.Description="Share button"
                         VerticalOptions="Center"
                         HorizontalOptions="End">
                         <ImageButton.Behaviors>

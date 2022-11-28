@@ -60,7 +60,7 @@
             </Border>
             <Image
                     Source="connectlines.svg"
-                    SemanticProperties.Description="My mug"
+                    SemanticProperties.Description="Top Separator image"
                     HeightRequest="90"
                     WidthRequest="400"                
                     HorizontalOptions="Center">
@@ -138,7 +138,7 @@
 
             <Image
                     Source="connectlines.svg"
-                    SemanticProperties.Description="My mug"
+                    SemanticProperties.Description="Bottom Separator image"
                     HeightRequest="90"
                     Rotation="180"
                     WidthRequest="400"                
@@ -180,7 +180,7 @@
                         Padding="10"
                         HeightRequest="80"
                         WidthRequest="80"
-                        SemanticProperties.Description="My mug"
+                        SemanticProperties.Description="Back button"
                         VerticalOptions="Center"
                         HorizontalOptions="Start">
                         <ImageButton.Behaviors>
