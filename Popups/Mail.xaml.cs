@@ -1,6 +1,10 @@
 using CommunityToolkit.Maui.Views;
 namespace CVasApp.Popups;
 
+/// <summary>
+/// Mail popup code behind
+/// </summary>
+
 public partial class Mail : Popup
 {
     public Mail()
@@ -8,6 +12,10 @@ public partial class Mail : Popup
         InitializeComponent();
     }
 
+
+    /// <summary>
+    /// Perform animation
+    /// </summary>
     private async void onPageloaded(object sender, EventArgs e)
     {
         while (true)
@@ -17,10 +25,14 @@ public partial class Mail : Popup
             await Task.Delay(100);
             await MailActionButton.ScaleTo(1, 1000, Easing.Linear);
             await Task.Delay(200);
-            
+
         }
     }
 
+
+    /// <summary>
+    /// Back animation and close popup
+    /// </summary>
     private async void PopupMailCliked(object sender, EventArgs e)
     {
         await BackButton.ScaleTo(0.8, 70, Easing.Linear);
@@ -28,6 +40,10 @@ public partial class Mail : Popup
         Close();
     }
 
+
+    /// <summary>
+    /// Compose new mail with pre-filled subject and destination
+    /// </summary>
     private async void MailClicked(object sender, EventArgs e)
     {
         if (Email.Default.IsComposeSupported)

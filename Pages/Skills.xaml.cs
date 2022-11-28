@@ -1,5 +1,9 @@
 namespace CVasApp;
 
+/// <summary>
+/// Skills Page code behind
+/// </summary>
+
 public partial class Skills : ContentPage
 {
     Border lastselected;
@@ -8,6 +12,9 @@ public partial class Skills : ContentPage
         InitializeComponent();
     }
 
+    /// <summary>
+    /// Go one page back
+    /// </summary>
     private async void OnBackButtonClickedAsync(object sender, EventArgs e)
     {
         await BackButton.ScaleTo(0.8, 70, Easing.Linear);
@@ -15,6 +22,10 @@ public partial class Skills : ContentPage
         await Shell.Current.GoToAsync("..");
     }
 
+
+    /// <summary>
+    /// performs animations when a item on the list is touched
+    /// </summary>
     private async void OnTapGestureRecognizerTapped(object sender, TappedEventArgs e)
     {
         Border nowselected = (sender) as Border;

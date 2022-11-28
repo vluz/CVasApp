@@ -1,12 +1,20 @@
 using CommunityToolkit.Maui.Views;
 namespace CVasApp.Popups;
 
+/// <summary>
+/// Slack popup code behind
+/// </summary>
+
 public partial class Slack : Popup
 {
-	public Slack()
-	{
-		InitializeComponent();
-	}
+    public Slack()
+    {
+        InitializeComponent();
+    }
+
+    /// <summary>
+    /// perform animation and close popup
+    /// </summary>
     private async void PopupSlackCliked(object sender, EventArgs e)
     {
         await BackButton.ScaleTo(0.8, 70, Easing.Linear);
@@ -14,6 +22,10 @@ public partial class Slack : Popup
         Close();
     }
 
+
+    /// <summary>
+    /// Opens default browser and attempts to connect to a private workspace
+    /// </summary>
     private async void SlackClicked(object sender, EventArgs e)
     {
         try
@@ -24,6 +36,7 @@ public partial class Slack : Popup
         catch (Exception ex)
         {
             Exception exception = ex;
+            Console.WriteLine(exception.Message);
             // An unexpected error occured. No browser may be installed on the device.
         }
     }

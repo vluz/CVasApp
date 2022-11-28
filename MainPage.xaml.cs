@@ -4,6 +4,10 @@ using Plugin.Maui.Audio;
 
 namespace CVasApp;
 
+/// <summary>
+/// Main Page code behind
+/// </summary>
+
 public partial class MainPage : ContentPage
 {
     private readonly IAudioManager audioManager;
@@ -14,6 +18,10 @@ public partial class MainPage : ContentPage
 
     }
 
+
+    /// <summary>
+    /// Go to profile page after short animation
+    /// </summary>
     private async void OnProfileButtonClickedAsync(object sender, EventArgs e)
     {
         ProfileButton.IsEnabled = false;
@@ -21,25 +29,33 @@ public partial class MainPage : ContentPage
         await ProfileButton.ScaleTo(ProfileButton.Scale = 1.25, 70, Easing.BounceIn);
         audioplayer.Play();
         await ProfileButton.ScaleTo(ProfileButton.Scale = 1, 20, Easing.BounceIn);
-        
+
         await Shell.Current.GoToAsync("Profile");
         audioplayer.Dispose();
         ProfileButton.IsEnabled = true;
     }
+
+    /// <summary>
+    /// Go to profile page after short animation
+    /// </summary>
     private async void OnProfilePicClickedAsync(object sender, EventArgs e)
     {
         ProfilePic.IsEnabled = false;
         var audioplayer = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("click.wav"));
-        
+
         await ProfilePic.ScaleXTo(0.005, 200, Easing.Linear);
-        audioplayer.Play();               
+        audioplayer.Play();
         await ProfilePic.ScaleXTo(1, 50, Easing.Linear);
-               
+
         await Shell.Current.GoToAsync("Profile");
         audioplayer.Dispose();
         ProfilePic.IsEnabled = true;
     }
 
+
+    /// <summary>
+    /// Go to exp page after short animation
+    /// </summary>
     private async void OnExpButtonClickedAsync(object sender, EventArgs e)
     {
         ExpButton.IsEnabled = false;
@@ -52,6 +68,10 @@ public partial class MainPage : ContentPage
         ExpButton.IsEnabled = true;
     }
 
+
+    /// <summary>
+    /// Go to cert page after short animation
+    /// </summary>
     private async void OnCertButtonClickedAsync(object sender, EventArgs e)
     {
         CertButton.IsEnabled = false;
@@ -64,6 +84,10 @@ public partial class MainPage : ContentPage
         CertButton.IsEnabled = true;
     }
 
+
+    /// <summary>
+    /// Go to education page after short animation
+    /// </summary>
     private async void OnEducationButtonClickedAsync(object sender, EventArgs e)
     {
         EducationButton.IsEnabled = false;
@@ -76,6 +100,10 @@ public partial class MainPage : ContentPage
         EducationButton.IsEnabled = true;
     }
 
+
+    /// <summary>
+    /// Go to about page after short animation
+    /// </summary>
     private async void OnAboutButtonClickedAsync(object sender, EventArgs e)
     {
         AboutButton.IsEnabled = false;
@@ -87,6 +115,11 @@ public partial class MainPage : ContentPage
         audioplayer.Dispose();
         AboutButton.IsEnabled = true;
     }
+
+
+    /// <summary>
+    /// Go to other page after short animation
+    /// </summary>
     private async void OnOtherButtonClickedAsync(object sender, EventArgs e)
     {
         OtherButton.IsEnabled = false;
@@ -98,6 +131,11 @@ public partial class MainPage : ContentPage
         audioplayer.Dispose();
         OtherButton.IsEnabled = true;
     }
+
+
+    /// <summary>
+    /// Go to skills page after short animation
+    /// </summary>
     private async void OnSkillsButtonClickedAsync(object sender, EventArgs e)
     {
         SkillsButton.IsEnabled = false;
@@ -109,6 +147,11 @@ public partial class MainPage : ContentPage
         audioplayer.Dispose();
         SkillsButton.IsEnabled = true;
     }
+
+
+    /// <summary>
+    /// Exit the app
+    /// </summary>
     private async void OnExitButtonClicked(object sender, EventArgs e)
     {
         var audioplayer = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("click.wav"));
@@ -118,6 +161,11 @@ public partial class MainPage : ContentPage
         audioplayer.Dispose();
         Application.Current.Quit();
     }
+
+
+    /// <summary>
+    /// Initiates a share request
+    /// </summary>
     private async void OnShareButtonClickedAsync(object sender, EventArgs e)
     {
         ShareButton.IsEnabled = false;
@@ -133,6 +181,11 @@ public partial class MainPage : ContentPage
         audioplayer.Dispose();
         ShareButton.IsEnabled = true;
     }
+
+
+    /// <summary>
+    /// Attempts to navigate to a web page
+    /// </summary>
     private async void OnWebButtonClickedAsync(object sender, EventArgs e)
     {
         WebButton.IsEnabled = false;
@@ -148,12 +201,18 @@ public partial class MainPage : ContentPage
         catch (Exception ex)
         {
             Exception exception = ex;
+            Console.WriteLine(exception.Message);
             // An unexpected error occured. No browser may be installed on the device.
         }
         audioplayer.Dispose();
         WebButton.IsEnabled = true;
     }
 
+
+
+    /// <summary>
+    /// Calls popup for signal action confirmation
+    /// </summary>
     private async void OnSignalPopupClicked(object sender, EventArgs e)
     {
         SignalPopupButton.IsEnabled = false;
@@ -167,6 +226,11 @@ public partial class MainPage : ContentPage
         SignalPopupButton.IsEnabled = true;
         audioplayer.Dispose();
     }
+
+
+    /// <summary>
+    /// Calls popup for mail action confirmation
+    /// </summary>
     private async void OnMailPopupClicked(object sender, EventArgs e)
     {
         MailPopupButton.IsEnabled = false;
@@ -180,6 +244,11 @@ public partial class MainPage : ContentPage
         audioplayer.Dispose();
         MailPopupButton.IsEnabled = true;
     }
+
+
+    /// <summary>
+    /// Calls popup for slack action confirmation
+    /// </summary>
     private async void OnSlackPopupClicked(object sender, EventArgs e)
     {
         SlackPopupButton.IsEnabled = false;
@@ -193,6 +262,11 @@ public partial class MainPage : ContentPage
         audioplayer.Dispose();
         SlackPopupButton.IsEnabled = true;
     }
+
+
+    /// <summary>
+    /// Calls popup for phone action confirmation
+    /// </summary>
     private async void OnPhonePopupClicked(object sender, EventArgs e)
     {
         PhonePopupButton.IsEnabled = false;
@@ -207,6 +281,11 @@ public partial class MainPage : ContentPage
         PhonePopupButton.IsEnabled = true;
     }
 
+
+
+    /// <summary>
+    /// Android gif workaround, awaits bug fix
+    /// </summary>
     //private async void OnTopGifLoaded(object sender, EventArgs e)
     //{
 
@@ -216,6 +295,11 @@ public partial class MainPage : ContentPage
     //    image.IsAnimationPlaying = true;
     //}
 
+
+
+    /// <summary>
+    /// Bottom gif workaround, intoduces 9 seconds delay
+    /// </summary>
     //private async void OnBottomGifLoaded(object sender, EventArgs e)
     //{
     //    Image image = (sender) as Image;

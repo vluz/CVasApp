@@ -1,15 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- <summary> -->
+<!--
+    Main Page
+    Serves as startup page for the app, has navigation to all other pages
+    -->
+<!-- </summary> -->
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="CVasApp.MainPage"
              Shell.NavBarIsVisible="False">
-    
+    <!-- <summary> -->
+    <!--
+    Sets top status bar to app colour
+    -->
+    <!-- </summary> -->
     <Page.Behaviors>
         <toolkit:StatusBarBehavior StatusBarColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}" 
                                    StatusBarStyle="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"/>
     </Page.Behaviors>
-    
+    <!-- <summary> -->
+    <!--
+    Main Page view
+    -->
+    <!-- </summary> -->
     <ScrollView 
         VerticalScrollBarVisibility="Never" 
         HorizontalScrollBarVisibility="Never" 
@@ -67,7 +81,7 @@
                     <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                 </Image.Behaviors>
             </Image>
-            <!--
+            <!-- (Waiting bug fix)
             <Image 
                 x:Name="TopGif"
                 Loaded="OnTopGifLoaded"   
@@ -78,7 +92,11 @@
                    InputTransparent="True"
                    HorizontalOptions="Center"/>
 -->
-
+            <!-- <summary> -->
+            <!--
+            Top Panel
+            -->
+            <!-- </summary> -->
             <Border
                     Margin="20"
                     Padding="10,0"
@@ -305,6 +323,12 @@
                     </Label>
                 </Grid>
             </Border>
+
+            <!-- <summary> -->
+            <!--
+            Bottom Panel, contains CV blocks
+            -->
+            <!-- </summary> -->
             <Border
                     
                     Margin="20,10"
@@ -338,7 +362,7 @@
                                 <GradientStop Color="White"
                                     Offset="0" />
                                 <GradientStop Color="Black"
-                                    Offset="0.7" />
+                                    Offset="0.6" />
                                 <GradientStop Color="Black"
                                     Offset="1" />
                             </LinearGradientBrush>
@@ -581,6 +605,11 @@
                    InputTransparent="True"
                    HorizontalOptions="Center"/>
             -->
+            <!-- <summary> -->
+            <!--
+                Bottom button bar
+            -->
+            <!-- </summary> -->
             <Border
                 BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
                 Margin="0"

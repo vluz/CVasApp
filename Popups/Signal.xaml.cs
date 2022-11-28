@@ -1,6 +1,10 @@
 using CommunityToolkit.Maui.Views;
 namespace CVasApp.Popups;
 
+/// <summary>
+/// Signal popup code behind
+/// </summary>
+
 public partial class Signal : Popup
 {
     public Signal()
@@ -8,6 +12,10 @@ public partial class Signal : Popup
         InitializeComponent();
     }
 
+
+    /// <summary>
+    /// Perform animation and close popup
+    /// </summary>
     private async void PopupSignalCliked(object sender, EventArgs e)
     {
         await BackButton.ScaleTo(0.8, 70, Easing.Linear);
@@ -15,6 +23,10 @@ public partial class Signal : Popup
         Close();
     }
 
+
+    /// <summary>
+    /// Calls default browser to open a link controlled by signal.org
+    /// </summary>
     private async void SignalClicked(object sender, EventArgs e)
     {
         try
@@ -25,10 +37,15 @@ public partial class Signal : Popup
         catch (Exception ex)
         {
             Exception exception = ex;
+            Console.WriteLine(exception.Message);
             // An unexpected error occured. No browser may be installed on the device.
         }
     }
 
+
+    /// <summary>
+    /// Performs animation on page load
+    /// </summary>
     private async void onPageLoaded(object sender, EventArgs e)
     {
         while (true)

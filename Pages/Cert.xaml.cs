@@ -1,13 +1,21 @@
 namespace CVasApp;
 
+/// <summary>
+/// Cert Page code behind
+/// </summary>
+
 public partial class Cert : ContentPage
 {
-    Border lastselected;
+    Border lastselected;  //stores last selected item, if no last selected it is set to null
     public Cert()
     {
         InitializeComponent();
     }
 
+
+    /// <summary>
+    /// Navigate one level, pop last page
+    /// </summary>
     private async void OnBackButtonClickedAsync(object sender, EventArgs e)
     {
         await BackButton.ScaleTo(0.8, 70, Easing.Linear);
@@ -15,6 +23,10 @@ public partial class Cert : ContentPage
         await Shell.Current.GoToAsync("..");
     }
 
+
+    /// <summary>
+    /// performs animations when a item on the list is touched
+    /// </summary>
     private async void OnTapGestureRecognizerTapped(object sender, TappedEventArgs e)
     {
         Border nowselected = (sender) as Border;

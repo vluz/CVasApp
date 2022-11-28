@@ -1,11 +1,17 @@
 namespace CVasApp;
 
+/// <summary>
+/// Profile Page code behind
+/// </summary>
+
 public partial class Profile : ContentPage
 {
     public Profile()
     {
         InitializeComponent();
 
+        // Split hack for text justification
+        // (todo) find better solution
         var textparts0 = "I have over twenty years experience providing coding, systems, storage, backup and data protection services.            "
                 .Split(' ', StringSplitOptions.RemoveEmptyEntries)
                 .Select(x0 => new Label
@@ -56,6 +62,10 @@ public partial class Profile : ContentPage
 
     }
 
+
+    /// <summary>
+    /// Go back one page
+    /// </summary>
     private async void OnBackButtonClickedAsync(object sender, EventArgs e)
     {
         await BackButton.ScaleTo(0.8, 70, Easing.Linear);

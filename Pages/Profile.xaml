@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
+<!-- <summary> -->
+<!--
+    Profile Page
+    Profile introduction for CV, implements a justification method as maui does not have justfication at the time of development
+-->
+<!-- </summary> -->
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
@@ -76,8 +82,8 @@
                     StrokeShape="RoundRectangle 20">
                 <Border.Background>
                     <LinearGradientBrush
-                                StartPoint="0,0"
-                                EndPoint="1,1">
+                                StartPoint="0,.3"
+                                EndPoint=".5,1">
                         <GradientStop Color="{AppThemeBinding Light={StaticResource MainPanelColorLightStart}, Dark={StaticResource MainPanelColorDarkStart}}"
                                     Offset="0" />
                         <GradientStop Color="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
@@ -94,11 +100,11 @@
                         <Shadow.Brush>
                             <LinearGradientBrush
                                 StartPoint="0,0"
-                                EndPoint="1,1">
+                                EndPoint="1,.33">
                                 <GradientStop Color="White"
-                                    Offset="0.1" />
+                                    Offset="0" />
                                 <GradientStop Color="Black"
-                                    Offset="0.6" />
+                                    Offset="0.9" />
                                 <GradientStop Color="Black"
                                     Offset="1" />
                             </LinearGradientBrush>
