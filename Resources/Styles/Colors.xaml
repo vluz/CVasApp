@@ -8,11 +8,26 @@
     <Color x:Key="MainBackgroundColorLight">#e0e0e0</Color>
     <Color x:Key="MainBackgroundColorDark">#0f1423</Color>
 
+    <Color x:Key="MainBackgroundColorLightStart">#e0e0e0</Color>
+    <Color x:Key="MainBackgroundColorDarkStart">#121729</Color>
+
+    <Color x:Key="MainBackgroundColorLightEnd">#e0e0e0</Color>
+    <Color x:Key="MainBackgroundColorDarkEnd">#0b0f1a</Color>
+    
+
     <Color x:Key="MainPanelColorLight">#cdd2d8</Color>
     <Color x:Key="MainPanelColorDark">#191e2d</Color>
 
+    <Color x:Key="MainPanelColorLightStart">#cdd2d8</Color>
+    <Color x:Key="MainPanelColorDarkStart">#1d2233</Color>
+
+    <Color x:Key="MainPanelColorLightEnd">#cdd2d8</Color>
+    <Color x:Key="MainPanelColorDarkEnd">#151a26</Color>
+    
+
     <Color x:Key="MainTextColorLight">Black</Color>
     <Color x:Key="MainTextColorDark">White</Color>
+    
 
     <Color x:Key="MainSVGTintLight">Black</Color>
     <Color x:Key="MainSVGTintDark">White</Color>

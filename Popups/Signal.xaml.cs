@@ -24,6 +24,7 @@ public partial class Signal : Popup
         }
         catch (Exception ex)
         {
+            Exception exception = ex;
             // An unexpected error occured. No browser may be installed on the device.
         }
     }

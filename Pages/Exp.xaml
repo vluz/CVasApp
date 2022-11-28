@@ -12,8 +12,19 @@
     <ScrollView 
         VerticalScrollBarVisibility="Never" 
         HorizontalScrollBarVisibility="Never" 
-        BackgroundColor="{AppThemeBinding Light={StaticResource MainBackgroundColorLight}, Dark={StaticResource MainBackgroundColorDark}}" 
         Margin="0">
+        <ScrollView.Background>
+            <LinearGradientBrush
+                                StartPoint="0,0"
+                                EndPoint="1,1">
+                <GradientStop Color="{AppThemeBinding Light={StaticResource MainPanelColorLightStart}, Dark={StaticResource MainPanelColorDarkStart}}"
+                                    Offset="0" />
+                <GradientStop Color="{AppThemeBinding Light={StaticResource MainBackgroundColorLight}, Dark={StaticResource MainBackgroundColorDark}}"
+                                    Offset=".5" />
+                <GradientStop Color="{AppThemeBinding Light={StaticResource MainPanelColorLightEnd}, Dark={StaticResource MainPanelColorDarkEnd}}"
+                                    Offset="1" />
+            </LinearGradientBrush>
+        </ScrollView.Background>
         <VerticalStackLayout
             Spacing="0"
             Padding="0,0"
@@ -117,7 +128,6 @@ SERRA; Palmela, Portugal 1996-1998</x:String>
                     <DataTemplate>
                         
                         <Border
-                            BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
                             Margin="0"
                             Padding="5,10"
                             HeightRequest="500"
@@ -125,7 +135,18 @@ SERRA; Palmela, Portugal 1996-1998</x:String>
                             StrokeThickness="1"
                             Stroke="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}"
                             StrokeShape="RoundRectangle 20">
-                            
+                            <Border.Background>
+                                <LinearGradientBrush
+                                StartPoint="0,0"
+                                EndPoint="1,1">
+                                    <GradientStop Color="{AppThemeBinding Light={StaticResource MainPanelColorLightStart}, Dark={StaticResource MainPanelColorDarkStart}}"
+                                    Offset="0" />
+                                    <GradientStop Color="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
+                                    Offset=".5" />
+                                    <GradientStop Color="{AppThemeBinding Light={StaticResource MainPanelColorLightEnd}, Dark={StaticResource MainPanelColorDarkEnd}}"
+                                    Offset="1" />
+                                </LinearGradientBrush>
+                            </Border.Background>
                             <VisualStateManager.VisualStateGroups>
                                 <VisualStateGroup x:Name="CommonStates">
                                     <VisualState x:Name="CurrentItem">

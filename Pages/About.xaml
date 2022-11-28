@@ -12,8 +12,19 @@
     <ScrollView 
         VerticalScrollBarVisibility="Never" 
         HorizontalScrollBarVisibility="Never" 
-        BackgroundColor="{AppThemeBinding Light={StaticResource MainBackgroundColorLight}, Dark={StaticResource MainBackgroundColorDark}}" 
         Margin="0">
+        <ScrollView.Background>
+            <LinearGradientBrush
+                                StartPoint="0,0"
+                                EndPoint="1,1">
+                <GradientStop Color="{AppThemeBinding Light={StaticResource MainPanelColorLightStart}, Dark={StaticResource MainPanelColorDarkStart}}"
+                                    Offset="0" />
+                <GradientStop Color="{AppThemeBinding Light={StaticResource MainBackgroundColorLight}, Dark={StaticResource MainBackgroundColorDark}}"
+                                    Offset=".5" />
+                <GradientStop Color="{AppThemeBinding Light={StaticResource MainPanelColorLightEnd}, Dark={StaticResource MainPanelColorDarkEnd}}"
+                                    Offset="1" />
+            </LinearGradientBrush>
+        </ScrollView.Background>
         <VerticalStackLayout
             Spacing="0"
             Padding="0,0"

@@ -12,8 +12,19 @@
     <ScrollView 
         VerticalScrollBarVisibility="Never" 
         HorizontalScrollBarVisibility="Never" 
-        BackgroundColor="{AppThemeBinding Light={StaticResource MainBackgroundColorLight}, Dark={StaticResource MainBackgroundColorDark}}" 
         Margin="0">
+        <ScrollView.Background>
+            <LinearGradientBrush
+                                StartPoint="0,0"
+                                EndPoint="1,1">
+                <GradientStop Color="{AppThemeBinding Light={StaticResource MainPanelColorLightStart}, Dark={StaticResource MainPanelColorDarkStart}}"
+                                    Offset="0" />
+                <GradientStop Color="{AppThemeBinding Light={StaticResource MainBackgroundColorLight}, Dark={StaticResource MainBackgroundColorDark}}"
+                                    Offset=".5" />
+                <GradientStop Color="{AppThemeBinding Light={StaticResource MainPanelColorLightEnd}, Dark={StaticResource MainPanelColorDarkEnd}}"
+                                    Offset="1" />
+            </LinearGradientBrush>
+        </ScrollView.Background>
         <VerticalStackLayout
             Spacing="0"
             Padding="0,0"
@@ -57,14 +68,24 @@
                 </Image.Behaviors>
             </Image>
             <Border
-                    BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
                     Margin="20"
                     Padding="0,0"
                     HorizontalOptions="FillAndExpand"
-                    
                     StrokeThickness="0"
                     Stroke="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}"
                     StrokeShape="RoundRectangle 20">
+                <Border.Background>
+                    <LinearGradientBrush
+                                StartPoint="0,0"
+                                EndPoint="1,1">
+                        <GradientStop Color="{AppThemeBinding Light={StaticResource MainPanelColorLightStart}, Dark={StaticResource MainPanelColorDarkStart}}"
+                                    Offset="0" />
+                        <GradientStop Color="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
+                                    Offset=".6" />
+                        <GradientStop Color="{AppThemeBinding Light={StaticResource MainPanelColorLightEnd}, Dark={StaticResource MainPanelColorDarkEnd}}"
+                                    Offset="1" />
+                    </LinearGradientBrush>
+                </Border.Background>
                 <Border.Shadow>
                     <Shadow
                             Offset="5,5"
@@ -72,8 +93,8 @@
                             Radius="40">
                         <Shadow.Brush>
                             <LinearGradientBrush
-                                StartPoint="0,.3"
-                                EndPoint=".25,1">
+                                StartPoint="0,0"
+                                EndPoint="1,1">
                                 <GradientStop Color="White"
                                     Offset="0.1" />
                                 <GradientStop Color="Black"
@@ -116,19 +137,6 @@
 		                Wrap="Wrap"/>
                     <Border StrokeThickness="0" HeightRequest="5" BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}" />
                 </VerticalStackLayout>
-                <!-- 
-                
-                    <Label
-                    Padding="10"
-                    FontSize="20"
-                    FontFamily="FontCHLight"
-                    HorizontalTextAlignment="Start"
-                    Text="I have over twenty years experience providing coding, systems, storage, backup and data protection services. &#10;&#10;
-I am well experienced on high-end and mid-range solutions with time proven skills, ranging from customer solution architecture and design to ‘hands on’ implementation and coding. At the operations level I am ITIL certified, familiar with operating systems, virtualization of hosts and storage, disaster recovery planning and operation, performance, capacity planning and have well tuned, strong troubleshooting skills. &#10;&#10;
-I have provided Premium Level 24x7 support at the storage, fabric switching and routing, hosts and applications including customer assistance in general troubleshooting, disaster recovery, tailored solution design and architecture adaptation and modification. &#10;&#10;
-Implementation skills range from several flavours of UNIX to Windows and virtual environments, including business applications, databases and information systems monitoring, metering and management solutions including a large range of systems, storage, backup and fabric switching and routing hardware.
-" />
--->
             </Border>
             <Image
                     Source="connectlines.svg"

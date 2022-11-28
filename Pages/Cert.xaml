@@ -13,8 +13,19 @@
     <ScrollView 
         VerticalScrollBarVisibility="Never" 
         HorizontalScrollBarVisibility="Never" 
-        BackgroundColor="{AppThemeBinding Light={StaticResource MainBackgroundColorLight}, Dark={StaticResource MainBackgroundColorDark}}" 
         Margin="0">
+        <ScrollView.Background>
+            <LinearGradientBrush
+                                StartPoint="0,0"
+                                EndPoint="1,1">
+                <GradientStop Color="{AppThemeBinding Light={StaticResource MainPanelColorLightStart}, Dark={StaticResource MainPanelColorDarkStart}}"
+                                    Offset="0" />
+                <GradientStop Color="{AppThemeBinding Light={StaticResource MainBackgroundColorLight}, Dark={StaticResource MainBackgroundColorDark}}"
+                                    Offset=".5" />
+                <GradientStop Color="{AppThemeBinding Light={StaticResource MainPanelColorLightEnd}, Dark={StaticResource MainPanelColorDarkEnd}}"
+                                    Offset="1" />
+            </LinearGradientBrush>
+        </ScrollView.Background>
         <VerticalStackLayout
             Spacing="0"
             Padding="0,0"
@@ -84,13 +95,24 @@
                     <DataTemplate>
                         <Border
                             HeightRequest="90"
-                            BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
                             Opacity="1"
                             Margin="1,5"
                             HorizontalOptions="FillAndExpand"
                             VerticalOptions="Start" 
                             Stroke="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}"
                             StrokeShape="RoundRectangle 10 10 10 10">
+                            <Border.Background>
+                                <LinearGradientBrush
+                                StartPoint="0,0"
+                                EndPoint="1,1">
+                                    <GradientStop Color="{AppThemeBinding Light={StaticResource MainPanelColorLightStart}, Dark={StaticResource MainPanelColorDarkStart}}"
+                                    Offset="0" />
+                                    <GradientStop Color="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
+                                    Offset=".5" />
+                                    <GradientStop Color="{AppThemeBinding Light={StaticResource MainPanelColorLightEnd}, Dark={StaticResource MainPanelColorDarkEnd}}"
+                                    Offset="1" />
+                                </LinearGradientBrush>
+                            </Border.Background>
                             <Border.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="OnTapGestureRecognizerTapped" />
                             </Border.GestureRecognizers>

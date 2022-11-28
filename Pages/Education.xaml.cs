@@ -2,6 +2,7 @@ namespace CVasApp;
 
 using CommunityToolkit.Maui.Views;
 using CVasApp.Popups;
+using Microsoft.Maui.Controls;
 using Microsoft.Maui.Controls.Internals;
 
 public partial class Education : ContentPage
@@ -21,6 +22,8 @@ public partial class Education : ContentPage
 
     private async void OnTapGestureRecognizerTapped(object sender, TappedEventArgs e)
     {
+        Border nowselected = (sender) as Border;
+        
         if (lastselected != null)
         {
             lastselected.StrokeThickness = 1;
@@ -32,14 +35,19 @@ public partial class Education : ContentPage
             }
             lastselected.HeightRequest = 90;
         }
-        Border border = (sender) as Border;
-        border.StrokeThickness = 6;
-        await border.ScaleTo(1.15);
-        for (int i = 90; i < 150; i=i+4)
+        if (nowselected == lastselected)
         {
-            border.HeightRequest = i;
+            lastselected = null;
+            return;
+        }
+        
+        nowselected.StrokeThickness = 6;
+        await nowselected.ScaleTo(1.15);
+        for (int i = 90; i < 150; i = i + 4)
+        {
+            nowselected.HeightRequest = i;
             await Task.Delay(1);
         }
-        lastselected = border;
+        lastselected = nowselected;
     }
 }

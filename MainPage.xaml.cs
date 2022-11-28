@@ -147,6 +147,7 @@ public partial class MainPage : ContentPage
         }
         catch (Exception ex)
         {
+            Exception exception = ex;
             // An unexpected error occured. No browser may be installed on the device.
         }
         audioplayer.Dispose();

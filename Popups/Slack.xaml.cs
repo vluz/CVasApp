@@ -23,6 +23,7 @@ public partial class Slack : Popup
         }
         catch (Exception ex)
         {
+            Exception exception = ex;
             // An unexpected error occured. No browser may be installed on the device.
         }
     }
