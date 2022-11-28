@@ -104,7 +104,7 @@
                                 <GradientStop Color="White"
                                     Offset="0" />
                                 <GradientStop Color="Black"
-                                    Offset="0.9" />
+                                    Offset="0.89" />
                                 <GradientStop Color="Black"
                                     Offset="1" />
                             </LinearGradientBrush>
