@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Maui.Views;
+using CommunityToolkit.Maui.Alerts;
 using CVasApp.Popups;
 using Plugin.Maui.Audio;
 
@@ -29,7 +30,6 @@ public partial class MainPage : ContentPage
         await ProfileButton.ScaleTo(ProfileButton.Scale = 1.25, 70, Easing.BounceIn);
         audioplayer.Play();
         await ProfileButton.ScaleTo(ProfileButton.Scale = 1, 20, Easing.BounceIn);
-
         await Shell.Current.GoToAsync("Profile");
         audioplayer.Dispose();
         ProfileButton.IsEnabled = true;
@@ -154,6 +154,7 @@ public partial class MainPage : ContentPage
     /// </summary>
     private async void OnExitButtonClicked(object sender, EventArgs e)
     {
+        await Toast.Make("Exiting", CommunityToolkit.Maui.Core.ToastDuration.Short).Show().ConfigureAwait(false);
         var audioplayer = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("click.wav"));
         await ExitButton.ScaleTo(ExitButton.Scale = 1.25, 70, Easing.BounceIn);
         audioplayer.Play();
