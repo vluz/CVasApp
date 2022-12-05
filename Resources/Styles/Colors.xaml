@@ -25,11 +25,11 @@
     <Color x:Key="MainPanelColorDarkEnd">#151a26</Color>
 
 
-    <Color x:Key="MainTextColorLight">#1d2233</Color>
+    <Color x:Key="MainTextColorLight">#2c334d</Color>
     <Color x:Key="MainTextColorDark">White</Color>
-    
 
-    <Color x:Key="MainSVGTintLight">Black</Color>
+
+    <Color x:Key="MainSVGTintLight">#2c334d</Color>
     <Color x:Key="MainSVGTintDark">White</Color>
 
     <!-- end my stuff -->
