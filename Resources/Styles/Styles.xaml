@@ -146,6 +146,7 @@
     </Style>
 
     <Style TargetType="Label">
+        <Setter Property="FontAutoScalingEnabled" Value="False" />  
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource White}}" />
         <Setter Property="FontFamily" Value="OpenSansRegular" />
         <Setter Property="FontSize" Value="14" />

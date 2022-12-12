@@ -58,6 +58,7 @@
                     </Shadow>
                 </Border.Shadow>
                 <Label
+                    FontAutoScalingEnabled="False" 
                     Grid.Column="1"
                     Grid.Row="0"
                     Grid.ColumnSpan="2"
@@ -186,6 +187,7 @@
                         </ImageButton>
                     </Border>
                     <Label
+                        FontAutoScalingEnabled="False" 
                             Padding="15"
                             Grid.Column="1"
                             Grid.Row="0"
