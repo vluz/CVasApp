@@ -5,154 +5,170 @@
     Lists each experience as a saparate panel
 -->
 <!-- </summary> -->
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-             x:Class="CVasApp.Exp"
-             Title="Exp"
-             Shell.NavBarIsVisible="False">
+<ContentPage
+    x:Class="CVasApp.Exp"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    Title="Exp"
+    Shell.NavBarIsVisible="False">
     <Page.Behaviors>
-        <toolkit:StatusBarBehavior StatusBarColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}" 
-                                   StatusBarStyle="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"/>
+        <toolkit:StatusBarBehavior StatusBarColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}" StatusBarStyle="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}" />
     </Page.Behaviors>
-    <ScrollView 
-        VerticalScrollBarVisibility="Never" 
-        HorizontalScrollBarVisibility="Never" 
-        Margin="0">
+    <ScrollView
+        Margin="0"
+        HorizontalScrollBarVisibility="Never"
+        VerticalScrollBarVisibility="Never">
         <ScrollView.Background>
-            <LinearGradientBrush
-                                StartPoint="0,0"
-                                EndPoint="1,1">
-                <GradientStop Color="{AppThemeBinding Light={StaticResource MainPanelColorLightStart}, Dark={StaticResource MainPanelColorDarkStart}}"
-                                    Offset="0" />
-                <GradientStop Color="{AppThemeBinding Light={StaticResource MainBackgroundColorLight}, Dark={StaticResource MainBackgroundColorDark}}"
-                                    Offset=".5" />
-                <GradientStop Color="{AppThemeBinding Light={StaticResource MainPanelColorLightEnd}, Dark={StaticResource MainPanelColorDarkEnd}}"
-                                    Offset="1" />
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Offset="0" Color="{AppThemeBinding Light={StaticResource MainPanelColorLightStart}, Dark={StaticResource MainPanelColorDarkStart}}" />
+                <GradientStop Offset=".5" Color="{AppThemeBinding Light={StaticResource MainBackgroundColorLight}, Dark={StaticResource MainBackgroundColorDark}}" />
+                <GradientStop Offset="1" Color="{AppThemeBinding Light={StaticResource MainPanelColorLightEnd}, Dark={StaticResource MainPanelColorDarkEnd}}" />
             </LinearGradientBrush>
         </ScrollView.Background>
         <VerticalStackLayout
-            Spacing="0"
             Padding="0,0"
+            Spacing="0"
             VerticalOptions="Start">
             <Border
-                BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
                 Margin="0"
                 Padding="0,-5"
-                StrokeThickness="0"
-                StrokeShape="RoundRectangle 0 0 30 30">
+                BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight},
+                                                  Dark={StaticResource MainPanelColorDark}}"
+                StrokeShape="RoundRectangle 0 0 30 30"
+                StrokeThickness="0">
                 <Border.Shadow>
                     <Shadow
-                            Offset="5,5"
-                            Opacity=".5"
-                            Radius="30">
-
-                    </Shadow>
+                        Opacity=".5"
+                        Radius="30"
+                        Offset="5,5" />
                 </Border.Shadow>
                 <Label
-                    Grid.Column="1"
                     Grid.Row="0"
+                    Grid.Column="1"
                     Grid.ColumnSpan="2"
                     Padding="0,15"
-                    Text="Experience"
                     FontFamily="FontCHLight"
-                    SemanticProperties.HeadingLevel="Level1"
-                    TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                     FontSize="20"
                     HorizontalOptions="Center"
-                    VerticalOptions="Center"/>
+                    SemanticProperties.HeadingLevel="Level1"
+                    Text="Experience"
+                    TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight},
+                                                Dark={StaticResource MainTextColorDark}}"
+                    VerticalOptions="Center" />
 
             </Border>
             <Image
-                    Source="connectlines.svg"
-                    SemanticProperties.Description="Top Separator image"
-                    HeightRequest="90"
-                    WidthRequest="400"                
-                    HorizontalOptions="Center">
+                HeightRequest="90"
+                HorizontalOptions="Center"
+                SemanticProperties.Description="Top Separator image"
+                Source="connectlines.svg"
+                WidthRequest="400">
                 <Image.Behaviors>
                     <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                 </Image.Behaviors>
             </Image>
-            
+
             <CarouselView
-                IndicatorView="ExpIndicator"
                 Margin="0"
-                WidthRequest="400"
                 HeightRequest="505"
-                PeekAreaInsets="30">
-               
-     
+                IndicatorView="ExpIndicator"
+                PeekAreaInsets="30"
+                WidthRequest="400">
+
+
                 <CarouselView.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
-                        <x:String>SYSTEMS, ENGENEERING, CODING, REPAIR&#10;
-Portugal&#10;
-2011 – Present &#10;
-Currently doing ad hoc projects as solution contractor in a miriad of areas ranging from Systems design, certification, implemetation, repair, specific solution coding, including mobile and other targets. </x:String>
-                        <x:String>SENIOR SYSTEMS ENGINEER &#10;
-CPC.is; Lisbon, Portugal&#10;
-May 2011 – December 2011 &#10;
-Invited to join back the engineering team of C.P.C., information systems division. Main responsibilities include coaching and training, customer project implementation, mainly UNIX/Windows, VMware, HP, Microsoft, Symantec, open source, among many other vendors solutions install and configure. Provided 24x7 customer support. Main customers include industry, local and central government, healthcare, logistics and transportation.</x:String>
-                        <x:String>SENIOR SYSTEMS SPECIALIST &#10;
-European Central Bank; Frankfurt, Germany&#10;
-April 2010 – December 2010 &#10;
-Contracted to provide 3rd line and engineering support to backup, storage, fabric switching and routing platforms and to provide engineering support to the disaster recovery solution. Later added as secondary tasks to provide 3rd line support to Unix, Windows, Oracle and the EXDI platform, a Europe-wide webMethods platform to 27 national banks. Finally I´ve also provided support to Darwin documentation system, the Statistics High Performance computing platform among several other services and applications.</x:String>
-                        <x:String>SENIOR STORAGE SPECIALIST&#10;
-Atos Origin; Birmingham, UK&#10;
-September 2009 - November 2009&#10;
-Called in to expand the Government Gateway disaster recovery to new set of application servers, train both the Engineering and the Business as Usual teams in the data consistency solution and performance troubleshooting of the production platform.</x:String>
-                        <x:String>SENIOR STORAGE SPECIALIST&#10;
-Atos Origin; Beeston, UK&#10;
-March 2007 - July 2009&#10;
-Contracted to join the storage team in Beeston having as main tasks to provide Architecture, Design, Implementation and Support for storage and backup of the Ministry of Justice; design and implementation of secure, encrypted data transfer for MoJ sensitive data; low level design and implementation of Government Gateway disaster recovery project including developing custom solution for data consistency; implementation of NHS Scotland storage upgrade; architecture and design of storage, backup and disaster recovery for the ACCA project, Implementation and test of disaster recovery for Brother project, and help in daily support tasks including training in the daily tasks of the new platforms delivered to Business as Usual.</x:String>
-                        <x:String>SENIOR INFRASTRUCTURE SPECIALIST&#10;
-EDS – Rolls-Royce; Derby, UK&#10;
-April 2006 - February 2007&#10;
-Hired to join the newly formed TREDSS/DWP project team having as main tasks, finish the enterprise architecture work, do part the architecture work in the Windows/VMware ‘tower’ in line with QMS (EDS’s Quality Management System; a superset of ITIL), provide architecture help in the AIX ‘tower’, design the Windows/VMware ‘tower’ hardware and operating system solution according to MYP (EDS’s Multi Year Plan; a closely managed, tested set of hardware and software), main engineering work in the Windows/VMware ‘tower’, responsible for the Windows and VMware builds and quality test work on the Windows/VMware and tools towers. Some small design and engineering work on ENI UK and RollsRoyce, including architecture and design of the largest VMware cluster in Europe at the time.</x:String>
-                        <x:String>SENIOR SYSTEMS ENGINEERING&#10;
-CPC is; Lisbon, Portugal&#10;
-2004 - April 2006&#10;
-Invited to start a new area of Storage, and Backup solutions, having as main responsibilities team and project management, project implementation, UNIX/Windows solutions design, install and configure; EMC, HP, Fujitsu-Siemens and other vendor storage design install and configure; Veritas, Legato and CA backup solutions implementation, 24x7 customer support, implementation team management and later special solutions group management (intelligence, military and scientific police). Main customers include all local and central government and all healthcare. CPCis is the top HP and Fujitsu-Siemens partner in Portugal and a new emerging EMC Partner.</x:String>
-                        <x:String>EMC SYSTEMS SPECIALIST&#10;
-WhatEverNet; Lisbon, Portugal&#10;
-2001-2004&#10;
-Called to join a team for the start of a new EMC Business Partner with other selected members, having as main responsibilities EMC solution design, pre-sales support, solution implementation and ‘on call’ customer support. Customers include most ISPs, some telcos, some banks and financial services, central and local government including intelligence and scientific police, state and some manufacturing, heavy industry and MSEs. WhatEverNet is the top Sun partner and one of the top EMC partners in Portugal.</x:String>
-                        <x:String>OPEN SYSTEMS SUPPORT&#10;
-EMC Portuguesa; Lisbon, Portugal&#10;
-1999-2001&#10;
-Hired to help integrate customer Mainframe, UNIX and other open systems with EMC Symmetrix and later also CLARiiON storage solutions, EMC data protection and backup solutions integration on customer disaster recovery plan, 24x7 second line Portugal and Spain Customer OS, disaster recovery and application support, and eventual pre-sales support. Customers include ISPs, all telcos, several financial services, most banks, central and local government, state, some manufacturing and heavy industry. EMC Portuguesa is the top EMC partner in Portugal and was at the time I joined a part of EMC itself.</x:String>
-                        <x:String>CONSULTANT AND PROGRAMMER&#10;
-Novabase; Lisbon, Portugal 1998-1999&#10;&#10;
-OWNER, PROGRAMMER AND TECHNOLOGIST&#10;
-InetD; Barreiro, Portugal 1998-2000&#10;&#10;
-INDUSTRIAL ENGINEERING&#10;
-ELAPP; Palmela, Portugal 1998&#10;&#10;
-INDUSTRIAL ENGINEERING&#10;
-SERRA; Palmela, Portugal 1996-1998</x:String>
+                        <x:String>
+                            SYSTEMS, ENGENEERING, CODING, REPAIR&#10;
+                            Portugal&#10;
+                            2011 – Present &#10;
+                            Currently doing ad hoc projects as solution contractor in a miriad of areas ranging from Systems design, certification, implemetation, repair, specific solution coding, including mobile and other targets.
+                        </x:String>
+                        <x:String>
+                            SENIOR SYSTEMS ENGINEER &#10;
+                            CPC.is; Lisbon, Portugal&#10;
+                            May 2011 – December 2011 &#10;
+                            Invited to join back the engineering team of C.P.C., information systems division. Main responsibilities include coaching and training, customer project implementation, mainly UNIX/Windows, VMware, HP, Microsoft, Symantec, open source, among many other vendors solutions install and configure. Provided 24x7 customer support. Main customers include industry, local and central government, healthcare, logistics and transportation.
+                        </x:String>
+                        <x:String>
+                            SENIOR SYSTEMS SPECIALIST &#10;
+                            European Central Bank; Frankfurt, Germany&#10;
+                            April 2010 – December 2010 &#10;
+                            Contracted to provide 3rd line and engineering support to backup, storage, fabric switching and routing platforms and to provide engineering support to the disaster recovery solution. Later added as secondary tasks to provide 3rd line support to Unix, Windows, Oracle and the EXDI platform, a Europe-wide webMethods platform to 27 national banks. Finally I´ve also provided support to Darwin documentation system, the Statistics High Performance computing platform among several other services and applications.
+                        </x:String>
+                        <x:String>
+                            SENIOR STORAGE SPECIALIST&#10;
+                            Atos Origin; Birmingham, UK&#10;
+                            September 2009 - November 2009&#10;
+                            Called in to expand the Government Gateway disaster recovery to new set of application servers, train both the Engineering and the Business as Usual teams in the data consistency solution and performance troubleshooting of the production platform.
+                        </x:String>
+                        <x:String>
+                            SENIOR STORAGE SPECIALIST&#10;
+                            Atos Origin; Beeston, UK&#10;
+                            March 2007 - July 2009&#10;
+                            Contracted to join the storage team in Beeston having as main tasks to provide Architecture, Design, Implementation and Support for storage and backup of the Ministry of Justice; design and implementation of secure, encrypted data transfer for MoJ sensitive data; low level design and implementation of Government Gateway disaster recovery project including developing custom solution for data consistency; implementation of NHS Scotland storage upgrade; architecture and design of storage, backup and disaster recovery for the ACCA project, Implementation and test of disaster recovery for Brother project, and help in daily support tasks including training in the daily tasks of the new platforms delivered to Business as Usual.
+                        </x:String>
+                        <x:String>
+                            SENIOR INFRASTRUCTURE SPECIALIST&#10;
+                            EDS – Rolls-Royce; Derby, UK&#10;
+                            April 2006 - February 2007&#10;
+                            Hired to join the newly formed TREDSS/DWP project team having as main tasks, finish the enterprise architecture work, do part the architecture work in the Windows/VMware ‘tower’ in line with QMS (EDS’s Quality Management System; a superset of ITIL), provide architecture help in the AIX ‘tower’, design the Windows/VMware ‘tower’ hardware and operating system solution according to MYP (EDS’s Multi Year Plan; a closely managed, tested set of hardware and software), main engineering work in the Windows/VMware ‘tower’, responsible for the Windows and VMware builds and quality test work on the Windows/VMware and tools towers. Some small design and engineering work on ENI UK and RollsRoyce, including architecture and design of the largest VMware cluster in Europe at the time.
+                        </x:String>
+                        <x:String>
+                            SENIOR SYSTEMS ENGINEERING&#10;
+                            CPC is; Lisbon, Portugal&#10;
+                            2004 - April 2006&#10;
+                            Invited to start a new area of Storage, and Backup solutions, having as main responsibilities team and project management, project implementation, UNIX/Windows solutions design, install and configure; EMC, HP, Fujitsu-Siemens and other vendor storage design install and configure; Veritas, Legato and CA backup solutions implementation, 24x7 customer support, implementation team management and later special solutions group management (intelligence, military and scientific police). Main customers include all local and central government and all healthcare. CPCis is the top HP and Fujitsu-Siemens partner in Portugal and a new emerging EMC Partner.
+                        </x:String>
+                        <x:String>
+                            EMC SYSTEMS SPECIALIST&#10;
+                            WhatEverNet; Lisbon, Portugal&#10;
+                            2001-2004&#10;
+                            Called to join a team for the start of a new EMC Business Partner with other selected members, having as main responsibilities EMC solution design, pre-sales support, solution implementation and ‘on call’ customer support. Customers include most ISPs, some telcos, some banks and financial services, central and local government including intelligence and scientific police, state and some manufacturing, heavy industry and MSEs. WhatEverNet is the top Sun partner and one of the top EMC partners in Portugal.
+                        </x:String>
+                        <x:String>
+                            OPEN SYSTEMS SUPPORT&#10;
+                            EMC Portuguesa; Lisbon, Portugal&#10;
+                            1999-2001&#10;
+                            Hired to help integrate customer Mainframe, UNIX and other open systems with EMC Symmetrix and later also CLARiiON storage solutions, EMC data protection and backup solutions integration on customer disaster recovery plan, 24x7 second line Portugal and Spain Customer OS, disaster recovery and application support, and eventual pre-sales support. Customers include ISPs, all telcos, several financial services, most banks, central and local government, state, some manufacturing and heavy industry. EMC Portuguesa is the top EMC partner in Portugal and was at the time I joined a part of EMC itself.
+                        </x:String>
+                        <x:String>
+                            CONSULTANT AND PROGRAMMER&#10;
+                            Novabase; Lisbon, Portugal 1998-1999&#10;&#10;
+                            OWNER, PROGRAMMER AND TECHNOLOGIST&#10;
+                            InetD; Barreiro, Portugal 1998-2000&#10;&#10;
+                            INDUSTRIAL ENGINEERING&#10;
+                            ELAPP; Palmela, Portugal 1998&#10;&#10;
+                            INDUSTRIAL ENGINEERING&#10;
+                            SERRA; Palmela, Portugal 1996-1998
+                        </x:String>
                     </x:Array>
                 </CarouselView.ItemsSource>
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
-                        
+
                         <Border
                             Margin="0"
                             Padding="5,10"
                             HeightRequest="500"
-                            WidthRequest="340"
+                            Stroke="{AppThemeBinding Light={StaticResource MainSVGTintLight},
+                                                     Dark={StaticResource MainSVGTintDark}}"
+                            StrokeShape="RoundRectangle 20"
                             StrokeThickness="1"
-                            Stroke="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}"
-                            StrokeShape="RoundRectangle 20">
+                            WidthRequest="340">
                             <Border.Background>
-                                <LinearGradientBrush
-                                StartPoint="0,0"
-                                EndPoint="1,1">
-                                    <GradientStop Color="{AppThemeBinding Light={StaticResource MainPanelColorLightStart}, Dark={StaticResource MainPanelColorDarkStart}}"
-                                    Offset="0" />
-                                    <GradientStop Color="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
-                                    Offset=".5" />
-                                    <GradientStop Color="{AppThemeBinding Light={StaticResource MainPanelColorLightEnd}, Dark={StaticResource MainPanelColorDarkEnd}}"
-                                    Offset="1" />
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                    <GradientStop Offset="0" Color="{AppThemeBinding Light={StaticResource MainPanelColorLightStart}, Dark={StaticResource MainPanelColorDarkStart}}" />
+                                    <GradientStop Offset=".5" Color="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}" />
+                                    <GradientStop Offset="1" Color="{AppThemeBinding Light={StaticResource MainPanelColorLightEnd}, Dark={StaticResource MainPanelColorDarkEnd}}" />
                                 </LinearGradientBrush>
                             </Border.Background>
+                            <Label
+                                Padding="10"
+                                FontFamily="FontCHLight"
+                                FontSize="17"
+                                Text="{Binding .}" />
                             <VisualStateManager.VisualStateGroups>
                                 <VisualStateGroup x:Name="CommonStates">
                                     <VisualState x:Name="CurrentItem">
@@ -184,48 +200,43 @@ SERRA; Palmela, Portugal 1996-1998</x:String>
                                     </VisualState>
                                 </VisualStateGroup>
                             </VisualStateManager.VisualStateGroups>
-                            <Label Text="{Binding .}" 
-                                   FontFamily="FontCHLight"
-                                   FontSize="17"
-                                   Padding="10"/>
                         </Border>
                     </DataTemplate>
                 </CarouselView.ItemTemplate>
             </CarouselView>
             <IndicatorView
-                Margin="20"
                 x:Name="ExpIndicator"
+                Margin="20"
                 HorizontalOptions="Center"
                 IndicatorColor="{StaticResource Gray500}"
-                SelectedIndicatorColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}"
-                />
+                SelectedIndicatorColor="{AppThemeBinding Light={StaticResource MainSVGTintLight},
+                                                         Dark={StaticResource MainSVGTintDark}}" />
 
             <Image
-                    Source="connectlines.svg"
-                    SemanticProperties.Description="Bottom Separator image"
-                    HeightRequest="90"
-                    Rotation="180"
-                    WidthRequest="400"                
-                    HorizontalOptions="Center">
+                HeightRequest="90"
+                HorizontalOptions="Center"
+                Rotation="180"
+                SemanticProperties.Description="Bottom Separator image"
+                Source="connectlines.svg"
+                WidthRequest="400">
                 <Image.Behaviors>
                     <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                 </Image.Behaviors>
             </Image>
-            
+
             <Border
-                BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
                 Margin="0"
                 Padding="0,0"
+                BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight},
+                                                  Dark={StaticResource MainPanelColorDark}}"
                 HeightRequest="50"
-                StrokeThickness="0"
-                StrokeShape="RoundRectangle 30 30 0 0">
+                StrokeShape="RoundRectangle 30 30 0 0"
+                StrokeThickness="0">
                 <Border.Shadow>
                     <Shadow
-                            Offset="5,5"
-                            Opacity=".5"
-                            Radius="30">
-
-                    </Shadow>
+                        Opacity=".5"
+                        Radius="30"
+                        Offset="5,5" />
                 </Border.Shadow>
                 <Grid>
                     <Grid.RowDefinitions>
@@ -238,16 +249,16 @@ SERRA; Palmela, Portugal 1996-1998</x:String>
 
                     <ImageButton
                         x:Name="BackButton"
-                        Clicked="OnBackButtonClickedAsync"
-                        Source="back.svg"
-                        Grid.Column="0"
                         Grid.Row="0"
+                        Grid.Column="0"
                         Padding="10"
+                        Clicked="OnBackButtonClickedAsync"
                         HeightRequest="80"
-                        WidthRequest="80"
+                        HorizontalOptions="Start"
                         SemanticProperties.Description="Back button"
+                        Source="back.svg"
                         VerticalOptions="Center"
-                        HorizontalOptions="Start">
+                        WidthRequest="80">
                         <ImageButton.Behaviors>
                             <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                         </ImageButton.Behaviors>
@@ -255,7 +266,7 @@ SERRA; Palmela, Portugal 1996-1998</x:String>
 
                 </Grid>
             </Border>
-            
+
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

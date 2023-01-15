@@ -5,77 +5,70 @@
     Contains a set of shouts to all that made this app possible, mostly others that have solved problems I've found during development
 -->
 <!-- </summary> -->
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-             x:Class="CVasApp.About"
-             Title="About"
-             Shell.NavBarIsVisible="False">
+<ContentPage
+    x:Class="CVasApp.About"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    Title="About"
+    Shell.NavBarIsVisible="False">
     <Page.Behaviors>
-        <toolkit:StatusBarBehavior StatusBarColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}" 
-                                   StatusBarStyle="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"/>
+        <toolkit:StatusBarBehavior StatusBarColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}" StatusBarStyle="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}" />
     </Page.Behaviors>
-    <ScrollView 
-        VerticalScrollBarVisibility="Never" 
-        HorizontalScrollBarVisibility="Never" 
-        Margin="0">
+    <ScrollView
+        Margin="0"
+        HorizontalScrollBarVisibility="Never"
+        VerticalScrollBarVisibility="Never">
         <ScrollView.Background>
-            <LinearGradientBrush
-                                StartPoint="0,0"
-                                EndPoint="1,1">
-                <GradientStop Color="{AppThemeBinding Light={StaticResource MainPanelColorLightStart}, Dark={StaticResource MainPanelColorDarkStart}}"
-                                    Offset="0" />
-                <GradientStop Color="{AppThemeBinding Light={StaticResource MainBackgroundColorLight}, Dark={StaticResource MainBackgroundColorDark}}"
-                                    Offset=".5" />
-                <GradientStop Color="{AppThemeBinding Light={StaticResource MainPanelColorLightEnd}, Dark={StaticResource MainPanelColorDarkEnd}}"
-                                    Offset="1" />
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Offset="0" Color="{AppThemeBinding Light={StaticResource MainPanelColorLightStart}, Dark={StaticResource MainPanelColorDarkStart}}" />
+                <GradientStop Offset=".5" Color="{AppThemeBinding Light={StaticResource MainBackgroundColorLight}, Dark={StaticResource MainBackgroundColorDark}}" />
+                <GradientStop Offset="1" Color="{AppThemeBinding Light={StaticResource MainPanelColorLightEnd}, Dark={StaticResource MainPanelColorDarkEnd}}" />
             </LinearGradientBrush>
         </ScrollView.Background>
         <VerticalStackLayout
-            Spacing="0"
             Padding="0,0"
+            Spacing="0"
             VerticalOptions="Start">
             <Border
-                BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
                 Margin="0"
                 Padding="0,-5"
-                StrokeThickness="0"
-                StrokeShape="RoundRectangle 0 0 30 30">
+                BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight},
+                                                  Dark={StaticResource MainPanelColorDark}}"
+                StrokeShape="RoundRectangle 0 0 30 30"
+                StrokeThickness="0">
                 <Border.Shadow>
                     <Shadow
-                            Offset="5,5"
-                            Opacity=".5"
-                            Radius="30">
-
-                    </Shadow>
+                        Opacity=".5"
+                        Radius="30"
+                        Offset="5,5" />
                 </Border.Shadow>
                 <Label
-                    Grid.Column="1"
                     Grid.Row="0"
+                    Grid.Column="1"
                     Grid.ColumnSpan="2"
                     Padding="0,15"
-                    Text="About"
                     FontFamily="FontCHLight"
-                    SemanticProperties.HeadingLevel="Level1"
-                    TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                     FontSize="20"
                     HorizontalOptions="Center"
-                    VerticalOptions="Center"/>
+                    SemanticProperties.HeadingLevel="Level1"
+                    Text="About"
+                    TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight},
+                                                Dark={StaticResource MainTextColorDark}}"
+                    VerticalOptions="Center" />
 
             </Border>
             <Image
-                    Source="connectlines.svg"
-                    SemanticProperties.Description="Top separator image"
-                    HeightRequest="90"
-                    WidthRequest="400"                
-                    HorizontalOptions="Center">
+                HeightRequest="90"
+                HorizontalOptions="Center"
+                SemanticProperties.Description="Top separator image"
+                Source="connectlines.svg"
+                WidthRequest="400">
                 <Image.Behaviors>
                     <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                 </Image.Behaviors>
             </Image>
-            <CollectionView
-                SelectionMode="None"
-                 >
+            <CollectionView SelectionMode="None">
                 <CollectionView.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>I would like to thank the following Individuals, Institutions, Sites, and Companies:</x:String>
@@ -97,50 +90,49 @@
                         <x:String>github.com</x:String>
                         <x:String>Samuel Francis Johnson</x:String>
                         <x:String>Sound Effect by SamuelFrancisJohnson from Pixabay</x:String>
-                        <x:String></x:String>
+                        <x:String />
                         <x:String>Dedicated to, and would not be possible without loving support from Lana</x:String>
-                        <x:String></x:String>
+                        <x:String />
                     </x:Array>
                 </CollectionView.ItemsSource>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Label     
-                                Margin="0"
-                                HorizontalTextAlignment="Center"
-                                HorizontalOptions="Center"
-                                VerticalOptions="Center"
-                                Padding="10"
-                                FontFamily="FontCHLight"
-                                FontSize="19"
-                                Text="{Binding .}" />
+                        <Label
+                            Margin="0"
+                            Padding="10"
+                            FontFamily="FontCHLight"
+                            FontSize="19"
+                            HorizontalOptions="Center"
+                            HorizontalTextAlignment="Center"
+                            Text="{Binding .}"
+                            VerticalOptions="Center" />
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
             <Image
-                    Source="connectlines.svg"
-                    SemanticProperties.Description="Bottom Separator image"
-                    HeightRequest="90"
-                    Rotation="180"
-                    WidthRequest="400"                
-                    HorizontalOptions="Center">
+                HeightRequest="90"
+                HorizontalOptions="Center"
+                Rotation="180"
+                SemanticProperties.Description="Bottom Separator image"
+                Source="connectlines.svg"
+                WidthRequest="400">
                 <Image.Behaviors>
                     <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                 </Image.Behaviors>
             </Image>
             <Border
-                BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
                 Margin="0"
                 Padding="0,0"
+                BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight},
+                                                  Dark={StaticResource MainPanelColorDark}}"
                 HeightRequest="50"
-                StrokeThickness="0"
-                StrokeShape="RoundRectangle 30 30 0 0">
+                StrokeShape="RoundRectangle 30 30 0 0"
+                StrokeThickness="0">
                 <Border.Shadow>
                     <Shadow
-                            Offset="5,5"
-                            Opacity=".5"
-                            Radius="30">
-
-                    </Shadow>
+                        Opacity=".5"
+                        Radius="30"
+                        Offset="5,5" />
                 </Border.Shadow>
                 <Grid>
                     <Grid.RowDefinitions>
@@ -153,16 +145,16 @@
 
                     <ImageButton
                         x:Name="BackButton"
-                        Clicked="OnBackButtonClickedAsync"
-                        Source="back.svg"
-                        Grid.Column="0"
                         Grid.Row="0"
+                        Grid.Column="0"
                         Padding="10"
+                        Clicked="OnBackButtonClickedAsync"
                         HeightRequest="80"
-                        WidthRequest="80"
+                        HorizontalOptions="Start"
                         SemanticProperties.Description="Back button"
+                        Source="back.svg"
                         VerticalOptions="Center"
-                        HorizontalOptions="Start">
+                        WidthRequest="80">
                         <ImageButton.Behaviors>
                             <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                         </ImageButton.Behaviors>

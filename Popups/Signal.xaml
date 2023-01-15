@@ -5,66 +5,67 @@
     Confirms signal actions
 -->
 <!-- </summary> -->
-<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-               xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-               Size="300, 300"
-               x:Class="CVasApp.Popups.Signal">
+<toolkit:Popup
+    x:Class="CVasApp.Popups.Signal"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    Size="300, 300">
 
     <VerticalStackLayout BackgroundColor="{StaticResource MainPanelColorLight}">
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="4*"/>
-                <RowDefinition Height="1.2*"/>
+                <RowDefinition Height="4*" />
+                <RowDefinition Height="1.2*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
 
             <Border
-                    Grid.Column="0"
-                        Grid.Row="0"
-                    BackgroundColor="{StaticResource MainPanelColorLight}"
-                    Margin="20"
-                    Padding="5,5"
-                    HorizontalOptions="FillAndExpand"
-                    HeightRequest="200"
-                    StrokeThickness="3"
-                    Stroke="{StaticResource MainSVGTintLight}"
-                    StrokeShape="RoundRectangle 20">
+                Grid.Row="0"
+                Grid.Column="0"
+                Margin="20"
+                Padding="5,5"
+                BackgroundColor="{StaticResource MainPanelColorLight}"
+                HeightRequest="200"
+                HorizontalOptions="FillAndExpand"
+                Stroke="{StaticResource MainSVGTintLight}"
+                StrokeShape="RoundRectangle 20"
+                StrokeThickness="3">
 
                 <VerticalStackLayout>
 
-                    <Label 
-            Padding="30"
-            Text="Link to Signal App?"
-            TextColor="{StaticResource MainSVGTintLight}"
-            FontSize="20"
-            FontFamily="FontCHLight"
-            HorizontalOptions="Center" />
-                    <Border 
-                    BackgroundColor="{StaticResource MainPanelColorLight}"
-                    Margin="0"
-                    Padding="10,10"
-                    HorizontalOptions="Center"
-                        VerticalOptions="Center"
-                    StrokeThickness="1"
-                    Stroke="{StaticResource MainSVGTintLight}"
-                        StrokeShape="RoundRectangle 20">
-                        <ImageButton 
-                        x:Name="SignalActionButton"
+                    <Label
+                        Padding="30"
+                        FontFamily="FontCHLight"
+                        FontSize="20"
+                        HorizontalOptions="Center"
+                        Text="Link to Signal App?"
+                        TextColor="{StaticResource MainSVGTintLight}" />
+                    <Border
+                        Margin="0"
+                        Padding="10,10"
+                        BackgroundColor="{StaticResource MainPanelColorLight}"
+                        HorizontalOptions="Center"
+                        Stroke="{StaticResource MainSVGTintLight}"
+                        StrokeShape="RoundRectangle 20"
+                        StrokeThickness="1"
+                        VerticalOptions="Center">
+                        <ImageButton
+                            x:Name="SignalActionButton"
                             Clicked="SignalClicked"
-                            Loaded="onPageLoaded"
-                            WidthRequest="40"
                             HeightRequest="40"
                             HorizontalOptions="Center"
-                            VerticalOptions="Center">
-                        <ImageButton.Source>
-                            <FontImageSource FontFamily="FontSolid" Glyph="&#xf075;" />
-                        </ImageButton.Source>
-                        <ImageButton.Behaviors>
-                            <toolkit:IconTintColorBehavior TintColor="{StaticResource MainSVGTintLight}" />
-                        </ImageButton.Behaviors>
+                            Loaded="onPageLoaded"
+                            VerticalOptions="Center"
+                            WidthRequest="40">
+                            <ImageButton.Source>
+                                <FontImageSource FontFamily="FontSolid" Glyph="&#xf075;" />
+                            </ImageButton.Source>
+                            <ImageButton.Behaviors>
+                                <toolkit:IconTintColorBehavior TintColor="{StaticResource MainSVGTintLight}" />
+                            </ImageButton.Behaviors>
                         </ImageButton>
                     </Border>
                 </VerticalStackLayout>
@@ -72,21 +73,21 @@
 
             <ImageButton
                 x:Name="BackButton"
-                        Clicked="PopupSignalCliked"
+                Grid.Row="1"
                 Grid.Column="0"
-                        Grid.Row="1"
-                        Source="back.svg"
-                        Padding="10"
-                        HeightRequest="80"
-                        WidthRequest="80"
-                        SemanticProperties.Description="Back button"
-                        VerticalOptions="End"
-                        HorizontalOptions="Start">
+                Padding="10"
+                Clicked="PopupSignalCliked"
+                HeightRequest="80"
+                HorizontalOptions="Start"
+                SemanticProperties.Description="Back button"
+                Source="back.svg"
+                VerticalOptions="End"
+                WidthRequest="80">
                 <ImageButton.Behaviors>
                     <toolkit:IconTintColorBehavior TintColor="{StaticResource MainSVGTintLight}" />
                 </ImageButton.Behaviors>
             </ImageButton>
         </Grid>
     </VerticalStackLayout>
-    
+
 </toolkit:Popup>

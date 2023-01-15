@@ -3,176 +3,160 @@
 <!--
     Main Page
     Serves as startup page for the app, has navigation to all other pages
-    -->
+-->
 <!-- </summary> -->
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-             x:Class="CVasApp.MainPage"
-             Shell.NavBarIsVisible="False">
+<ContentPage
+    x:Class="CVasApp.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    Shell.NavBarIsVisible="False">
     <!-- <summary> -->
     <!--
-    Sets top status bar to app colour
+        Sets top status bar to app colour
     -->
     <!-- </summary> -->
     <Page.Behaviors>
-        <toolkit:StatusBarBehavior StatusBarColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}" 
-                                   StatusBarStyle="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"/>
+        <toolkit:StatusBarBehavior StatusBarColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}" StatusBarStyle="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}" />
     </Page.Behaviors>
     <!-- <summary> -->
     <!--
-    Main Page view
+        Main Page view
     -->
     <!-- </summary> -->
-    <ScrollView 
-        VerticalScrollBarVisibility="Never" 
-        HorizontalScrollBarVisibility="Never" 
-        Margin="0">
+    <ScrollView
+        Margin="0"
+        HorizontalScrollBarVisibility="Never"
+        VerticalScrollBarVisibility="Never">
         <ScrollView.Background>
-            <LinearGradientBrush
-                                StartPoint="0,0"
-                                EndPoint="1,1">
-                <GradientStop Color="{AppThemeBinding Light={StaticResource MainPanelColorLightStart}, Dark={StaticResource MainPanelColorDarkStart}}"
-                                    Offset="0" />
-                <GradientStop Color="{AppThemeBinding Light={StaticResource MainBackgroundColorLight}, Dark={StaticResource MainBackgroundColorDark}}"
-                                    Offset=".5" />
-                <GradientStop Color="{AppThemeBinding Light={StaticResource MainPanelColorLightEnd}, Dark={StaticResource MainPanelColorDarkEnd}}"
-                                    Offset="1" />
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Offset="0" Color="{AppThemeBinding Light={StaticResource MainPanelColorLightStart}, Dark={StaticResource MainPanelColorDarkStart}}" />
+                <GradientStop Offset=".5" Color="{AppThemeBinding Light={StaticResource MainBackgroundColorLight}, Dark={StaticResource MainBackgroundColorDark}}" />
+                <GradientStop Offset="1" Color="{AppThemeBinding Light={StaticResource MainPanelColorLightEnd}, Dark={StaticResource MainPanelColorDarkEnd}}" />
             </LinearGradientBrush>
         </ScrollView.Background>
         <VerticalStackLayout
-            Spacing="0"
             Padding="0,0"
+            Spacing="0"
             VerticalOptions="Start">
             <Border
-                BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
                 Margin="0"
                 Padding="0,-5"
-                StrokeThickness="0"
-                StrokeShape="RoundRectangle 0 0 30 30">
+                BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight},
+                                                  Dark={StaticResource MainPanelColorDark}}"
+                StrokeShape="RoundRectangle 0 0 30 30"
+                StrokeThickness="0">
                 <Border.Shadow>
                     <Shadow
-                            Offset="5,5"
-                            Opacity=".5"
-                            Radius="30">
-                    </Shadow>
+                        Opacity=".5"
+                        Radius="30"
+                        Offset="5,5" />
                 </Border.Shadow>
                 <Label
-                    FontAutoScalingEnabled="False" 
-                    Grid.Column="1"
                     Grid.Row="0"
+                    Grid.Column="1"
                     Grid.ColumnSpan="2"
                     Padding="0,10"
-                    Text="CV as App"
+                    FontAutoScalingEnabled="False"
                     FontFamily="FontCHLight"
-                    SemanticProperties.HeadingLevel="Level1"
-                    TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                     FontSize="20"
                     HorizontalOptions="Center"
-                    VerticalOptions="Center"/>
+                    SemanticProperties.HeadingLevel="Level1"
+                    Text="CV as App"
+                    TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight},
+                                                Dark={StaticResource MainTextColorDark}}"
+                    VerticalOptions="Center" />
             </Border>
-            
+
             <Image
-                    Source="connectlines.svg"
-                    SemanticProperties.Description="Top separator image"
-                    HeightRequest="90"
-                    WidthRequest="400"                
-                    HorizontalOptions="Center">
+                HeightRequest="90"
+                HorizontalOptions="Center"
+                SemanticProperties.Description="Top separator image"
+                Source="connectlines.svg"
+                WidthRequest="400">
                 <Image.Behaviors>
                     <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                 </Image.Behaviors>
             </Image>
             <!-- (Waiting bug fix)
-            <Image 
+            <Image
                 x:Name="TopGif"
-                Loaded="OnTopGifLoaded"   
-                
-                   HeightRequest="90" 
+                Loaded="OnTopGifLoaded"
+
+                   HeightRequest="90"
                    WidthRequest="400"
-                   IsAnimationPlaying="False" 
+                   IsAnimationPlaying="False"
                    InputTransparent="True"
-                   HorizontalOptions="Center"/>
--->
+                   HorizontalOptions="Center"/>-->
             <!-- <summary> -->
             <!--
-            Top Panel
+                Top Panel
             -->
             <!-- </summary> -->
             <Border
-                    Margin="20"
-                    Padding="10,0"
-                    HorizontalOptions="FillAndExpand"
-                    HeightRequest="190"
-                    StrokeThickness="0"
-                    Stroke="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}"
-                    StrokeShape="RoundRectangle 20">
-                
+                Margin="20"
+                Padding="10,0"
+                HeightRequest="190"
+                HorizontalOptions="FillAndExpand"
+                Stroke="{AppThemeBinding Light={StaticResource MainSVGTintLight},
+                                         Dark={StaticResource MainSVGTintDark}}"
+                StrokeShape="RoundRectangle 20"
+                StrokeThickness="0">
+
                 <Border.Background>
-                    <LinearGradientBrush
-                                StartPoint="0,.3"
-                                EndPoint=".25,1">
-                        <GradientStop Color="{AppThemeBinding Light={StaticResource MainPanelColorLightStart}, Dark={StaticResource MainPanelColorDarkStart}}"
-                                    Offset="0" />
-                        <GradientStop Color="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
-                                    Offset=".5" />
-                        <GradientStop Color="{AppThemeBinding Light={StaticResource MainPanelColorLightEnd}, Dark={StaticResource MainPanelColorDarkEnd}}"
-                                    Offset="1" />
+                    <LinearGradientBrush StartPoint="0,.3" EndPoint=".25,1">
+                        <GradientStop Offset="0" Color="{AppThemeBinding Light={StaticResource MainPanelColorLightStart}, Dark={StaticResource MainPanelColorDarkStart}}" />
+                        <GradientStop Offset=".5" Color="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}" />
+                        <GradientStop Offset="1" Color="{AppThemeBinding Light={StaticResource MainPanelColorLightEnd}, Dark={StaticResource MainPanelColorDarkEnd}}" />
                     </LinearGradientBrush>
                 </Border.Background>
-                
+
                 <Border.Shadow>
                     <Shadow
-                            Offset="5,5"
-                            Opacity=".5"
-                            Radius="40">
+                        Opacity=".5"
+                        Radius="40"
+                        Offset="5,5">
                         <Shadow.Brush>
-                            <LinearGradientBrush
-                                StartPoint="0,.3"
-                                EndPoint=".25,1">
-                                <GradientStop Color="White"
-                                    Offset="0.1" />
-                                <GradientStop Color="Black"
-                                    Offset="0.6" />
-                                <GradientStop Color="Black"
-                                    Offset="1" />
+                            <LinearGradientBrush StartPoint="0,.3" EndPoint=".25,1">
+                                <GradientStop Offset="0.1" Color="White" />
+                                <GradientStop Offset="0.6" Color="Black" />
+                                <GradientStop Offset="1" Color="Black" />
                             </LinearGradientBrush>
                         </Shadow.Brush>
                     </Shadow>
                 </Border.Shadow>
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height=".95*"/>
-                        <RowDefinition Height=".5*"/>
-                        <RowDefinition Height=".5*"/>
-                        <RowDefinition Height=".23*"/>
+                        <RowDefinition Height=".95*" />
+                        <RowDefinition Height=".5*" />
+                        <RowDefinition Height=".5*" />
+                        <RowDefinition Height=".23*" />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1.8*"/>
-                        <ColumnDefinition Width="1.4*"/>
+                        <ColumnDefinition Width="1.8*" />
+                        <ColumnDefinition Width="1.4*" />
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Border
-                            Grid.Column="0"
-                            Grid.Row="0"
-                            Grid.RowSpan="4"
-                            WidthRequest="130"
-                            HeightRequest="130"
-                            StrokeThickness="3"
-                            Stroke="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}"
-                            StrokeShape="RoundRectangle 100">
+                        Grid.Row="0"
+                        Grid.RowSpan="4"
+                        Grid.Column="0"
+                        HeightRequest="130"
+                        Stroke="{AppThemeBinding Light={StaticResource MainSVGTintLight},
+                                                 Dark={StaticResource MainSVGTintDark}}"
+                        StrokeShape="RoundRectangle 100"
+                        StrokeThickness="3"
+                        WidthRequest="130">
                         <Border.Shadow>
                             <Shadow
-                            Offset="5,5"
-                            Opacity=".6"
-                            Radius="30">
+                                Opacity=".6"
+                                Radius="30"
+                                Offset="5,5">
                                 <Shadow.Brush>
                                     <LinearGradientBrush>
-                                        <GradientStop Color="White"
-                                            Offset="0" />
-                                        <GradientStop Color="Black"
-                                            Offset="0.5" />
-                                        <GradientStop Color="Black"
-                                            Offset="1" />
+                                        <GradientStop Offset="0" Color="White" />
+                                        <GradientStop Offset="0.5" Color="Black" />
+                                        <GradientStop Offset="1" Color="Black" />
                                     </LinearGradientBrush>
                                 </Shadow.Brush>
                             </Shadow>
@@ -180,38 +164,38 @@
                         <ImageButton
                             x:Name="ProfilePic"
                             Clicked="OnProfilePicClickedAsync"
-                            Source="profilepic.png"
-                            SemanticProperties.Description="Profile picture, photographed from the front, bust only, circular"
                             HeightRequest="130"
-                            HorizontalOptions="Center">
-                        </ImageButton>
+                            HorizontalOptions="Center"
+                            SemanticProperties.Description="Profile picture, photographed from the front, bust only, circular"
+                            Source="profilepic.png" />
                     </Border>
                     <Label
-                        FontAutoScalingEnabled="False" 
-                            Padding="15"
-                            Grid.Column="1"
-                            Grid.Row="0"
-                            Grid.ColumnSpan="2"
-                            Text="Victor Luz"
-                            FontFamily="FontCHLight"
-                            SemanticProperties.HeadingLevel="Level1"
-                            TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
-                            FontSize="30"
-                            HorizontalOptions="Start"
-                            VerticalOptions="End">
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2"
+                        Padding="15"
+                        FontAutoScalingEnabled="False"
+                        FontFamily="FontCHLight"
+                        FontSize="30"
+                        HorizontalOptions="Start"
+                        SemanticProperties.HeadingLevel="Level1"
+                        Text="Victor Luz"
+                        TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight},
+                                                    Dark={StaticResource MainTextColorDark}}"
+                        VerticalOptions="End">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="OnProfilePicClickedAsync" />
                         </Label.GestureRecognizers>
                     </Label>
-                    <ImageButton 
-                            x:Name="PhonePopupButton"
-                            Clicked="OnPhonePopupClicked"
-                            Grid.Column="1"
-                            Grid.Row="1"
-                            WidthRequest="20"
-                            HeightRequest="20"
-                            HorizontalOptions="Start"
-                            VerticalOptions="Center">
+                    <ImageButton
+                        x:Name="PhonePopupButton"
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Clicked="OnPhonePopupClicked"
+                        HeightRequest="20"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        WidthRequest="20">
                         <ImageButton.Source>
                             <FontImageSource FontFamily="FontSolid" Glyph="&#xf095;" />
                         </ImageButton.Source>
@@ -219,29 +203,30 @@
                             <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                         </ImageButton.Behaviors>
                     </ImageButton>
-                    <Label 
-                            Padding="12"
-                            Grid.Column="1"
-                            Grid.Row="1"    
-                            FontFamily="FontCHLight"
-                            Text="     932673261"
-                            TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
-                            FontSize="12"
-                            HorizontalOptions="Start"
-                            VerticalOptions="Center">
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Padding="12"
+                        FontFamily="FontCHLight"
+                        FontSize="12"
+                        HorizontalOptions="Start"
+                        Text="     932673261"
+                        TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight},
+                                                    Dark={StaticResource MainTextColorDark}}"
+                        VerticalOptions="Center">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="OnPhonePopupClicked" />
                         </Label.GestureRecognizers>
                     </Label>
-                    <ImageButton 
-                                x:Name="SlackPopupButton"
-                                Clicked="OnSlackPopupClicked"
-                                Grid.Column="2"
-                                Grid.Row="1"
-                                WidthRequest="20"
-                                HeightRequest="20"
-                                HorizontalOptions="Start"
-                                VerticalOptions="Center">
+                    <ImageButton
+                        x:Name="SlackPopupButton"
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Clicked="OnSlackPopupClicked"
+                        HeightRequest="20"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        WidthRequest="20">
                         <ImageButton.Source>
                             <FontImageSource FontFamily="FontBrands" Glyph="&#xf198;" />
                         </ImageButton.Source>
@@ -250,28 +235,29 @@
                         </ImageButton.Behaviors>
                     </ImageButton>
                     <Label
-                            Padding="12"
-                            Grid.Column="2"
-                            Grid.Row="1"
-                            FontFamily="FontCHLight"
-                            Text="     Slack"
-                            TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
-                            FontSize="12"
-                            HorizontalOptions="Start"
-                            VerticalOptions="Center">
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Padding="12"
+                        FontFamily="FontCHLight"
+                        FontSize="12"
+                        HorizontalOptions="Start"
+                        Text="     Slack"
+                        TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight},
+                                                    Dark={StaticResource MainTextColorDark}}"
+                        VerticalOptions="Center">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="OnSlackPopupClicked" />
                         </Label.GestureRecognizers>
                     </Label>
-                    <ImageButton 
-                            x:Name="SignalPopupButton"
-                            Clicked="OnSignalPopupClicked"
-                            Grid.Column="2"
-                            Grid.Row="2"
-                            WidthRequest="20"
-                            HeightRequest="20"
-                            HorizontalOptions="Start"
-                            VerticalOptions="Center">
+                    <ImageButton
+                        x:Name="SignalPopupButton"
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        Clicked="OnSignalPopupClicked"
+                        HeightRequest="20"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        WidthRequest="20">
                         <ImageButton.Source>
                             <FontImageSource FontFamily="FontSolid" Glyph="&#xf075;" />
                         </ImageButton.Source>
@@ -280,28 +266,29 @@
                         </ImageButton.Behaviors>
                     </ImageButton>
                     <Label
-                            Padding="12"
-                            Grid.Column="2"
-                            Grid.Row="2"
-                            FontFamily="FontCHLight"
-                            Text="     Signal"
-                            TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
-                            FontSize="12"
-                            HorizontalOptions="Start"
-                            VerticalOptions="Center">
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        Padding="12"
+                        FontFamily="FontCHLight"
+                        FontSize="12"
+                        HorizontalOptions="Start"
+                        Text="     Signal"
+                        TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight},
+                                                    Dark={StaticResource MainTextColorDark}}"
+                        VerticalOptions="Center">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="OnSignalPopupClicked" />
                         </Label.GestureRecognizers>
                     </Label>
-                    <ImageButton 
-                            x:Name="MailPopupButton"
-                            Clicked="OnMailPopupClicked"
-                            Grid.Column="1"
-                            Grid.Row="2"
-                            WidthRequest="20"
-                            HeightRequest="20"
-                            HorizontalOptions="Start"
-                            VerticalOptions="Center">
+                    <ImageButton
+                        x:Name="MailPopupButton"
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Clicked="OnMailPopupClicked"
+                        HeightRequest="20"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        WidthRequest="20">
                         <ImageButton.Source>
                             <FontImageSource FontFamily="FontSolid" Glyph="&#xf0e0;" />
                         </ImageButton.Source>
@@ -310,15 +297,16 @@
                         </ImageButton.Behaviors>
                     </ImageButton>
                     <Label
-                            Padding="12"
-                            Grid.Column="1"
-                            Grid.Row="2"
-                            FontFamily="FontCHLight"
-                            Text="     vluz@me.com"
-                            TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
-                            FontSize="12"
-                            HorizontalOptions="Start"
-                            VerticalOptions="Center">
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Padding="12"
+                        FontFamily="FontCHLight"
+                        FontSize="12"
+                        HorizontalOptions="Start"
+                        Text="     vluz@me.com"
+                        TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight},
+                                                    Dark={StaticResource MainTextColorDark}}"
+                        VerticalOptions="Center">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="OnMailPopupClicked" />
                         </Label.GestureRecognizers>
@@ -328,54 +316,44 @@
 
             <!-- <summary> -->
             <!--
-            Bottom Panel, contains CV blocks
+                Bottom Panel, contains CV blocks
             -->
             <!-- </summary> -->
             <Border
-                    
-                    Margin="20,10"
-                    Padding="5,10"
-                    HorizontalOptions="FillAndExpand"
-                    HeightRequest="285"
-                    StrokeThickness="0"
-                    Stroke="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}"
-                    StrokeShape="RoundRectangle 20">
+                Margin="20,10"
+                Padding="5,10"
+                HeightRequest="285"
+                HorizontalOptions="FillAndExpand"
+                Stroke="{AppThemeBinding Light={StaticResource MainSVGTintLight},
+                                         Dark={StaticResource MainSVGTintDark}}"
+                StrokeShape="RoundRectangle 20"
+                StrokeThickness="0">
                 <Border.Background>
-                    <LinearGradientBrush
-                                StartPoint="0,.1"
-                                EndPoint=".6,1">
-                        <GradientStop Color="{AppThemeBinding Light={StaticResource MainPanelColorLightStart}, Dark={StaticResource MainPanelColorDarkStart}}"
-                                    Offset="0" />
-                        <GradientStop Color="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
-                                    Offset=".6" />
-                        <GradientStop Color="{AppThemeBinding Light={StaticResource MainPanelColorLightEnd}, Dark={StaticResource MainPanelColorDarkEnd}}"
-                                    Offset="1" />
+                    <LinearGradientBrush StartPoint="0,.1" EndPoint=".6,1">
+                        <GradientStop Offset="0" Color="{AppThemeBinding Light={StaticResource MainPanelColorLightStart}, Dark={StaticResource MainPanelColorDarkStart}}" />
+                        <GradientStop Offset=".6" Color="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}" />
+                        <GradientStop Offset="1" Color="{AppThemeBinding Light={StaticResource MainPanelColorLightEnd}, Dark={StaticResource MainPanelColorDarkEnd}}" />
                     </LinearGradientBrush>
                 </Border.Background>
                 <Border.Shadow>
                     <Shadow
-                            Offset="5,5"
-                            Opacity=".5"
-                            Radius="30">
+                        Opacity=".5"
+                        Radius="30"
+                        Offset="5,5">
                         <Shadow.Brush>
-                            <LinearGradientBrush
-                                StartPoint="0,.1"
-                                EndPoint=".6,1">
-                                <GradientStop Color="White"
-                                    Offset="0" />
-                                <GradientStop Color="Black"
-                                    Offset="0.6" />
-                                <GradientStop Color="Black"
-                                    Offset="1" />
+                            <LinearGradientBrush StartPoint="0,.1" EndPoint=".6,1">
+                                <GradientStop Offset="0" Color="White" />
+                                <GradientStop Offset="0.6" Color="Black" />
+                                <GradientStop Offset="1" Color="Black" />
                             </LinearGradientBrush>
                         </Shadow.Brush>
                     </Shadow>
                 </Border.Shadow>
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height=".4*"/>
-                        <RowDefinition Height=".9*"/>
-                        <RowDefinition Height=".9*"/>
+                        <RowDefinition Height=".4*" />
+                        <RowDefinition Height=".9*" />
+                        <RowDefinition Height=".9*" />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition />
@@ -386,81 +364,83 @@
 
                     <ImageButton
                         x:Name="ProfileButton"
-                        Clicked="OnProfileButtonClickedAsync"
-                        Source="profile.svg"
-                        WidthRequest="50"
-                        HeightRequest="50"
-                        Grid.Column="0"
                         Grid.Row="1"
+                        Grid.Column="0"
+                        Clicked="OnProfileButtonClickedAsync"
+                        HeightRequest="50"
+                        HorizontalOptions="Center"
                         SemanticProperties.Description="Profile button"
+                        Source="profile.svg"
                         VerticalOptions="Center"
-                        HorizontalOptions="Center">
+                        WidthRequest="50">
                         <ImageButton.Behaviors>
                             <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                         </ImageButton.Behaviors>
                     </ImageButton>
                     <Label
-                        Padding="12"
-                        Grid.Column="0"
                         Grid.Row="1"
+                        Grid.Column="0"
+                        Padding="12"
                         FontFamily="FontCHLight"
-                        Text="Profile"
-                        TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                         FontSize="12"
                         HorizontalOptions="Center"
+                        Text="Profile"
+                        TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight},
+                                                    Dark={StaticResource MainTextColorDark}}"
                         VerticalOptions="End">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="OnProfileButtonClickedAsync" />
                         </Label.GestureRecognizers>
                     </Label>
                     <Label
-                        Padding="12"
-                        Grid.Column="0"
                         Grid.Row="0"
+                        Grid.Column="0"
                         Grid.ColumnSpan="3"
+                        Padding="12"
                         FontFamily="FontCHLight"
-                        Text="CV Sections"
-                        TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                         FontSize="25"
                         HorizontalOptions="Center"
-                        VerticalOptions="Center"/>
+                        Text="CV Sections"
+                        TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight},
+                                                    Dark={StaticResource MainTextColorDark}}"
+                        VerticalOptions="Center" />
 
                     <Border
-                        Grid.Column="0"
                         Grid.Row="0"
+                        Grid.Column="0"
                         Grid.ColumnSpan="3"
+                        BackgroundColor="{AppThemeBinding Light={StaticResource MainSVGTintLight},
+                                                          Dark={StaticResource MainSVGTintDark}}"
                         HeightRequest="1"
-                        WidthRequest="230"
-                        BackgroundColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}"
+                        HorizontalOptions="Center"
                         StrokeThickness="1"
                         VerticalOptions="End"
-                        HorizontalOptions="Center">
-
-                    </Border>
+                        WidthRequest="230" />
                     <ImageButton
                         x:Name="ExpButton"
-                        Clicked="OnExpButtonClickedAsync"
-                        Source="expereince.svg"
-                        WidthRequest="50"
-                        HeightRequest="50"
-                        Grid.Column="1"
                         Grid.Row="1"
+                        Grid.Column="1"
+                        Clicked="OnExpButtonClickedAsync"
+                        HeightRequest="50"
+                        HorizontalOptions="Center"
                         SemanticProperties.Description="Exp button"
+                        Source="expereince.svg"
                         VerticalOptions="Center"
-                        HorizontalOptions="Center">
+                        WidthRequest="50">
                         <ImageButton.Behaviors>
                             <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                         </ImageButton.Behaviors>
                     </ImageButton>
                     <Label
-                        Padding="12"
-                        Grid.Column="1"
                         Grid.Row="1"
+                        Grid.Column="1"
+                        Padding="12"
                         FontFamily="FontCHLight"
-                        Text="Experience"
-                        TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                         FontSize="12"
                         HorizontalOptions="Center"
+                        Text="Experience"
+                        TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight},
+                                                    Dark={StaticResource MainTextColorDark}}"
                         VerticalOptions="End">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="OnExpButtonClickedAsync" />
@@ -468,28 +448,29 @@
                     </Label>
                     <ImageButton
                         x:Name="SkillsButton"
-                        Clicked="OnSkillsButtonClickedAsync"
-                        Source="skills.svg"
-                        WidthRequest="50"
-                        HeightRequest="50"
-                        Grid.Column="1"
                         Grid.Row="2"
+                        Grid.Column="1"
+                        Clicked="OnSkillsButtonClickedAsync"
+                        HeightRequest="50"
+                        HorizontalOptions="Center"
                         SemanticProperties.Description="Skills button"
+                        Source="skills.svg"
                         VerticalOptions="Center"
-                        HorizontalOptions="Center">
+                        WidthRequest="50">
                         <ImageButton.Behaviors>
                             <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                         </ImageButton.Behaviors>
                     </ImageButton>
                     <Label
-                        Padding="12"
-                        Grid.Column="1"
                         Grid.Row="2"
+                        Grid.Column="1"
+                        Padding="12"
                         FontFamily="FontCHLight"
-                        Text="Skills"
-                        TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                         FontSize="12"
                         HorizontalOptions="Center"
+                        Text="Skills"
+                        TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight},
+                                                    Dark={StaticResource MainTextColorDark}}"
                         VerticalOptions="End">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="OnSkillsButtonClickedAsync" />
@@ -497,28 +478,29 @@
                     </Label>
                     <ImageButton
                         x:Name="EducationButton"
-                        Clicked="OnEducationButtonClickedAsync"
-                        Source="education.svg"
-                        WidthRequest="50"
-                        HeightRequest="50"
-                        Grid.Column="2"
                         Grid.Row="1"
+                        Grid.Column="2"
+                        Clicked="OnEducationButtonClickedAsync"
+                        HeightRequest="50"
+                        HorizontalOptions="Center"
                         SemanticProperties.Description="Education button"
+                        Source="education.svg"
                         VerticalOptions="Center"
-                        HorizontalOptions="Center">
+                        WidthRequest="50">
                         <ImageButton.Behaviors>
                             <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                         </ImageButton.Behaviors>
                     </ImageButton>
                     <Label
-                        Padding="12"
-                        Grid.Column="2"
                         Grid.Row="1"
+                        Grid.Column="2"
+                        Padding="12"
                         FontFamily="FontCHLight"
-                        Text="Education"
-                        TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                         FontSize="12"
                         HorizontalOptions="Center"
+                        Text="Education"
+                        TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight},
+                                                    Dark={StaticResource MainTextColorDark}}"
                         VerticalOptions="End">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="OnEducationButtonClickedAsync" />
@@ -526,28 +508,29 @@
                     </Label>
                     <ImageButton
                         x:Name="OtherButton"
-                        Clicked="OnOtherButtonClickedAsync"
-                        Source="otherinfo.svg"
-                        WidthRequest="50"
-                        HeightRequest="50"
-                        Grid.Column="2"
                         Grid.Row="2"
+                        Grid.Column="2"
+                        Clicked="OnOtherButtonClickedAsync"
+                        HeightRequest="50"
+                        HorizontalOptions="Center"
                         SemanticProperties.Description="Other Information Button"
+                        Source="otherinfo.svg"
                         VerticalOptions="Center"
-                        HorizontalOptions="Center">
+                        WidthRequest="50">
                         <ImageButton.Behaviors>
                             <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                         </ImageButton.Behaviors>
                     </ImageButton>
                     <Label
-                        Padding="12"
-                        Grid.Column="2"
                         Grid.Row="2"
+                        Grid.Column="2"
+                        Padding="12"
                         FontFamily="FontCHLight"
-                        Text="Other Information"
-                        TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                         FontSize="12"
                         HorizontalOptions="Center"
+                        Text="Other Information"
+                        TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight},
+                                                    Dark={StaticResource MainTextColorDark}}"
                         VerticalOptions="End">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="OnOtherButtonClickedAsync" />
@@ -555,55 +538,56 @@
                     </Label>
                     <ImageButton
                         x:Name="CertButton"
-                        Clicked="OnCertButtonClickedAsync"
-                        Source="cert.svg"
-                        WidthRequest="50"
-                        HeightRequest="50"
-                        Grid.Column="0"
                         Grid.Row="2"
+                        Grid.Column="0"
+                        Clicked="OnCertButtonClickedAsync"
+                        HeightRequest="50"
+                        HorizontalOptions="Center"
                         SemanticProperties.Description="Certifications button"
+                        Source="cert.svg"
                         VerticalOptions="Center"
-                        HorizontalOptions="Center">
+                        WidthRequest="50">
                         <ImageButton.Behaviors>
                             <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                         </ImageButton.Behaviors>
                     </ImageButton>
                     <Label
-                        Padding="12"
-                        Grid.Column="0"
                         Grid.Row="2"
+                        Grid.Column="0"
+                        Padding="12"
                         FontFamily="FontCHLight"
-                        Text="Certifications"
-                        TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}"
                         FontSize="12"
                         HorizontalOptions="Center"
+                        Text="Certifications"
+                        TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight},
+                                                    Dark={StaticResource MainTextColorDark}}"
                         VerticalOptions="End">
-                    <Label.GestureRecognizers>
+                        <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="OnCertButtonClickedAsync" />
-                    </Label.GestureRecognizers>
+                        </Label.GestureRecognizers>
                     </Label>
                 </Grid>
             </Border>
-            
+
             <Image
-                    Source="connectlines.svg"
-                    SemanticProperties.Description="Bottom separator image"
-                    HeightRequest="90"
-                    Rotation="180"
-                    WidthRequest="400"                
-                    HorizontalOptions="Center">
+                HeightRequest="90"
+                HorizontalOptions="Center"
+                Rotation="180"
+                SemanticProperties.Description="Bottom separator image"
+                Source="connectlines.svg"
+                WidthRequest="400">
                 <Image.Behaviors>
                     <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                 </Image.Behaviors>
             </Image>
             <!--
-            <Image 
+            <Image
                 x:Name="BottomGif"
-                Loaded="OnBottomGifLoaded"   
-                
-                   HeightRequest="90" 
+                Loaded="OnBottomGifLoaded"
+
+                   HeightRequest="90"
                    WidthRequest="400"
-                   IsAnimationPlaying="False" 
+                   IsAnimationPlaying="False"
                    InputTransparent="True"
                    HorizontalOptions="Center"/>
             -->
@@ -613,19 +597,18 @@
             -->
             <!-- </summary> -->
             <Border
-                BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}"
                 Margin="0"
                 Padding="0,0"
+                BackgroundColor="{AppThemeBinding Light={StaticResource MainPanelColorLight},
+                                                  Dark={StaticResource MainPanelColorDark}}"
                 HeightRequest="50"
-                StrokeThickness="0"
-                StrokeShape="RoundRectangle 30 30 0 0">
+                StrokeShape="RoundRectangle 30 30 0 0"
+                StrokeThickness="0">
                 <Border.Shadow>
                     <Shadow
-                            Offset="5,5"
-                            Opacity=".5"
-                            Radius="30">
-
-                    </Shadow>
+                        Opacity=".5"
+                        Radius="30"
+                        Offset="5,5" />
                 </Border.Shadow>
                 <Grid>
                     <Grid.RowDefinitions>
@@ -640,64 +623,64 @@
 
                     <ImageButton
                         x:Name="ExitButton"
-                        Clicked="OnExitButtonClicked"
-                        Source="exit.svg"
-                        Grid.Column="0"
                         Grid.Row="0"
+                        Grid.Column="0"
                         Padding="10"
+                        Clicked="OnExitButtonClicked"
                         HeightRequest="70"
-                        WidthRequest="70"
+                        HorizontalOptions="Start"
                         SemanticProperties.Description="Exit Button"
+                        Source="exit.svg"
                         VerticalOptions="Center"
-                        HorizontalOptions="Start">
+                        WidthRequest="70">
                         <ImageButton.Behaviors>
                             <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                         </ImageButton.Behaviors>
                     </ImageButton>
                     <ImageButton
                         x:Name="AboutButton"
-                        Clicked="OnAboutButtonClickedAsync"
-                        Source="about.svg"
-                        Grid.Column="1"
                         Grid.Row="0"
+                        Grid.Column="1"
                         Padding="10"
+                        Clicked="OnAboutButtonClickedAsync"
                         HeightRequest="70"
-                        WidthRequest="70"
+                        HorizontalOptions="Start"
                         SemanticProperties.Description="About button"
+                        Source="about.svg"
                         VerticalOptions="Center"
-                        HorizontalOptions="Start">
+                        WidthRequest="70">
                         <ImageButton.Behaviors>
                             <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                         </ImageButton.Behaviors>
                     </ImageButton>
                     <ImageButton
                         x:Name="WebButton"
-                        Clicked="OnWebButtonClickedAsync"
-                        Source="web.svg"
-                        Grid.Column="2"
                         Grid.Row="0"
+                        Grid.Column="2"
                         Padding="10"
+                        Clicked="OnWebButtonClickedAsync"
                         HeightRequest="70"
-                        WidthRequest="70"
+                        HorizontalOptions="Center"
                         SemanticProperties.Description="Link to web page button"
+                        Source="web.svg"
                         VerticalOptions="Center"
-                        HorizontalOptions="Center">
+                        WidthRequest="70">
                         <ImageButton.Behaviors>
                             <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                         </ImageButton.Behaviors>
                     </ImageButton>
                     <ImageButton
                         x:Name="ShareButton"
-                        Clicked="OnShareButtonClickedAsync"
-                        Source="share.svg"
+                        Grid.Row="0"
                         Grid.Column="3"
                         Padding="10"
-                        Grid.Row="0"
+                        Clicked="OnShareButtonClickedAsync"
                         HeightRequest="70"
-                        WidthRequest="70"
+                        HorizontalOptions="End"
                         SemanticProperties.Description="Share button"
+                        Source="share.svg"
                         VerticalOptions="Center"
-                        HorizontalOptions="End">
+                        WidthRequest="70">
                         <ImageButton.Behaviors>
                             <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
                         </ImageButton.Behaviors>
