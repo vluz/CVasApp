@@ -189,7 +189,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="CommunityToolkit.Maui" Version="4.0.0" />
+	  <PackageReference Include="CommunityToolkit.Maui" Version="5.0.0" />
 	  <PackageReference Include="Plugin.Maui.Audio" Version="1.0.0" />
 	</ItemGroup>
 
