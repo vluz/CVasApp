@@ -43,7 +43,7 @@
                         FontFamily="FontCHLight"
                         FontSize="20"
                         HorizontalOptions="Center"
-                        Text="Mail vluz@me.com?"
+                        Text="Mail a vluz@me.com?"
                         TextColor="{StaticResource MainSVGTintLight}" />
                     <Border
                         Margin="0"

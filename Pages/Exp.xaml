@@ -52,7 +52,7 @@
                     FontSize="20"
                     HorizontalOptions="Center"
                     SemanticProperties.HeadingLevel="Level1"
-                    Text="Experience"
+                    Text="Experiência"
                     TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight},
                                                 Dark={StaticResource MainTextColorDark}}"
                     VerticalOptions="Center" />
@@ -80,68 +80,72 @@
                 <CarouselView.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>
-                            SYSTEMS, ENGENEERING, CODING, REPAIR&#10;
-                            Portugal&#10;
-                            2011 – Present &#10;
-                            Currently doing ad hoc projects as solution contractor in a miriad of areas ranging from Systems design, certification, implemetation, repair, specific solution coding, including mobile and other targets.
+Freelancer: Engenheiro de Sistemas, Armazenamento e Virtualização &#10;
+2012 - Presente &#10;
+Contratos por projeto para sistemas de pequena e média dimensão, armazenamento, cópias de segurança e soluções de virtualização a todos os níveis. Na maior parte, soluções construidas à medida. &#10;
+Apoio ao cliente 24x7, incluindo apoio remoto imediato. &#10;
+Clientes de vários sectores, incluindo xSPs, telecomunicações, serviços financeiros, banca, serviços online, administração local, comércio e indústria. &#10;
+Formação em vários formatos. &#10;
                         </x:String>
                         <x:String>
-                            SENIOR SYSTEMS ENGINEER &#10;
-                            CPC.is; Lisbon, Portugal&#10;
-                            May 2011 – December 2011 &#10;
-                            Invited to join back the engineering team of C.P.C., information systems division. Main responsibilities include coaching and training, customer project implementation, mainly UNIX/Windows, VMware, HP, Microsoft, Symantec, open source, among many other vendors solutions install and configure. Provided 24x7 customer support. Main customers include industry, local and central government, healthcare, logistics and transportation.
+CPC.is: Engenheiro de sistemas sénior &#10;
+Lisboa, Portugal, Maio de 2011 - Dezembro de 2011 &#10;
+Reintegrou a equipa de engenharia da CPC, divisão de sistemas de informação. &#10;
+Orientou e formou membros da equipa, implementou projetos de clientes e prestou apoio aos clientes. &#10;
+Trabalhou com UNIX/Windows, VMware, HP, Microsoft, Symantec e soluções de código aberto. &#10;
                         </x:String>
                         <x:String>
-                            SENIOR SYSTEMS SPECIALIST &#10;
-                            European Central Bank; Frankfurt, Germany&#10;
-                            April 2010 – December 2010 &#10;
-                            Contracted to provide 3rd line and engineering support to backup, storage, fabric switching and routing platforms and to provide engineering support to the disaster recovery solution. Later added as secondary tasks to provide 3rd line support to Unix, Windows, Oracle and the EXDI platform, a Europe-wide webMethods platform to 27 national banks. Finally I´ve also provided support to Darwin documentation system, the Statistics High Performance computing platform among several other services and applications.
+Banco Central Europeu: Especialista Sénior em Sistemas &#10;
+Frankfurt, Alemanha, Abril de 2010 - Dezembro de 2010 &#10;
+Forneceu suporte de engenharia para plataformas de sistemas, virtualização, bases de dados, backup, armazenamento, sistemas europeus de comutação de dados. Suporte a soluções de recuperação após desastres, UNIX, Windows, Oracle e a plataforma EXDI. Suporte a bancos centrais incluindo o banco de Portugal. &#10;
+Colaborou com o sistema Darwin ao nível europeu e com a plataforma informática de elevado desempenho para divisão de estatísticas do BCE incluindo as primeiras experiências em ML moderno, a um nível experimental. &#10;
                         </x:String>
                         <x:String>
-                            SENIOR STORAGE SPECIALIST&#10;
-                            Atos Origin; Birmingham, UK&#10;
-                            September 2009 - November 2009&#10;
-                            Called in to expand the Government Gateway disaster recovery to new set of application servers, train both the Engineering and the Business as Usual teams in the data consistency solution and performance troubleshooting of the production platform.
+Atos Origin: Especialista sénior em DR de armazenamento &#10;
+Birmingham, Reino Unido, Setembro de 2009 - Novembro de 2009 &#10;
+Expansão da recuperação após desastres do Government Gateway para um novo conjunto de servidores de aplicações. Formação das equipas de Engenharia e Business as Usual em soluções de consistência de dados e resolução de problemas de desempenho. &#10;
                         </x:String>
                         <x:String>
-                            SENIOR STORAGE SPECIALIST&#10;
-                            Atos Origin; Beeston, UK&#10;
-                            March 2007 - July 2009&#10;
-                            Contracted to join the storage team in Beeston having as main tasks to provide Architecture, Design, Implementation and Support for storage and backup of the Ministry of Justice; design and implementation of secure, encrypted data transfer for MoJ sensitive data; low level design and implementation of Government Gateway disaster recovery project including developing custom solution for data consistency; implementation of NHS Scotland storage upgrade; architecture and design of storage, backup and disaster recovery for the ACCA project, Implementation and test of disaster recovery for Brother project, and help in daily support tasks including training in the daily tasks of the new platforms delivered to Business as Usual.
+Atos Origin: Especialista Sénior em Armazenamento
+Beeston, Reino Unido, Março de 2007 - Julho de 2009 &#10;
+Integrou a equipa de armazenamento para fornecer arquitetura, conceção, implementação e suporte para armazenamento e cópia de segurança do Ministério da Justiça Inglês. &#10;
+Concebeu e implementou uma solução de transferência de dados verificada, processos auditáveis, segura e encriptada para os dados sensíveis do Ministério da Justiça. &#10;
+Trabalhou em vários projetos, incluindo a recuperação de desastres do Government Gateway, a atualização do armazenamento da NHS Scotland e o projeto ACCA. &#10;
                         </x:String>
                         <x:String>
-                            SENIOR INFRASTRUCTURE SPECIALIST&#10;
-                            EDS – Rolls-Royce; Derby, UK&#10;
-                            April 2006 - February 2007&#10;
-                            Hired to join the newly formed TREDSS/DWP project team having as main tasks, finish the enterprise architecture work, do part the architecture work in the Windows/VMware ‘tower’ in line with QMS (EDS’s Quality Management System; a superset of ITIL), provide architecture help in the AIX ‘tower’, design the Windows/VMware ‘tower’ hardware and operating system solution according to MYP (EDS’s Multi Year Plan; a closely managed, tested set of hardware and software), main engineering work in the Windows/VMware ‘tower’, responsible for the Windows and VMware builds and quality test work on the Windows/VMware and tools towers. Some small design and engineering work on ENI UK and RollsRoyce, including architecture and design of the largest VMware cluster in Europe at the time.
+EDS - Rolls-Royce: Especialista em Infraestruturas e Sistemas &#10;
+Derby, Reino Unido, Abril de 2006 - Fevereiro de 2007 &#10;
+Integrou a recém-formada equipa de projeto TREDSS/DWP para concluir o trabalho de arquitetura empresarial, conceber soluções de hardware e sistemas operativos Windows/VMware e realizar trabalhos de engenharia em Windows/VMware e ferramentas (tooling). &#10;
+Colaborou na conceção e engenharia de projetos da ENI UK e da Rolls-Royce, incluindo a arquitetura e conceção do maior cluster virtual da Europa na altura. &#10;
                         </x:String>
                         <x:String>
-                            SENIOR SYSTEMS ENGINEERING&#10;
-                            CPC is; Lisbon, Portugal&#10;
-                            2004 - April 2006&#10;
-                            Invited to start a new area of Storage, and Backup solutions, having as main responsibilities team and project management, project implementation, UNIX/Windows solutions design, install and configure; EMC, HP, Fujitsu-Siemens and other vendor storage design install and configure; Veritas, Legato and CA backup solutions implementation, 24x7 customer support, implementation team management and later special solutions group management (intelligence, military and scientific police). Main customers include all local and central government and all healthcare. CPCis is the top HP and Fujitsu-Siemens partner in Portugal and a new emerging EMC Partner.
+CPC.is: Engenheiro de Sistemas Sénior &#10;
+Lisboa, Portugal, 2004 - Abril de 2006 &#10;
+Convidado para iniciar uma nova área de soluções de Armazenamento e Backup, com responsabilidades que incluem gestão de equipas e projetos, implementação de projetos, conceção, instalação e configuração de soluções UNIX/Windows e apoio ao cliente 24x7. &#10;
+Geriu grupos de implementação e de soluções especiais, trabalhando com clientes da administração local e central e dos sectores da saúde. &#10;
                         </x:String>
                         <x:String>
-                            EMC SYSTEMS SPECIALIST&#10;
-                            WhatEverNet; Lisbon, Portugal&#10;
-                            2001-2004&#10;
-                            Called to join a team for the start of a new EMC Business Partner with other selected members, having as main responsibilities EMC solution design, pre-sales support, solution implementation and ‘on call’ customer support. Customers include most ISPs, some telcos, some banks and financial services, central and local government including intelligence and scientific police, state and some manufacturing, heavy industry and MSEs. WhatEverNet is the top Sun partner and one of the top EMC partners in Portugal.
+WhatEverNet: Especialista em sistemas EMC &#10;
+Lisboa, Portugal, 2001 - 2004 &#10;
+Juntou-se a uma equipa para iniciar um novo Parceiro Comercial EMC, com responsabilidades que incluíam a conceção de soluções EMC, apoio pré-venda, implementação de soluções e apoio ao cliente em permanência. &#10;
+Trabalhou com clientes de vários sectores, incluindo ISP, telcos, bancos, serviços financeiros, administração central e local, serviços secretos e polícia científica, Estado, indústria transformadora, indústria pesada e MPE. &#10;
                         </x:String>
                         <x:String>
-                            OPEN SYSTEMS SUPPORT&#10;
-                            EMC Portuguesa; Lisbon, Portugal&#10;
-                            1999-2001&#10;
-                            Hired to help integrate customer Mainframe, UNIX and other open systems with EMC Symmetrix and later also CLARiiON storage solutions, EMC data protection and backup solutions integration on customer disaster recovery plan, 24x7 second line Portugal and Spain Customer OS, disaster recovery and application support, and eventual pre-sales support. Customers include ISPs, all telcos, several financial services, most banks, central and local government, state, some manufacturing and heavy industry. EMC Portuguesa is the top EMC partner in Portugal and was at the time I joined a part of EMC itself.
+EMC Portuguesa: Suporte a sistemas abertos &#10;
+Lisboa, Portugal, 1999 - 2001 &#10;
+Auxiliou na integração do Mainframe do cliente, UNIX e outros sistemas abertos com as soluções de armazenamento EMC Symmetrix e CLARiiON. &#10;
+Prestou apoio 24 horas por dia, 7 dias por semana, ao sistema operativo dos clientes de Portugal e Espanha, à recuperação de desastres e às aplicações, bem como apoio ocasional de pré-venda. &#10;
                         </x:String>
                         <x:String>
-                            CONSULTANT AND PROGRAMMER&#10;
-                            Novabase; Lisbon, Portugal 1998-1999&#10;&#10;
-                            OWNER, PROGRAMMER AND TECHNOLOGIST&#10;
-                            InetD; Barreiro, Portugal 1998-2000&#10;&#10;
-                            INDUSTRIAL ENGINEERING&#10;
-                            ELAPP; Palmela, Portugal 1998&#10;&#10;
-                            INDUSTRIAL ENGINEERING&#10;
-                            SERRA; Palmela, Portugal 1996-1998
+Novabase SD: Consultor e Programador &#10;
+Lisboa, Portugal, 1998 - 1999 &#10;
+Nota: Primeiro contacto com ML e estatística no formato de desenvolvimento de solução de árvore de decisão não linear para banca. &#10;
+InetD: Proprietário, programador e tecnólogo &#10;
+Barreiro, Portugal, 1998 - 2000 &#10;
+ELAPP: Engenharia industrial &#10;
+Palmela, Portugal, 1998 &#10;
+SERRA: Engenharia Industrial &#10;
+Palmela, Portugal, 1996 - 1998 &#10;
                         </x:String>
                     </x:Array>
                 </CarouselView.ItemsSource>

@@ -2,7 +2,7 @@
 <?xaml-comp compile="true" ?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
-    
+
     <!--  This App specific  -->
     <Color x:Key="MainBackgroundColorLight">#e0e0e0</Color>
     <Color x:Key="MainBackgroundColorDark">#0f1423</Color>
@@ -32,8 +32,8 @@
     <Color x:Key="MainSVGTintDark">White</Color>
 
     <!--  end This App specific  -->
-    
-    
+
+
     <Color x:Key="Primary">#512BD4</Color>
     <Color x:Key="Secondary">#DFD8F7</Color>
     <Color x:Key="Tertiary">#2B0B98</Color>

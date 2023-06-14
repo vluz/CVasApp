@@ -176,8 +176,8 @@ public partial class MainPage : ContentPage
         await ShareButton.ScaleTo(ShareButton.Scale = 1, 20, Easing.BounceIn);
         await Share.RequestAsync(new ShareTextRequest
         {
-            Uri = "https://victest.rf.gd/",
-            Title = "Share App Link"
+            Uri = "https://victest.rf.gd/CV/index.html",
+            Title = "Partilhar Link"
         });
         audioplayer.Dispose();
         ShareButton.IsEnabled = true;
@@ -196,7 +196,7 @@ public partial class MainPage : ContentPage
         await WebButton.ScaleTo(WebButton.Scale = 1, 20, Easing.BounceIn);
         try
         {
-            Uri uri = new Uri("https://victest.rf.gd/");
+            Uri uri = new Uri("https://victest.rf.gd/CV/index.html");
             await Browser.Default.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
         }
         catch (Exception ex)
@@ -214,17 +214,17 @@ public partial class MainPage : ContentPage
     /// <summary>
     /// Calls popup for signal action confirmation
     /// </summary>
-    private async void OnSignalPopupClicked(object sender, EventArgs e)
+    private async void OnGithubPopupClicked(object sender, EventArgs e)
     {
-        SignalPopupButton.IsEnabled = false;
+        GithubPopupButton.IsEnabled = false;
         var audioplayer = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("click.wav"));
-        await SignalPopupButton.ScaleTo(SignalPopupButton.Scale = 1.25, 70, Easing.BounceIn);
+        await GithubPopupButton.ScaleTo(GithubPopupButton.Scale = 1.25, 70, Easing.BounceIn);
         audioplayer.Play();
-        await SignalPopupButton.ScaleTo(SignalPopupButton.Scale = 1, 20, Easing.BounceIn);
-        var popup = new Signal();
+        await GithubPopupButton.ScaleTo(GithubPopupButton.Scale = 1, 20, Easing.BounceIn);
+        var popup = new Github();
 
         this.ShowPopup(popup);
-        SignalPopupButton.IsEnabled = true;
+        GithubPopupButton.IsEnabled = true;
         audioplayer.Dispose();
     }
 
@@ -250,18 +250,18 @@ public partial class MainPage : ContentPage
     /// <summary>
     /// Calls popup for slack action confirmation
     /// </summary>
-    private async void OnSlackPopupClicked(object sender, EventArgs e)
+    private async void OnTelegramPopupClicked(object sender, EventArgs e)
     {
-        SlackPopupButton.IsEnabled = false;
+        TelegramPopupButton.IsEnabled = false;
         var audioplayer = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("click.wav"));
-        await SlackPopupButton.ScaleTo(SlackPopupButton.Scale = 1.25, 70, Easing.BounceIn);
+        await TelegramPopupButton.ScaleTo(TelegramPopupButton.Scale = 1.25, 70, Easing.BounceIn);
         audioplayer.Play();
-        await SlackPopupButton.ScaleTo(SlackPopupButton.Scale = 1, 20, Easing.BounceIn);
-        var popup = new Slack();
+        await TelegramPopupButton.ScaleTo(TelegramPopupButton.Scale = 1, 20, Easing.BounceIn);
+        var popup = new Telegram();
 
         this.ShowPopup(popup);
         audioplayer.Dispose();
-        SlackPopupButton.IsEnabled = true;
+        TelegramPopupButton.IsEnabled = true;
     }
 
 

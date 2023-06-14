@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- <summary> -->
 <!--
-    Slack popup
-    Confirms slack actions
+    Github popup
+    Confirms Github actions
 -->
 <!-- </summary> -->
 <toolkit:Popup
-    x:Class="CVasApp.Popups.Slack"
+    x:Class="CVasApp.Popups.Github"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
@@ -41,7 +41,7 @@
                         FontFamily="FontCHLight"
                         FontSize="20"
                         HorizontalOptions="Center"
-                        Text="Launch Slack?"
+                        Text="Abrir browser a Github?"
                         TextColor="{StaticResource MainSVGTintLight}" />
                     <Border
                         Margin="0"
@@ -53,15 +53,15 @@
                         StrokeThickness="1"
                         VerticalOptions="Center">
                         <ImageButton
-                            x:Name="SlackActionButton"
-                            Clicked="SlackClicked"
-                            HeightRequest="50"
+                            x:Name="GithubActionButton"
+                            Clicked="GithubClicked"
+                            HeightRequest="40"
                             HorizontalOptions="Center"
                             Loaded="onPageLoaded"
                             VerticalOptions="Center"
-                            WidthRequest="50">
+                            WidthRequest="40">
                             <ImageButton.Source>
-                                <FontImageSource FontFamily="FontBrands" Glyph="&#xf198;" />
+                                <FontImageSource FontFamily="FontBrands" Glyph="&#xf09b;" />
                             </ImageButton.Source>
                             <ImageButton.Behaviors>
                                 <toolkit:IconTintColorBehavior TintColor="{StaticResource MainSVGTintLight}" />
@@ -70,12 +70,13 @@
                     </Border>
                 </VerticalStackLayout>
             </Border>
+
             <ImageButton
                 x:Name="BackButton"
                 Grid.Row="1"
                 Grid.Column="0"
                 Padding="10"
-                Clicked="PopupSlackCliked"
+                Clicked="PopupGithubCliked"
                 HeightRequest="80"
                 HorizontalOptions="Start"
                 SemanticProperties.Description="Back button"
@@ -88,4 +89,5 @@
             </ImageButton>
         </Grid>
     </VerticalStackLayout>
+
 </toolkit:Popup>

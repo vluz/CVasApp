@@ -53,7 +53,7 @@
                     FontSize="20"
                     HorizontalOptions="Center"
                     SemanticProperties.HeadingLevel="Level1"
-                    Text="Skills"
+                    Text="Competências"
                     TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight},
                                                 Dark={StaticResource MainTextColorDark}}"
                     VerticalOptions="Center" />
@@ -72,41 +72,20 @@
             <CollectionView SelectionMode="Single">
                 <CollectionView.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
-                        <x:String>Portuguese spoken and written, native</x:String>
-                        <x:String>English spoken and written, fluent</x:String>
-                        <x:String>French spoken and written</x:String>
-                        <x:String>Some German spoken and written</x:String>
-                        <x:String>Large experience in all EMC, HDS, IBM and NetApp Hardware and Software solutions</x:String>
-                        <x:String>Large experience in Brocade/McData and Cisco MDS fabric switches and routers</x:String>
-                        <x:String>Certified and experienced in all Microsoft Operating systems including embebed systems</x:String>
-                        <x:String>Experience in all SUN and HP Hardware and Software including Solaris and HP-UX</x:String>
-                        <x:String>Experience in Apple Xsan up to and including version 2.1.1</x:String>
-                        <x:String>Experience with Quatum StorNextFX2 high-performance distributed filesystem</x:String>
-                        <x:String>Experience in VMware ESX/ESXi, VMware View including composer, Recovery Manager</x:String>
-                        <x:String>Experience in Solaris virtualisation (containers and zones)</x:String>
-                        <x:String>Knowledge of virtualisation in AIX and Microsoft Virtual solutions</x:String>
-                        <x:String>Certified and experienced in all Fujitsu-Siemens Hardware and Software</x:String>
-                        <x:String>Knowledge of IBM OS2, OS400, IBM and UNISYS Mainframes from the storage point of view</x:String>
-                        <x:String>Large experience in Backup hardware from several vendors</x:String>
-                        <x:String>Large experience in several UNIX (AIX, Solaris/Open Solaris, HP-UX, Linux, BSD, OS X)</x:String>
-                        <x:String>Experience in web-related servers and services installation and configuration</x:String>
-                        <x:String>Programming knowledge include: C, C++, ObjectiveC, .net, xTML/xASP/PHP, Perl, Python, and Java</x:String>
-                        <x:String>Large experience in applications ranging from Compositing, 2D/3D Design, Composition and Office applications</x:String>
-                        <x:String>Some experience in Assembler</x:String>
-                        <x:String>Good knowledge of Apple hardware and software including OS X Server and Xserve</x:String>
-                        <x:String>Good, sound, knowledge of cryptography</x:String>
-                        <x:String>Good knowledge and experience in computer security</x:String>
-                        <x:String>Some knowledge of reverse engineering</x:String>
-                        <x:String>Some knowledge of TEMPEST and AMSG 720B and subsequent</x:String>
-                        <x:String>Experience of local and wide area networks</x:String>
-                        <x:String>Programming of PLC, KUKA and AEG Robots</x:String>
+                        <x:String>Português (nativo)</x:String>
+                        <x:String>Inglês (fluente)</x:String>
+                        <x:String>Várias soluções ao longo dos anos, incluindo mas não restrito a IBM, EMC, NetApp, HDS, Brocade, McData e Inrange, bem como Netbackup, ARCserve, EMC Networker, Puredisk, CommVault e processos de desduplicação de tapes.</x:String>
+                        <x:String>Vasta experiência com soluções Microsoft, software aberto, EMC, HDS, IBM, NetApp, Brocade/McData, Cisco MDS, Microsoft, SUN, HP, Apple, Quantum StorNextFX2, VMware, Solaris, HP-UX e Fujitsu-Siemens.</x:String>
+                        <x:String>Proficiente em linguagens de programação como Python, C/C++, .NET Maui, xTML ASP/PHP, Perl, Java, e JavaScript. Competente com FastAPI.</x:String>
+                        <x:String>Dentro de Python, conhecimento de todos os tipos de soluções.</x:String>
+                        <x:String>Conhecimentos em segurança informática, criptografia e engenharia inversa.</x:String>
                     </x:Array>
                 </CollectionView.ItemsSource>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Border
                             Margin="1,5"
-                            HeightRequest="90"
+                            HeightRequest="160"
                             HorizontalOptions="FillAndExpand"
                             Opacity="1"
                             Stroke="{AppThemeBinding Light={StaticResource MainSVGTintLight},

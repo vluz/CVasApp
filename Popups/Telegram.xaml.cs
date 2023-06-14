@@ -23,6 +23,8 @@ public partial class Telegram : Popup
         }
         catch (Exception ex)
         {
+            Exception exception = ex;
+            Console.WriteLine(exception.Message);
             // An unexpected error occured. No browser may be installed on the device.
         }
     }

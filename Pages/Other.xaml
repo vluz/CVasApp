@@ -53,7 +53,7 @@
                     FontSize="20"
                     HorizontalOptions="Center"
                     SemanticProperties.HeadingLevel="Level1"
-                    Text="Other Information"
+                    Text="Outra Informação"
                     TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight},
                                                 Dark={StaticResource MainTextColorDark}}"
                     VerticalOptions="Center" />
@@ -72,10 +72,9 @@
             <CollectionView SelectionMode="Single">
                 <CollectionView.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
-                        <x:String>Security Cleared in Portugal, UK and European Agencies</x:String>
-                        <x:String>Experienced in coaching and training</x:String>
-                        <x:String>Available for travel</x:String>
-                        <x:String>Available Immediatly</x:String>
+                        <x:String>Segurança autorizada: Reino Unido (BC) e Agências Europeias</x:String>
+                        <x:String>Outras certificações disponíveis</x:String>
+                        <x:String>Experiência em formação</x:String>
                     </x:Array>
                 </CollectionView.ItemsSource>
                 <CollectionView.ItemTemplate>

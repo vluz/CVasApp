@@ -53,7 +53,7 @@
                     FontSize="20"
                     HorizontalOptions="Center"
                     SemanticProperties.HeadingLevel="Level1"
-                    Text="Education"
+                    Text="Educação"
                     TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight},
                                                 Dark={StaticResource MainTextColorDark}}"
                     VerticalOptions="Center" />
@@ -72,27 +72,11 @@
             <CollectionView SelectionMode="Single">
                 <CollectionView.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
-                        <x:String>1st to 11th Grade in Instituto Militar dos Pupilos do Exercito (Military Institution)</x:String>
-                        <x:String>EEC Level IV (Bach.) degree in Industrial electronics in ANFEI</x:String>
-                        <x:String>Specialization in industrial automation in ANFEI</x:String>
-                        <x:String>Level 3 technical German translation course in ANFEI</x:String>
-                        <x:String>Configuration, maintenance and repair of electronics in SERRA</x:String>
-                        <x:String>EMC Symmetrix installation, configuration, maintenance and repair course in IPM Spain</x:String>
-                        <x:String>EMC Celerra installation and configuration course in IPM Spain</x:String>
-                        <x:String>CNT Ultranet Storage Gateway Installation and configuration course in IPM Spain</x:String>
-                        <x:String>Connectrix, Brocade and McData switches course in IPM Spain</x:String>
-                        <x:String>Inrange Switches and directors course by Inrange in EMC Portuguesa</x:String>
-                        <x:String>EMC Clariion installation, configuration, maintenance and repair course in IPM Spain</x:String>
-                        <x:String>Several EMC courses in IPM Spain, EMC Portuguesa and EMC UK</x:String>
-                        <x:String>HP-UX admin I and II courses by HP Portugal</x:String>
-                        <x:String>Several Solaris Courses by Sun Portugal and WhatEverNet</x:String>
-                        <x:String>Solaris and Fujitsu-Siemens UNIX Hardware course by Fujitsu-Siemens</x:String>
-                        <x:String>Several HP Hardware and pre-sales courses</x:String>
-                        <x:String>Several VMware updates, technical seminars and ‘hands on’ labs by VMware</x:String>
-                        <x:String>NetApp hardware update by NetApp</x:String>
-                        <x:String>HDS USPV hardware update by HDS</x:String>
-                        <x:String>IBM DS8000 family and XIV family update by IBM</x:String>
-                        <x:String>Administration of webMethods 7 by Software AG</x:String>
+                        <x:String>Aluno do Instituto Militar dos Pupilos do Exército do primeiro até ao 11º ano</x:String>
+                        <x:String>Licenciatura em Eletrónica Industrial (EEC Nível IV) ANFEI</x:String>
+                        <x:String>Especialização em automação industrial, Siemens/ANFEI</x:String>
+                        <x:String>Exame Europeu Nível IV modelo Alemão passado com nota muito positiva</x:String>
+                        <x:String>Vários cursos EMC, HP, Solaris, Fujitsu-Siemens, VMware, NetApp, HDS, IBM, etc.</x:String>
                     </x:Array>
                 </CollectionView.ItemsSource>
                 <CollectionView.ItemTemplate>

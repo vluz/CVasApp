@@ -10,7 +10,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-    Title="Profile"
+    Title="Perfil"
     Shell.NavBarIsVisible="False">
     <Page.Behaviors>
         <toolkit:StatusBarBehavior StatusBarColor="{AppThemeBinding Light={StaticResource MainPanelColorLight}, Dark={StaticResource MainPanelColorDark}}" StatusBarStyle="{AppThemeBinding Light={StaticResource MainTextColorLight}, Dark={StaticResource MainTextColorDark}}" />
@@ -52,7 +52,7 @@
                     FontSize="20"
                     HorizontalOptions="Center"
                     SemanticProperties.HeadingLevel="Level1"
-                    Text="Profile"
+                    Text="Perfil"
                     TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight},
                                                 Dark={StaticResource MainTextColorDark}}"
                     VerticalOptions="Center" />

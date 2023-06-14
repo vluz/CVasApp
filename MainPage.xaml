@@ -62,7 +62,7 @@
                     FontSize="20"
                     HorizontalOptions="Center"
                     SemanticProperties.HeadingLevel="Level1"
-                    Text="CV as App"
+                    Text="CV como App"
                     TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight},
                                                 Dark={StaticResource MainTextColorDark}}"
                     VerticalOptions="Center" />
@@ -219,16 +219,16 @@
                         </Label.GestureRecognizers>
                     </Label>
                     <ImageButton
-                        x:Name="SlackPopupButton"
+                        x:Name="TelegramPopupButton"
                         Grid.Row="1"
                         Grid.Column="2"
-                        Clicked="OnSlackPopupClicked"
+                        Clicked="OnTelegramPopupClicked"
                         HeightRequest="20"
                         HorizontalOptions="Start"
                         VerticalOptions="Center"
                         WidthRequest="20">
                         <ImageButton.Source>
-                            <FontImageSource FontFamily="FontBrands" Glyph="&#xf198;" />
+                            <FontImageSource FontFamily="FontBrands" Glyph="&#xf2c6;" />
                         </ImageButton.Source>
                         <ImageButton.Behaviors>
                             <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
@@ -241,25 +241,25 @@
                         FontFamily="FontCHLight"
                         FontSize="12"
                         HorizontalOptions="Start"
-                        Text="     Slack"
+                        Text="     TG"
                         TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight},
                                                     Dark={StaticResource MainTextColorDark}}"
                         VerticalOptions="Center">
                         <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OnSlackPopupClicked" />
+                            <TapGestureRecognizer Tapped="OnTelegramPopupClicked" />
                         </Label.GestureRecognizers>
                     </Label>
                     <ImageButton
-                        x:Name="SignalPopupButton"
+                        x:Name="GithubPopupButton"
                         Grid.Row="2"
                         Grid.Column="2"
-                        Clicked="OnSignalPopupClicked"
+                        Clicked="OnGithubPopupClicked"
                         HeightRequest="20"
                         HorizontalOptions="Start"
                         VerticalOptions="Center"
                         WidthRequest="20">
                         <ImageButton.Source>
-                            <FontImageSource FontFamily="FontSolid" Glyph="&#xf075;" />
+                            <FontImageSource FontFamily="FontBrands" Glyph="&#xf09b;" />
                         </ImageButton.Source>
                         <ImageButton.Behaviors>
                             <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource MainSVGTintLight}, Dark={StaticResource MainSVGTintDark}}" />
@@ -272,12 +272,12 @@
                         FontFamily="FontCHLight"
                         FontSize="12"
                         HorizontalOptions="Start"
-                        Text="     Signal"
+                        Text="     Github"
                         TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight},
                                                     Dark={StaticResource MainTextColorDark}}"
                         VerticalOptions="Center">
                         <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OnSignalPopupClicked" />
+                            <TapGestureRecognizer Tapped="OnGithubPopupClicked" />
                         </Label.GestureRecognizers>
                     </Label>
                     <ImageButton
@@ -384,7 +384,7 @@
                         FontFamily="FontCHLight"
                         FontSize="12"
                         HorizontalOptions="Center"
-                        Text="Profile"
+                        Text="Perfil"
                         TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight},
                                                     Dark={StaticResource MainTextColorDark}}"
                         VerticalOptions="End">
@@ -396,11 +396,11 @@
                         Grid.Row="0"
                         Grid.Column="0"
                         Grid.ColumnSpan="3"
-                        Padding="12"
+                        Padding="8"
                         FontFamily="FontCHLight"
                         FontSize="25"
                         HorizontalOptions="Center"
-                        Text="CV Sections"
+                        Text="Secções"
                         TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight},
                                                     Dark={StaticResource MainTextColorDark}}"
                         VerticalOptions="Center" />
@@ -438,7 +438,7 @@
                         FontFamily="FontCHLight"
                         FontSize="12"
                         HorizontalOptions="Center"
-                        Text="Experience"
+                        Text="Experiência"
                         TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight},
                                                     Dark={StaticResource MainTextColorDark}}"
                         VerticalOptions="End">
@@ -468,7 +468,7 @@
                         FontFamily="FontCHLight"
                         FontSize="12"
                         HorizontalOptions="Center"
-                        Text="Skills"
+                        Text="Competências"
                         TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight},
                                                     Dark={StaticResource MainTextColorDark}}"
                         VerticalOptions="End">
@@ -498,7 +498,7 @@
                         FontFamily="FontCHLight"
                         FontSize="12"
                         HorizontalOptions="Center"
-                        Text="Education"
+                        Text="Educação"
                         TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight},
                                                     Dark={StaticResource MainTextColorDark}}"
                         VerticalOptions="End">
@@ -528,7 +528,7 @@
                         FontFamily="FontCHLight"
                         FontSize="12"
                         HorizontalOptions="Center"
-                        Text="Other Information"
+                        Text="Outra Info."
                         TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight},
                                                     Dark={StaticResource MainTextColorDark}}"
                         VerticalOptions="End">
@@ -558,7 +558,7 @@
                         FontFamily="FontCHLight"
                         FontSize="12"
                         HorizontalOptions="Center"
-                        Text="Certifications"
+                        Text="Certificações"
                         TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight},
                                                     Dark={StaticResource MainTextColorDark}}"
                         VerticalOptions="End">

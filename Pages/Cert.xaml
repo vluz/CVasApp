@@ -53,7 +53,7 @@
                     FontSize="20"
                     HorizontalOptions="Center"
                     SemanticProperties.HeadingLevel="Level1"
-                    Text="Certifications"
+                    Text="Certificações"
                     TextColor="{AppThemeBinding Light={StaticResource MainTextColorLight},
                                                 Dark={StaticResource MainTextColorDark}}"
                     VerticalOptions="Center" />
@@ -72,7 +72,7 @@
             <CollectionView SelectionMode="Single">
                 <CollectionView.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
-                        <x:String>ITIL Certification (Candidate nr. ITIL/NL010155 @ APMG)</x:String>
+                        <x:String>Certificação ITIL (ITIL/NL010155 @ APMG)</x:String>
                         <x:String>Microsoft Certified Systems Engineer: Security (MCSE +S)</x:String>
                         <x:String>Microsoft Certified Systems Engineer: Messaging (MCSE +M)</x:String>
                         <x:String>Microsoft Certified Systems Engineer (MCSE)</x:String>

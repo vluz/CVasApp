@@ -41,7 +41,7 @@
                         FontFamily="FontCHLight"
                         FontSize="20"
                         HorizontalOptions="Center"
-                        Text="Dial 932673261?"
+                        Text="Ligar 932673261?"
                         TextColor="{StaticResource MainSVGTintLight}" />
                     <Border
                         Margin="0"

@@ -160,12 +160,10 @@
 	<ItemGroup>
 	  <Compile Remove="NewPage1.cs" />
 	  <Compile Remove="Popups\NewPage1.xaml.cs" />
-	  <Compile Remove="Popups\Telegram.xaml.cs" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <MauiXaml Remove="Popups\NewPage1.xaml" />
-	  <MauiXaml Remove="Popups\Telegram.xaml" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -189,8 +187,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="CommunityToolkit.Maui" Version="5.0.0" />
+	  <PackageReference Include="CommunityToolkit.Maui" Version="5.2.0" />
 	  <PackageReference Include="Plugin.Maui.Audio" Version="1.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Popups\Github.xaml.cs">
+	    <DependentUpon>Github.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -221,10 +225,10 @@
 	  <MauiXaml Update="Popups\Phone.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Popups\Signal.xaml">
+	  <MauiXaml Update="Popups\Github.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Popups\Slack.xaml">
+	  <MauiXaml Update="Popups\Telegram.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
