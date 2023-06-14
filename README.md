@@ -19,3 +19,18 @@ CommunityToolkit.Maui
 
 Plugin.Maui.Audio    
 
+<hr>
+
+![Screenshot](Screenshots/Screenshot1.jpg?raw=true "Screenshot")
+
+![Screenshot](Screenshots/Screenshot2.jpg?raw=true "Screenshot")
+
+![Screenshot](Screenshots/Screenshot3.jpg?raw=true "Screenshot")
+
+![Screenshot](Screenshots/Screenshot4.jpg?raw=true "Screenshot")
+
+![Screenshot](Screenshots/Screenshot5.jpg?raw=true "Screenshot")
+
+![Screenshot](Screenshots/Screenshot6.jpg?raw=true "Screenshot")
+
+![Screenshot](Screenshots/Screenshot7.jpg?raw=true "Screenshot")
